@@ -34,7 +34,7 @@ El sitio se actualiza unos dos minutos después de guardar. El avance se ve en l
 | `FTP_PASSWORD` | Contraseña FTP |
 
 Opcionales, como *variables* en la misma página:
-- `FTP_SERVER_DIR`: la carpeta donde se sube, terminada en `/`. Por defecto es `/domains/factorh.co/public_html/`. Si la publicación termina en otra carpeta, la acción **Ver carpetas FTP** (pestaña Actions → Run workflow) muestra qué ve el usuario FTP.
+- `FTP_SERVER_DIR`: la carpeta donde se sube, terminada en `/`. Por defecto es `/public_html/`, porque la cuenta FTP de Hostinger entra directamente a la carpeta del dominio factorh.co. Si la publicación termina en otra carpeta, la acción **Ver carpetas FTP** (pestaña Actions → Run workflow) muestra qué ve el usuario FTP.
 - `FTP_PROTOCOL`: `ftps` por defecto. Cámbialo a `ftp` solo si la publicación falla con un error de TLS.
 
 Nunca pongas contraseñas en los archivos del repositorio; van solo en los secrets.

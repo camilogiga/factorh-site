@@ -42,7 +42,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
           local-dir: ./site/
-          server-dir: ${{ vars.FTP_SERVER_DIR || '/domains/factorh.co/public_html/' }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/public_html/' }}
           exclude: |
             **/.git*
             **/.git*/**
