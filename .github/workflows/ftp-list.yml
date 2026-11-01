@@ -1,5 +1,5 @@
 # Manual, read-only: lists the folders the FTP login sees (to set the upload folder).
-name: Ver carpetas FTP
+name: Ver carpetas FTP y correo
 on: workflow_dispatch
 jobs:
   list:
@@ -17,4 +17,9 @@ jobs:
           # %2F makes a path absolute (from the FTP root) instead of relative to the login folder.
           for d in "" "%2F" "%2Fpublic_html/" "%2Fdomains/" "%2Fdomains/factorh.co/public_html/"; do
             echo "== $d"; ftp "ftp://$H/$d" || echo "(no se puede listar)"
+          done
+      - name: Registros de correo del dominio (SPF, DKIM, DMARC)
+        run: |
+          for q in "factorh.co TXT" "factorh.co MX" "_dmarc.factorh.co TXT" "hostingermail-a._domainkey.factorh.co CNAME" "hostingermail-b._domainkey.factorh.co CNAME" "hostingermail-c._domainkey.factorh.co CNAME" "hostingermail-a._domainkey.factorh.co TXT" "factorh.co NS" "factorh.co A"; do
+            echo "== $q"; dig +short $q
           done
