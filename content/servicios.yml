@@ -1,0 +1,72 @@
+google:
+  descripcion: 'Presencia digital para médicos: redes sociales, contenidos, Google, sitio web y pauta con criterio ético. Además, Trayectoria, Vocería e Impacto.'
+  titulo: Factor H, servicios
+mas_pacientes_y:
+  p_1: Servicios
+  h1_1: Más pacientes, y los indicados. Con estándar médico.
+  p_2: 'El centro es Presencia digital: manejamos tus redes, contenidos y estrategia digital. Puedes empezar por el Diagnóstico y sumar las demás líneas cuando las necesites.'
+diagnostico_factor_h:
+  p_1: Punto de partida · 3 semanas
+  h2_1: Diagnóstico Factor H
+  p_2: Una revisión completa de cómo te encuentran hoy los pacientes y de tu presencia digital, con una hoja de ruta de seis meses. Si después contratas un programa, el valor del Diagnóstico se abona.
+  li_1: Entrevista inicial de 60 minutos
+  li_2: Auditoría de tu presencia digital y en prensa
+  li_3: Revisión de tu perfil académico
+  li_4: Cómo te encuentran hoy los pacientes
+  li_5: Comparación con 3 colegas de tu especialidad
+  li_6: Revisión de riesgos éticos
+  li_7: Informe y sesión de entrega de 45 minutos
+presencia_digital:
+  foto_1: img/digital.jpg
+  p_1: Producto central · Programa mensual
+  h2_1: Presencia digital
+  p_2: Para ti, si quieres que te encuentren más pacientes, y los indicados. Toda tu estrategia digital en un solo equipo, sin dedicarle tu tiempo.
+  li_1: Tu sitio web profesional, listo en menos de una semana
+  li_2: 'Posicionamiento en Google para que te encuentren quienes buscan tu especialidad: buscador, perfil de negocio y directorios médicos'
+  li_3: Estrategia y gestión de todas tus redes sociales
+  li_4: 'Contenidos en tu voz: artículos, videos y boletines'
+  li_5: Pauta digital con criterio ético
+  li_6: Informe mensual de resultados
+  foto_2: img/manos.jpg
+  p_3: Base del programa · 6 semanas
+  h2_2: Trayectoria
+  p_4: Para profesionales e instituciones de salud que van a empezar a comunicar, o que ya lo hacen sin una línea clara.
+  li_7: Sesión de 90 minutos sobre tu historia y tus posiciones
+  li_8: 'Narrativa: quién eres, cómo trabajas y qué te respalda'
+  li_9: Mensajes clave para colegas, pacientes, prensa e industria
+  li_10: Guía de voz y biografías corta, media y larga
+  li_11: Perfiles actualizados en LinkedIn, Instagram y directorios
+  foto_3: img/voceria.jpg
+  p_5: Capacidad adicional · Por proyecto o por resultado
+  h2_3: Vocería
+  p_6: Para quienes reciben, o quieren recibir, llamadas de periodistas. Pagas por la entrevista conseguida o la columna publicada.
+  li_12: Media training con simulacros en cámara
+  li_13: Entrevistas en medios de Colombia, la región y EE. UU.
+  li_14: Columnas de opinión escritas en tu voz
+  li_15: Comunicados de prensa
+  foto_4: img/impacto.jpg
+  p_7: Capacidad adicional · Por proyecto
+  h2_4: Impacto
+  p_8: Para investigadores, docentes y médicos que presentan en congresos o aspiran a premios y sociedades científicas.
+  li_16: Divulgación de una publicación en lenguaje claro
+  li_17: Plan de comunicación para congresos
+  li_18: Postulaciones a premios y sociedades
+  li_19: Orden de tu perfil en Google Scholar, ORCID y CvLAC
+ips_clinicas_y:
+  p_1: Para instituciones
+  h2_1: IPS, clínicas y empresas del sector salud
+  p_2: 'Las mismas cuatro líneas, adaptadas a una organización. Su reputación depende de sus profesionales, así que trabajamos las dos capas: la marca de la institución y la de sus especialistas.'
+  p_3: Trabajamos con
+  li_1: IPS y grupos de práctica fundados por médicos
+  li_2: Clínicas y centros especializados
+  li_3: Empresas que prestan servicios a médicos y hospitales
+  li_4: Emprendimientos MedTech y de salud digital
+  li_5: Asociaciones y sociedades científicas
+  p_4: Qué hacemos
+  li_6: Narrativa institucional y perfiles de sus especialistas
+  li_7: Sitio web institucional, Google por sede y redes
+  li_8: Voceros preparados, prensa y manejo de crisis
+  li_9: Eventos académicos y divulgación de investigación
+seccion_3:
+  p_1: ¿No sabes por dónde empezar? Conversemos 20 minutos.
+  a_1: Agendar una conversación

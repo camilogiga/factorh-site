@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://factorh.co/sitemap.xml

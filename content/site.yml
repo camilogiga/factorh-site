@@ -1,0 +1,22 @@
+datos:
+  correo: contacto@factorh.co
+menu:
+  aria_1: Factor H, inicio
+  span_1: factor h
+  aria_2: Principal
+  a_1: Servicios
+  a_2: Cómo trabajamos
+  a_3: Nosotros
+  a_4: Solicitar diagnóstico
+pie:
+  p_1: Que te encuentren tus [[pacientes.]]
+  a_1: Solicitar diagnóstico
+  span_1: factor h
+  span_2: Factor H Comunicaciones S.A.S.
+  aria_1: Pie de página
+  a_2: Servicios
+  a_3: Cómo trabajamos
+  a_4: Nosotros
+  a_5: Contacto
+  a_6: Política de datos
+  span_3: Pacientes indicados, con respaldo.

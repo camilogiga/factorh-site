@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{a:google.descripcion}}">
+<link rel="canonical" href="https://factorh.co/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1E2227">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Factor H">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="{{a:google.titulo}}">
+<meta property="og:description" content="{{a:google.descripcion}}">
+<meta property="og:url" content="https://factorh.co/">
+<meta property="og:image" content="https://factorh.co/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>{{t:google.titulo}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F6B57}a:hover{color:#1E2227}
+.fh-edge{position:relative}
+.fh-edge::after{content:"";position:absolute;left:calc(100% + 20px);top:calc(50% - 5px);width:100vw;height:10px;background:var(--bar,#1F6B57)}
+.fh-edge-l::before{content:"";position:absolute;right:calc(100% + 20px);top:calc(50% - 5px);width:100vw;height:10px;background:var(--bar,#1F6B57)}
+.fh-card{transition:transform .25s ease, box-shadow .25s ease}
+.fh-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,34,39,.28)}
+.fh-tile:hover .fh-photo{transform:scale(1.04)}
+.fh-photo{transition:transform .4s ease}
+.fh-marquee{display:flex;width:max-content;animation:fhm 40s linear infinite}
+.fh-strip:hover .fh-marquee{animation-play-state:paused}
+@keyframes fhm{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.fh-marquee{animation:none}.fh-card,.fh-photo{transition:none}}
+@media (max-width: 700px){.fh-edge::after{display:none}}
+.fh-hero-photo{position:absolute;z-index:-2;top:0;right:0;bottom:0;width:50%}
+.fh-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 25%;display:block}
+.fh-hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1E2227 0%,rgba(30,34,39,.55) 30%,rgba(30,34,39,0) 60%),linear-gradient(0deg,#1E2227 0%,rgba(30,34,39,0) 25%)}
+.fh-hero-copy{max-width:min(620px,52%)}
+.fh-hero-copy .fh-edge::after{width:9vw}
+@media (max-width: 900px){
+.fh-hero-photo{position:relative;z-index:0;width:auto;height:clamp(300px,80vw,560px);margin:-24px 0 0}
+.fh-hero-photo::after{background:linear-gradient(180deg,#1E2227 0%,rgba(30,34,39,0) 30%,rgba(30,34,39,0) 75%,#1E2227 100%)}
+.fh-hero-copy{max-width:none}
+.fh-hero-copy .fh-edge::after{width:100vw}
+}
+</style>
+<style>html,body{background:#F2F1EC}html{scroll-behavior:smooth}</style>
+<link rel="stylesheet" href="assets/anim.css">
+<script src="assets/anim.js" defer></script>
+</head>
+<body>
+<div style="background: #F2F1EC; color: #1E2227; font-family: 'Instrument Sans', sans-serif; font-size: 17px; line-height: 1.55; overflow: hidden; overflow-wrap: break-word">
+
+  <section style="position: relative; isolation: isolate; color: #F2F1EC; background: #1E2227">
+    <svg aria-hidden="true" viewBox="0 0 100 100" style="position: absolute; z-index: -3; left: -14%; top: 2%; width: min(70vw, 760px); height: auto; opacity: 0.06"><rect x="12" y="8" width="20" height="84" fill="#F2F1EC"></rect><rect x="32" y="52" width="36" height="14" fill="#F2F1EC"></rect><rect x="68" y="38" width="20" height="54" fill="#5FB89C"></rect><rect x="68" y="22" width="20" height="12" fill="#E0A848"></rect></svg>
+
+    <header>
+      <div style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+        <a href="index.html" aria-label="{{a:site.menu.aria_1}}" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #F2F1EC">
+          <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect x="12" y="8" width="20" height="84" fill="#F2F1EC"></rect><rect x="32" y="52" width="36" height="14" fill="#F2F1EC"></rect><rect x="68" y="38" width="20" height="54" fill="#5FB89C"></rect><rect x="68" y="22" width="20" height="12" fill="#E0A848"></rect></svg>
+          <span style="font-weight: 600; font-size: 26px; letter-spacing: -1px">{{t:site.menu.span_1}}</span>
+        </a>
+        <nav aria-label="{{a:site.menu.aria_2}}" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px">
+          <a href="servicios.html" style="color: #F2F1EC; text-decoration: none">{{t:site.menu.a_1}}</a>
+          <a href="como-trabajamos.html" style="color: #F2F1EC; text-decoration: none">{{t:site.menu.a_2}}</a>
+          <a href="nosotros.html" style="color: #F2F1EC; text-decoration: none">{{t:site.menu.a_3}}</a>
+          <a href="contacto.html" style="background: #F2F1EC; color: #1E2227; text-decoration: none; padding: 12px 18px; font-weight: 600">{{t:site.menu.a_4}}</a>
+        </nav>
+      </div>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 11vw, 150px) 24px clamp(48px, 6vw, 80px)"><div class="fh-hero-copy" style="display: flex; flex-direction: column; gap: 28px">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #E0A848"><span style="width: 12px; height: 12px; background: #E0A848; flex: none"></span>{{t:que_te_encuentren.p_1}}</p>
+      <h1 style="margin: 0; font-weight: 700; font-size: clamp(44px, 6.4vw, 88px); line-height: 0.98; letter-spacing: -0.04em">{{t:que_te_encuentren.h1_1|<span class="fh-edge" style="--bar: #5FB89C; white-space: nowrap">}}</h1>
+      <p style="margin: 0; font-size: clamp(18px, 2vw, 22px); max-width: 620px; color: #D3D6DA">{{t:que_te_encuentren.p_2}}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+        <a href="contacto.html" style="background: #5FB89C; color: #1E2227; text-decoration: none; padding: 17px 26px; font-weight: 700">{{t:que_te_encuentren.a_1}}</a>
+        <a href="servicios.html" style="border: 1px solid #F2F1EC; color: #F2F1EC; text-decoration: none; padding: 16px 26px; font-weight: 600">{{t:que_te_encuentren.a_2}}</a>
+      </div>
+    </div></div>
+
+    <div class="fh-hero-photo"><img src="{{img:que_te_encuentren.foto_1}}" alt=""></div>
+
+    <svg width="100%" height="120" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true" style="display: block"><rect x="5" y="2.0" width="40" height="198.0" fill="#2C3138"></rect><rect x="55" y="34.3" width="40" height="165.7" fill="#2C3138"></rect><rect x="105" y="62.3" width="40" height="137.7" fill="#2C3138"></rect><rect x="155" y="86.6" width="40" height="113.4" fill="#2C3138"></rect><rect x="205" y="107.6" width="40" height="92.4" fill="#2C3138"></rect><rect x="255" y="125.8" width="40" height="74.2" fill="#2C3138"></rect><rect x="305" y="141.6" width="40" height="58.4" fill="#E0A848"></rect><rect x="355" y="155.4" width="40" height="44.6" fill="#3A4048"></rect><rect x="405" y="167.3" width="40" height="32.7" fill="#3A4048"></rect><rect x="455" y="177.6" width="40" height="22.4" fill="#3A4048"></rect><rect x="505" y="186.6" width="40" height="13.4" fill="#3A4048"></rect><rect x="555" y="194.4" width="40" height="5.6" fill="#3A4048"></rect></svg>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 24px; display: flex; flex-wrap: wrap; gap: clamp(24px, 6vw, 96px); align-items: flex-start">
+    <svg width="120" height="120" viewBox="0 0 100 100" aria-hidden="true" style="flex: none"><rect x="12" y="8" width="20" height="84" fill="#1E2227"></rect><rect x="32" y="52" width="36" height="14" fill="#1E2227"></rect><rect x="68" y="38" width="20" height="54" fill="#1F6B57"></rect><rect x="68" y="22" width="20" height="12" fill="#C68A2E"></rect></svg>
+    <div style="flex: 1 1 420px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 20px">
+      <h2 style="margin: 0; font-weight: 700; font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -1px; color: #1F6B57">{{t:tus_pacientes_ya.h2_1}}</h2>
+      <p style="margin: 0; font-size: clamp(18px, 2vw, 22px); color: #33373D">{{t:tus_pacientes_ya.p_1}}</p>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 24px clamp(56px, 8vw, 104px); display: flex; flex-direction: column; gap: 32px">
+    <h2 style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; color: #1E2227">
+      <span style="font-weight: 700; font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -0.05em">{{t:lo_que_hacemos.span_1}}</span>
+      <span style="font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); letter-spacing: -0.5px; color: #1F6B57">{{t:lo_que_hacemos.span_2}}</span>
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
+      <div style="background: #FFFFFF; border-top: 8px solid #1E2227; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 10px">
+        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #5B6068">{{t:lo_que_hacemos.p_1}}</p>
+        <h3 style="margin: 0; font-weight: 700; font-size: clamp(24px, 2.6vw, 28px); line-height: 1.1; letter-spacing: -0.5px">{{t:lo_que_hacemos.h3_1}}</h3>
+        <p style="margin: 0; color: #33373D; font-size: 16px">{{t:lo_que_hacemos.p_2}}</p>
+      </div>
+      <div style="background: #FFFFFF; border-top: 8px solid #1F6B57; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 10px">
+        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #5B6068">{{t:lo_que_hacemos.p_3}}</p>
+        <h3 style="margin: 0; font-weight: 700; font-size: clamp(24px, 2.6vw, 28px); line-height: 1.1; letter-spacing: -0.5px">{{t:lo_que_hacemos.h3_2}}</h3>
+        <p style="margin: 0; color: #33373D; font-size: 16px">{{t:lo_que_hacemos.p_4}}</p>
+      </div>
+      <div style="background: #FFFFFF; border-top: 8px solid #5B6068; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 10px">
+        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #5B6068">{{t:lo_que_hacemos.p_5}}</p>
+        <h3 style="margin: 0; font-weight: 700; font-size: clamp(24px, 2.6vw, 28px); line-height: 1.1; letter-spacing: -0.5px">{{t:lo_que_hacemos.h3_3}}</h3>
+        <p style="margin: 0; color: #33373D; font-size: 16px">{{t:lo_que_hacemos.p_6}}</p>
+      </div>
+      <div style="background: #FFFFFF; border-top: 8px solid #C68A2E; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 10px">
+        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #5B6068">{{t:lo_que_hacemos.p_7}}</p>
+        <h3 style="margin: 0; font-weight: 700; font-size: clamp(24px, 2.6vw, 28px); line-height: 1.1; letter-spacing: -0.5px">{{t:lo_que_hacemos.h3_4}}</h3>
+        <p style="margin: 0; color: #33373D; font-size: 16px">{{t:lo_que_hacemos.p_8}}</p>
+      </div>
+    </div>
+    <p style="margin: 0; display: flex; gap: 12px; align-items: flex-start; max-width: 860px; font-size: clamp(17px, 1.8vw, 19px); color: #33373D"><span aria-hidden="true" style="width: 12px; height: 12px; margin-top: 7px; background: #C68A2E; flex: none"></span><span>{{t:lo_que_hacemos.span_3}}</span></p>
+    <a href="servicios.html#instituciones" class="fh-card" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; background: #1E2227; color: #F2F1EC; text-decoration: none; padding: clamp(24px, 4vw, 36px)">
+      <span style="display: flex; flex-direction: column; gap: 8px; flex: 999 1 420px; min-width: 0">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E0A848">{{t:lo_que_hacemos.span_4}}</span>
+        <span style="font-weight: 700; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; letter-spacing: -0.5px">{{t:lo_que_hacemos.span_5}}</span>
+        <span style="color: #D3D6DA; font-size: 16px">{{t:lo_que_hacemos.span_6}}</span>
+      </span>
+      <span style="flex: 1 1 auto; font-weight: 700; color: #5FB89C">{{t:lo_que_hacemos.span_7}}</span>
+    </a>
+  </section>
+
+  <section style="background: #FFFFFF; padding: clamp(56px, 8vw, 96px) 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
+      <h2 style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; color: #1E2227">
+        <span class="fh-edge-l" style="position: relative; font-weight: 700; font-size: clamp(56px, 10vw, 112px); line-height: 1; letter-spacing: -0.05em">{{t:mas_alla_de.span_1}}</span>
+        <span style="font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); letter-spacing: -0.5px; color: #1F6B57">{{t:mas_alla_de.span_2}}</span>
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; align-items: end">
+        <a class="fh-card" href="servicios.html" style="position: relative; isolation: isolate; overflow: hidden; height: 460px; background: #1E2227; color: #F2F1EC; text-decoration: none; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px">
+          <span aria-hidden="true" style="position: absolute; z-index: -1; right: 24px; top: 24px; bottom: 0; width: 64px; background: #2C3138"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #B9BDC3">{{t:mas_alla_de.span_3}}</span>
+          <span style="font-weight: 700; font-size: 32px; letter-spacing: -1px; line-height: 1">{{t:mas_alla_de.span_4}}</span>
+          <span style="font-size: 16px; color: #D3D6DA">{{t:mas_alla_de.span_5}}</span>
+        </a>
+        <a class="fh-card" href="servicios.html" style="position: relative; isolation: isolate; overflow: hidden; height: 400px; background: #1F6B57; color: #F2F1EC; text-decoration: none; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px">
+          <span aria-hidden="true" style="position: absolute; z-index: -1; right: 24px; top: 24px; bottom: 0; width: 64px; background: #24785F"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #CDE5DC">{{t:mas_alla_de.span_6}}</span>
+          <span style="font-weight: 700; font-size: 32px; letter-spacing: -1px; line-height: 1">{{t:mas_alla_de.span_7}}</span>
+          <span style="font-size: 16px; color: #E3EFEA">{{t:mas_alla_de.span_8}}</span>
+        </a>
+        <a class="fh-card" href="servicios.html" style="position: relative; isolation: isolate; overflow: hidden; height: 340px; background: #33393F; color: #F2F1EC; text-decoration: none; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px">
+          <span aria-hidden="true" style="position: absolute; z-index: -1; right: 24px; top: 24px; bottom: 0; width: 64px; background: #3D444B"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #B9BDC3">{{t:mas_alla_de.span_9}}</span>
+          <span style="font-weight: 700; font-size: 32px; letter-spacing: -1px; line-height: 1">{{t:mas_alla_de.span_10}}</span>
+          <span style="font-size: 16px; color: #D3D6DA">{{t:mas_alla_de.span_11}}</span>
+        </a>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <span aria-hidden="true" style="height: 28px; background: #C68A2E"></span>
+          <a class="fh-card" href="servicios.html" style="position: relative; isolation: isolate; overflow: hidden; height: 280px; background: #E4E2DB; color: #1E2227; text-decoration: none; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px">
+            <span aria-hidden="true" style="position: absolute; z-index: -1; right: 24px; top: 24px; bottom: 0; width: 64px; background: #D9D6CD"></span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B6068">{{t:mas_alla_de.span_12}}</span>
+            <span style="font-weight: 700; font-size: 32px; letter-spacing: -1px; line-height: 1">{{t:mas_alla_de.span_13}}</span>
+            <span style="font-size: 16px; color: #33373D">{{t:mas_alla_de.span_14}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; isolation: isolate; overflow: hidden; background: #1F6B57; color: #F2F1EC">
+    <img src="{{img:diagnostico_factor_h.foto_1}}" alt="" style="position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; opacity: 0.22; mix-blend-mode: luminosity">
+    <span aria-hidden="true" style="position: absolute; z-index: -1; right: -2%; top: 50%; transform: translateY(-50%); font-weight: 700; font-size: clamp(280px, 40vw, 560px); line-height: 0.7; letter-spacing: -0.06em; color: #24785F">{{t:diagnostico_factor_h.span_1}}</span>
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase"><span style="width: 10px; height: 10px; background: #E0A848"></span>{{t:diagnostico_factor_h.p_1}}</p>
+      <h2 style="margin: 0; font-weight: 700; font-size: clamp(36px, 6vw, 72px); line-height: 1; letter-spacing: -0.04em">{{t:diagnostico_factor_h.h2_1}}</h2>
+      <p style="margin: 0; max-width: 620px; font-size: clamp(18px, 2vw, 21px)">{{t:diagnostico_factor_h.p_2}}</p>
+      <a href="contacto.html" style="align-self: flex-start; margin-top: 12px; background: #F2F1EC; color: #1E2227; text-decoration: none; padding: 17px 26px; font-weight: 700">{{t:diagnostico_factor_h.a_1}}</a>
+    </div>
+  </section>
+
+  <section style="background: #1E2227; color: #F2F1EC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <h2 style="margin: 0; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); color: #5FB89C">{{t:por_que_nos.span_1}}</span>
+          <span style="font-weight: 700; font-size: clamp(56px, 9vw, 104px); line-height: 1; letter-spacing: -0.05em">{{t:por_que_nos.span_2}}</span>
+        </h2>
+        <p style="margin: 0">{{t:por_que_nos.p_1}}</p>
+        <p style="margin: 0">{{t:por_que_nos.p_2}}</p>
+      </div>
+      <figure style="flex: 1 1 360px; margin: 0">
+        <svg width="100%" viewBox="0 0 600 340" role="img" aria-label="{{a:por_que_nos.aria_1}}">
+          <line x1="40" y1="300" x2="560" y2="300" stroke="#B9BDC3" stroke-width="1"></line>
+          <rect x="50" y="31.2" width="36" height="268.8" fill="#F2F1EC"></rect>
+          <rect x="100" y="115.2" width="36" height="184.8" fill="#F2F1EC"></rect>
+          <rect x="150" y="160" width="36" height="140" fill="#F2F1EC"></rect>
+          <rect x="200" y="193.6" width="36" height="106.4" fill="#F2F1EC"></rect>
+          <rect x="250" y="221.6" width="36" height="78.4" fill="#F2F1EC"></rect>
+          <rect x="300" y="249.6" width="36" height="50.4" fill="#F2F1EC"></rect>
+          <rect x="350" y="260.8" width="36" height="39.2" fill="#E0A848"></rect>
+          <rect x="400" y="272" width="36" height="28" fill="#6B7178"></rect>
+          <rect x="450" y="283.2" width="36" height="16.8" fill="#6B7178"></rect>
+          <rect x="500" y="288.8" width="36" height="11.2" fill="#6B7178"></rect>
+          <line x1="18" y1="300" x2="560" y2="239" stroke="#5FB89C" stroke-width="2" stroke-dasharray="6 5"></line>
+          <text x="368" y="244" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#F2F1EC">h = 7</text>
+          <text x="40" y="328" font-family="JetBrains Mono, monospace" font-size="12" fill="#B9BDC3">Artículos ordenados de más a menos citados (ejemplo)</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: flex; flex-direction: column; gap: 32px">
+    <h2 style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px">
+      <span class="fh-edge-l" style="position: relative; font-weight: 700; font-size: clamp(56px, 10vw, 112px); line-height: 1; letter-spacing: -0.05em">{{t:2_horas_al.span_1}}</span>
+      <span style="font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); letter-spacing: -0.5px; color: #1F6B57">{{t:2_horas_al.span_2}}</span>
+    </h2>
+    <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px">
+      <li style="background: #FFFFFF; border-top: 6px solid #1E2227; padding: 28px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B6068">{{t:2_horas_al.span_3}}</span><strong style="font-size: 22px">{{t:2_horas_al.strong_1}}</strong><span style="color: #33373D; font-size: 16px">{{t:2_horas_al.span_4}}</span></li>
+      <li style="background: #FFFFFF; border-top: 6px solid #1F6B57; padding: 28px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B6068">{{t:2_horas_al.span_5}}</span><strong style="font-size: 22px">{{t:2_horas_al.strong_2}}</strong><span style="color: #33373D; font-size: 16px">{{t:2_horas_al.span_6}}</span></li>
+      <li style="background: #FFFFFF; border-top: 6px solid #C68A2E; padding: 28px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B6068">{{t:2_horas_al.span_7}}</span><strong style="font-size: 22px">{{t:2_horas_al.strong_3}}</strong><span style="color: #33373D; font-size: 16px">{{t:2_horas_al.span_8}}</span></li>
+    </ol>
+    <a href="como-trabajamos.html" style="font-weight: 600">{{t:2_horas_al.a_1}}</a>
+  </section>
+
+  <section style="position: relative; isolation: isolate; overflow: hidden; background: #1E2227; color: #F2F1EC">
+    <span aria-hidden="true" style="position: absolute; z-index: -1; left: -1%; top: -0.12em; font-weight: 700; font-size: clamp(200px, 30vw, 420px); line-height: 1; letter-spacing: -0.06em; color: #262B31; white-space: nowrap">{{t:confian_en_nosotros.span_1}}</span>
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 140px) 24px clamp(48px, 6vw, 72px); display: flex; flex-direction: column; gap: 32px">
+      <h2 style="margin: 0; font-weight: 400; font-size: clamp(26px, 3.4vw, 36px)">{{t:confian_en_nosotros.h2_1}} <strong style="font-weight: 700">{{t:confian_en_nosotros.strong_1}}</strong></h2>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 40px; ">
+        <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E0A848"><span style="width: 10px; height: 10px; background: #E0A848; flex: none"></span>{{t:confian_en_nosotros.p_1}}</p>
+        <img src="{{img:confian_en_nosotros.foto_1}}" alt="{{a:confian_en_nosotros.alt_1}}" style="height: clamp(56px, 7vw, 80px); width: auto; max-width: 100%">
+      </div>
+    </div>
+    <div class="fh-strip" role="region" aria-label="{{a:confian_en_nosotros.aria_1}}" style="background: #F2F1EC; color: #1E2227; overflow: hidden; padding: 26px 0">
+      <div class="fh-marquee">
+        <ul style="margin: 0; padding: 0 56px 0 0; list-style: none; display: flex; align-items: center; gap: 56px; font-weight: 600; font-size: 20px; white-space: nowrap">
+          <li>{{t:confian_en_nosotros.li_1}}</li><li aria-hidden="true" style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_2}}</li><li aria-hidden="true" style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_3}}</li><li aria-hidden="true" style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_4}}</li><li aria-hidden="true" style="width: 10px; height: 10px; background: #C68A2E"></li>
+        </ul>
+        <ul aria-hidden="true" style="margin: 0; padding: 0 56px 0 0; list-style: none; display: flex; align-items: center; gap: 56px; font-weight: 600; font-size: 20px; white-space: nowrap">
+          <li>{{t:confian_en_nosotros.li_1}}</li><li style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_2}}</li><li style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_3}}</li><li style="width: 10px; height: 10px; background: #C68A2E"></li>
+          <li>{{t:confian_en_nosotros.li_4}}</li><li style="width: 10px; height: 10px; background: #C68A2E"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: flex; flex-direction: column; gap: 32px">
+    <h2 style="margin: 0; font-weight: 700; font-size: clamp(28px, 4vw, 40px); letter-spacing: -1px; line-height: 1.1">{{t:quienes_somos.h2_1}}</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 32px">
+      <div style="display: flex; gap: 20px; align-items: flex-start">
+        <img src="{{img:quienes_somos.foto_1}}" alt="" style="width: 96px; height: 120px; flex: none; object-fit: cover; object-position: 50% 15%; background: #E4E2DB">
+        <div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 20px">{{t:quienes_somos.strong_1}}</strong><span style="font-size: 16px; color: #33373D">{{t:quienes_somos.span_1}}</span></div>
+      </div>
+      <div style="display: flex; gap: 20px; align-items: flex-start">
+        <img src="{{img:quienes_somos.foto_2}}" alt="" style="width: 96px; height: 120px; flex: none; object-fit: cover; object-position: 50% 15%; background: #E4E2DB">
+        <div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 20px">{{t:quienes_somos.strong_2}}</strong><span style="font-size: 16px; color: #33373D">{{t:quienes_somos.span_2}}</span></div>
+      </div>
+    </div>
+    <a href="nosotros.html" style="font-weight: 600">{{t:quienes_somos.a_1}}</a>
+  </section>
+
+  <footer style="background: #1E2227; color: #F2F1EC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 40px; display: flex; flex-direction: column; gap: 24px">
+      <p style="margin: 0; font-weight: 700; font-size: clamp(40px, 7vw, 80px); line-height: 1; letter-spacing: -0.04em; max-width: 900px">{{t:site.pie.p_1|<span class="fh-edge" style="--bar: #E0A848; white-space: nowrap">}}</p>
+      <a href="contacto.html" style="align-self: flex-start; background: #5FB89C; color: #1E2227; text-decoration: none; padding: 17px 26px; font-weight: 700">{{t:site.pie.a_1}}</a>
+      <div style="height: 1px; background: #3A4048; margin-top: 32px"></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><rect x="12" y="8" width="20" height="84" fill="#F2F1EC"></rect><rect x="32" y="52" width="36" height="14" fill="#F2F1EC"></rect><rect x="68" y="38" width="20" height="54" fill="#5FB89C"></rect><rect x="68" y="22" width="20" height="12" fill="#E0A848"></rect></svg>
+            <span style="font-weight: 600; font-size: 24px; letter-spacing: -1px">{{t:site.pie.span_1}}</span>
+          </div>
+          <span style="font-size: 14px; color: #B9BDC3">{{t:site.pie.span_2}}</span>
+        </div>
+        <nav aria-label="{{a:site.pie.aria_1}}" style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px">
+          <a href="servicios.html" style="color: #F2F1EC">{{t:site.pie.a_2}}</a>
+          <a href="como-trabajamos.html" style="color: #F2F1EC">{{t:site.pie.a_3}}</a>
+          <a href="nosotros.html" style="color: #F2F1EC">{{t:site.pie.a_4}}</a>
+          <a href="contacto.html" style="color: #F2F1EC">{{t:site.pie.a_5}}</a>
+          <a href="politica-datos.html" style="color: #F2F1EC">{{t:site.pie.a_6}}</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+          <a href="mailto:{{a:site.datos.correo}}" style="color: #F2F1EC">{{a:site.datos.correo}}</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+google:
+  descripcion: Escríbenos para conversar 20 minutos sobre tus pacientes y tu presencia digital.
+  titulo: Factor H, contacto
+conversemos_sobre_tus:
+  p_1: Contacto
+  h1_1: Conversemos sobre tus pacientes.
+  p_2: Cuéntanos en qué estás y te respondemos en un día hábil para agendar una conversación de 20 minutos.
+  span_1: '**Correo:** contacto@factorh.co'
+  span_2: '**Atendemos:** toda Colombia, presencial y remoto'
+  h2_1: Gracias. Recibimos tu mensaje.
+  p_3: Te escribiremos en un día hábil para agendar la conversación.
+  a_1: Volver al inicio
+  label_1: Escribes como
+  option_1: Profesional de la salud
+  option_2: IPS, clínica o grupo de práctica
+  option_3: Empresa o asociación del sector salud
+  label_2: Nombre completo
+  label_3: Especialidad o entidad
+  label_4: Ciudad
+  label_5: Correo
+  label_6: Teléfono o WhatsApp
+  label_7: Qué buscas
+  option_4: Más pacientes, y los indicados
+  option_5: Más reconocimiento entre colegas y medios
+  option_6: Las dos
+  option_7: Aún no lo sé
+  label_8: Qué te interesa
+  option_8: Diagnóstico Factor H
+  option_9: Redes sociales y contenidos (Presencia digital)
+  option_10: Sitio web
+  option_11: Trayectoria
+  option_12: Vocería
+  option_13: Impacto
+  label_9: Mensaje (opcional)
+  span_3: Autorizo a Factor H Comunicaciones S.A.S. a tratar mis datos personales para responder esta solicitud, según su
+  a_2: política de tratamiento de datos
+  span_4: y la Ley 1581 de 2012.
+  p_4: No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a contacto@factorh.co.
+  button_1: Enviar solicitud

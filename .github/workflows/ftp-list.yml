@@ -1,0 +1,20 @@
+# Manual, read-only: lists the folders the FTP login sees (to set the upload folder).
+name: Ver carpetas FTP
+on: workflow_dispatch
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Listar
+        env:
+          H: ${{ secrets.FTP_SERVER }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          H="${H#ftp://}"; H="${H%/}"
+          ftp() { curl -sS -k --ssl-reqd --user "$U:$P" "$@"; }
+          echo "== pwd"; ftp "ftp://$H/" -Q "PWD" -o /dev/null -v 2>&1 | grep -E '^< (257|220)' || true
+          # %2F makes a path absolute (from the FTP root) instead of relative to the login folder.
+          for d in "" "%2F" "%2Fpublic_html/" "%2Fdomains/" "%2Fdomains/factorh.co/public_html/"; do
+            echo "== $d"; ftp "ftp://$H/$d" || echo "(no se puede listar)"
+          done

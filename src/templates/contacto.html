@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{a:google.descripcion}}">
+<link rel="canonical" href="https://factorh.co/contacto.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1E2227">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Factor H">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="{{a:google.titulo}}">
+<meta property="og:description" content="{{a:google.descripcion}}">
+<meta property="og:url" content="https://factorh.co/contacto.html">
+<meta property="og:image" content="https://factorh.co/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>{{t:google.titulo}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F6B57}a:hover{color:#1E2227}
+</style>
+<style>html,body{background:#F2F1EC}html{scroll-behavior:smooth}</style>
+<link rel="stylesheet" href="assets/anim.css">
+<script src="assets/anim.js" defer></script>
+</head>
+<body>
+<div style="background: #F2F1EC; color: #1E2227; font-family: 'Instrument Sans', sans-serif; font-size: 17px; line-height: 1.55; overflow-x: hidden; overflow-wrap: break-word">
+
+  <header style="border-bottom: 1px solid #D6D4CC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="index.html" aria-label="{{a:site.menu.aria_1}}" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1E2227">
+        <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><rect x="12" y="8" width="20" height="84" fill="#1E2227"></rect><rect x="32" y="52" width="36" height="14" fill="#1E2227"></rect><rect x="68" y="38" width="20" height="54" fill="#1F6B57"></rect><rect x="68" y="22" width="20" height="12" fill="#C68A2E"></rect></svg>
+        <span style="font-weight: 600; font-size: 24px; letter-spacing: -1px">{{t:site.menu.span_1}}</span>
+      </a>
+      <nav aria-label="{{a:site.menu.aria_2}}" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px">
+        <a href="servicios.html" style="color: #1E2227; text-decoration: none">{{t:site.menu.a_1}}</a>
+        <a href="como-trabajamos.html" style="color: #1E2227; text-decoration: none">{{t:site.menu.a_2}}</a>
+        <a href="nosotros.html" style="color: #1E2227; text-decoration: none">{{t:site.menu.a_3}}</a>
+        <a href="contacto.html" aria-current="page" style="background: #1F6B57; color: #FFFFFF; text-decoration: none; padding: 12px 18px; font-weight: 600">{{t:site.menu.a_4}}</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 48px">
+    <div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #5B6068">{{t:conversemos_sobre_tus.p_1}}</p>
+      <h1 style="margin: 0; font-weight: 600; font-size: clamp(32px, 6vw, 48px); line-height: 1.05; letter-spacing: -2px">{{t:conversemos_sobre_tus.h1_1}}</h1>
+      <p style="margin: 0; color: #33373D">{{t:conversemos_sobre_tus.p_2}}</p>
+      <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 16px; font-size: 16px">
+        <span>{{t:conversemos_sobre_tus.span_1}}</span>
+        <span>{{t:conversemos_sobre_tus.span_2}}</span>
+      </div>
+    </div>
+
+    <div style="flex: 999 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #D6D4CC; padding: clamp(20px, 4vw, 36px)">
+      <div id="fh-sent" hidden>
+        <div role="status" style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-weight: 600; font-size: 28px">{{t:conversemos_sobre_tus.h2_1}}</h2>
+          <p style="margin: 0; color: #33373D">{{t:conversemos_sobre_tus.p_3}}</p>
+          <a href="index.html" style="font-weight: 600">{{t:conversemos_sobre_tus.a_1}}</a>
+        </div>
+      </div>
+      <div id="fh-form">
+        <form id="fh-contact" action="enviar.php" method="post" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px">
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; grid-column: 1 / -1">{{t:conversemos_sobre_tus.label_1}}
+            <select name="tipo" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px">
+              <option>{{t:conversemos_sobre_tus.option_1}}</option>
+              <option>{{t:conversemos_sobre_tus.option_2}}</option>
+              <option>{{t:conversemos_sobre_tus.option_3}}</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; grid-column: 1 / -1">{{t:conversemos_sobre_tus.label_2}}
+            <input type="text" name="nombre" required autocomplete="name" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px; box-sizing: border-box">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500">{{t:conversemos_sobre_tus.label_3}}
+            <input type="text" name="especialidad" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px; box-sizing: border-box">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500">{{t:conversemos_sobre_tus.label_4}}
+            <input type="text" name="ciudad" autocomplete="address-level2" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px; box-sizing: border-box">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500">{{t:conversemos_sobre_tus.label_5}}
+            <input type="email" name="correo" required autocomplete="email" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px; box-sizing: border-box">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500">{{t:conversemos_sobre_tus.label_6}}
+            <input type="tel" name="telefono" autocomplete="tel" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px; box-sizing: border-box">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; grid-column: 1 / -1">{{t:conversemos_sobre_tus.label_7}}
+            <select name="meta" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px">
+              <option>{{t:conversemos_sobre_tus.option_4}}</option>
+              <option>{{t:conversemos_sobre_tus.option_5}}</option>
+              <option>{{t:conversemos_sobre_tus.option_6}}</option>
+              <option>{{t:conversemos_sobre_tus.option_7}}</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; grid-column: 1 / -1">{{t:conversemos_sobre_tus.label_8}}
+            <select name="interes" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; min-height: 44px">
+              <option>{{t:conversemos_sobre_tus.option_8}}</option>
+              <option>{{t:conversemos_sobre_tus.option_9}}</option>
+              <option>{{t:conversemos_sobre_tus.option_10}}</option>
+              <option>{{t:conversemos_sobre_tus.option_11}}</option>
+              <option>{{t:conversemos_sobre_tus.option_12}}</option>
+              <option>{{t:conversemos_sobre_tus.option_13}}</option>
+              <option>{{t:conversemos_sobre_tus.option_7}}</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; grid-column: 1 / -1">{{t:conversemos_sobre_tus.label_9}}
+            <textarea name="mensaje" rows="4" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #8A8F96; background: #FFFFFF; resize: vertical"></textarea>
+          </label>
+          <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #33373D; grid-column: 1 / -1">
+            <input type="checkbox" name="autorizacion" value="si" required style="width: 20px; height: 20px; margin-top: 2px; flex: none">
+            <span>{{t:conversemos_sobre_tus.span_3}} <a href="politica-datos.html">{{t:conversemos_sobre_tus.a_2}}</a> {{t:conversemos_sobre_tus.span_4}}</span>
+          </label>
+          <div style="grid-column: 1 / -1">
+            <p id="fh-error" hidden role="alert" style="margin: 0 0 12px; color: #A33A2A">{{t:conversemos_sobre_tus.p_4}}</p>
+            <input type="text" name="sitio_web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px">
+            <button type="submit" style="font: inherit; font-weight: 600; background: #1F6B57; color: #FFFFFF; border: 0; padding: 16px 28px; min-height: 48px; cursor: pointer">{{t:conversemos_sobre_tus.button_1}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #1E2227; color: #F2F1EC">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><rect x="12" y="8" width="20" height="84" fill="#F2F1EC"></rect><rect x="32" y="52" width="36" height="14" fill="#F2F1EC"></rect><rect x="68" y="38" width="20" height="54" fill="#5FB89C"></rect><rect x="68" y="22" width="20" height="12" fill="#E0A848"></rect></svg>
+          <span style="font-weight: 600; font-size: 24px; letter-spacing: -1px">{{t:site.pie.span_1}}</span>
+        </div>
+        <span>{{t:site.pie.span_3}}</span>
+        <span style="font-size: 14px; color: #B9BDC3">{{t:site.pie.span_2}}</span>
+      </div>
+      <nav aria-label="{{a:site.pie.aria_1}}" style="display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+        <a href="servicios.html" style="color: #F2F1EC">{{t:site.pie.a_2}}</a>
+        <a href="como-trabajamos.html" style="color: #F2F1EC">{{t:site.pie.a_3}}</a>
+        <a href="nosotros.html" style="color: #F2F1EC">{{t:site.pie.a_4}}</a>
+        <a href="politica-datos.html" style="color: #F2F1EC">{{t:site.pie.a_6}}</a>
+      </nav>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+        <a href="contacto.html" style="color: #F2F1EC">{{t:site.pie.a_5}}</a>
+        <a href="mailto:{{a:site.datos.correo}}" style="color: #F2F1EC">{{a:site.datos.correo}}</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('fh-contact'); if(!form) return;
+  var err=document.getElementById('fh-error');
+  form.addEventListener('submit',function(e){
+    e.preventDefault(); err.hidden=true;
+    if(!form.reportValidity()) return;
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Enviando...';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json().catch(function(){return {ok:false};});})
+      .then(function(d){ if(d&&d.ok){document.getElementById('fh-form').hidden=true;document.getElementById('fh-sent').hidden=false;window.scrollTo({top:0,behavior:'smooth'});} else {throw 0;} })
+      .catch(function(){err.hidden=false;btn.disabled=false;btn.textContent='Enviar solicitud';});
+  });
+  if(location.search.indexOf('enviado=1')>-1){document.getElementById('fh-form').hidden=true;document.getElementById('fh-sent').hidden=false;}
+})();
+</script></body>
+</html>

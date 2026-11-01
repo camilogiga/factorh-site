@@ -1,0 +1,25 @@
+google:
+  descripcion: Factor H es una firma colombiana de comunicaciones dedicada solo a la salud, fundada por Camilo Giraldo Gallo y Rina Díaz Sánchez.
+  titulo: Factor H, nosotros
+una_firma_de:
+  p_1: Nosotros
+  h1_1: Una firma de comunicaciones dedicada solo a la salud.
+  p_2: Los pacientes eligen a su médico por confianza, y hoy esa confianza empieza en Google y en redes. Creamos Factor H para que los profesionales de la salud lleguen a los pacientes indicados, con la misma seriedad con la que tratan su práctica.
+camilo_giraldo_gallo:
+  foto_1: img/camilo.jpg
+  alt_1: Camilo Giraldo Gallo
+  h2_1: Camilo Giraldo Gallo
+  p_1: Socio fundador
+  p_2: Consultor de comunicaciones con 15 años de trayectoria en Colombia y Estados Unidos. Magíster en Comunicación de Masas de la Universidad de la Florida y fundador de GO Global Media.
+  foto_2: img/rina.jpg
+  alt_2: Rina Díaz Sánchez
+  h2_2: Rina Díaz Sánchez
+  p_3: Socia fundadora
+  p_4: Abogada, coach profesional y especialista con enfoque de género, con más de 15 años de experiencia en política pública, gobierno, tercer sector y comunicaciones.
+foto_del_equipo:
+  foto_1: img/mj06-equipo.jpg
+por_que_nos:
+  aria_1: Símbolo de Factor H
+  h2_1: Por qué nos llamamos Factor H
+  p_1: 'El índice h mide el impacto de un investigador según cuántas veces citan sus trabajos. Cualquier médico con formación académica lo reconoce: es prestigio validado por pares.'
+  p_2: 'Nuestro símbolo es esa gráfica: el tallo alto son los trabajos más citados, el tallo bajo es la curva que desciende y el cuadro ámbar es el punto h. Así entendemos nuestro oficio: confianza que se acumula con constancia y con respaldo.'

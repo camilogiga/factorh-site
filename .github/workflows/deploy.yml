@@ -1,0 +1,48 @@
+# Builds the site and uploads it to Hostinger on every change to main
+# (including edits saved in the Pages CMS editor).
+name: Publicar en Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      HAS_FTP: ${{ secrets.FTP_SERVER != '' }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Construir las páginas
+        run: |
+          pip install pyyaml
+          python3 src/build.py
+
+      - name: Faltan los datos de FTP
+        if: env.HAS_FTP != 'true'
+        run: |
+          echo "::warning::El sitio se construyó pero no se publicó. Agrega los secretos FTP_SERVER, FTP_USERNAME y FTP_PASSWORD (ver README)."
+
+      - name: Subir a Hostinger
+        if: env.HAS_FTP == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./site/
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/domains/factorh.co/public_html/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**

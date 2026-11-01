@@ -1,0 +1,95 @@
+google:
+  descripcion: Factor H maneja las redes sociales, los contenidos y la estrategia digital de médicos y profesionales de la salud en Colombia, para que los encuentren los pacientes indicados.
+  titulo: Factor H · Pacientes indicados, con respaldo.
+que_te_encuentren:
+  p_1: Pacientes indicados, con respaldo.
+  h1_1: Que te encuentren los pacientes [[indicados.]]
+  p_2: Manejamos las redes sociales, los contenidos y la estrategia digital de médicos y profesionales de la salud, para que te lleguen más pacientes y los que mejor puedes atender. Tú hablas y apruebas; nosotros hacemos el resto.
+  a_1: Solicitar un Diagnóstico Factor H
+  a_2: Ver servicios
+  foto_1: img/mj01-portada.jpg
+tus_pacientes_ya:
+  h2_1: Tus pacientes ya te están buscando en Google y en redes. La pregunta es qué encuentran.
+  p_1: Factor H es una consultora colombiana dedicada **solo a la salud**. Trabajamos como un colega que entiende la medicina y sus límites éticos, y que además sabe de redes, contenidos y estrategia digital.
+lo_que_hacemos:
+  span_1: Lo que hacemos
+  span_2: para que lleguen los pacientes indicados
+  p_1: '01'
+  h3_1: Redes sociales
+  p_2: Estrategia y gestión de todas tus redes, con publicaciones constantes y una comunidad bien atendida.
+  p_3: '02'
+  h3_2: Contenidos en tu voz
+  p_4: Videos, publicaciones y artículos que responden lo que tus pacientes preguntan antes de consultar.
+  p_5: '03'
+  h3_3: Google y sitio web
+  p_6: Que aparezcas cuando buscan tu especialidad en tu ciudad, con un sitio listo en menos de una semana.
+  p_7: '04'
+  h3_4: Pauta y medición
+  p_8: Pauta con criterio ético e informe mensual de cómo te llegan los pacientes.
+  span_3: 'Pacientes indicados, no volumen a cualquier precio. Cuidamos la ética médica: sin promesas de resultados, sin precios como gancho y sin testimonios de pacientes sin su autorización.'
+  span_4: Para todo el ecosistema de salud
+  span_5: IPS, clínicas, MedTech y empresas del sector
+  span_6: Contamos la historia de la institución y la de sus especialistas, con el mismo rigor.
+  span_7: Ver cómo trabajamos con instituciones
+mas_alla_de:
+  span_1: Más allá
+  span_2: de las redes, cuando lo necesites
+  span_3: '01'
+  span_4: Presencia digital
+  span_5: 'El programa central: redes, contenidos, Google, sitio web y pauta.'
+  span_6: '02'
+  span_7: Trayectoria
+  span_8: La narrativa y los mensajes de los que salen todos tus contenidos.
+  span_9: '03'
+  span_10: Vocería
+  span_11: Media training, entrevistas y columnas de opinión.
+  span_12: '04'
+  span_13: Impacto
+  span_14: Publicaciones, congresos y postulaciones a premios.
+diagnostico_factor_h:
+  foto_1: img/mj07-textura.jpg
+  span_1: h
+  p_1: Por dónde empezar · 3 semanas
+  h2_1: Diagnóstico Factor H
+  p_2: Sabrás cómo te encuentran hoy los pacientes, qué ven cuando buscan tu especialidad en tu ciudad, cómo te comparas con colegas, qué riesgos éticos tiene lo que publicas y qué hacer en los próximos seis meses.
+  a_1: Solicitar diagnóstico
+por_que_nos:
+  span_1: por qué nos llamamos
+  span_2: Factor h
+  p_1: 'El índice h mide el impacto de un investigador: cuántos de sus trabajos han sido citados al menos ese mismo número de veces. Es prestigio validado por pares, no autoproclamado.'
+  p_2: 'Nuestro símbolo es esa gráfica convertida en H. Así entendemos la confianza de un paciente: se acumula con constancia, se apoya en hechos y la confirman otros.'
+  aria_1: Gráfica ilustrativa de citas por artículo en orden descendente; el índice h es 7
+2_horas_al:
+  span_1: 2 horas
+  span_2: al mes es lo que te pedimos
+  span_3: '01'
+  strong_1: Escuchamos
+  span_4: Una sesión de 90 minutos para conocer tu historia, tus posiciones y lo que no quieres publicar.
+  span_5: '02'
+  strong_2: Escribimos en tu voz
+  span_6: Dos reuniones de 30 minutos al mes se convierten en contenido que suena a ti.
+  span_7: '03'
+  strong_3: Tú apruebas
+  span_8: Nada se publica sin tu visto bueno. Revisas por WhatsApp y nosotros publicamos.
+  a_1: Conoce el proceso y nuestro marco ético
+confian_en_nosotros:
+  span_1: respaldo
+  h2_1: Confían en
+  strong_1: nosotros
+  p_1: Trabajamos con
+  foto_1: img/acc-white.png
+  alt_1: Asociación Colombiana de Coloproctología
+  aria_1: Clientes
+  li_1: Asociación Colombiana de Coloproctología
+  li_2: Dr. Antonio Caycedo-Marulanda
+  li_3: Dr. David R. Baquero Z.
+  li_4: Dra. Eliana Cortés
+quienes_somos:
+  h2_1: Quiénes somos
+  foto_1: img/camilo.jpg
+  strong_1: Camilo Giraldo Gallo
+  span_1: Consultor de comunicaciones con 15 años de trayectoria en Colombia y Estados Unidos. Magíster en Comunicación de Masas de la Universidad de la Florida.
+  foto_2: img/rina.jpg
+  strong_2: Rina Díaz Sánchez
+  span_2: Abogada y coach profesional, con más de 15 años de experiencia en política pública, gobierno, tercer sector y comunicaciones.
+  a_1: Conoce al equipo
