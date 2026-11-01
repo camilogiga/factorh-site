@@ -39,6 +39,17 @@ Opcionales, como *variables* en la misma página:
 
 Nunca pongas contraseñas en los archivos del repositorio; van solo en los secrets.
 
+**Correo del formulario (para que no llegue a spam).** El formulario envía con la cuenta contacto@factorh.co por el servidor de correo de Hostinger, así sale firmado. Necesita la contraseña de ese buzón en un archivo que **no** está en este repositorio:
+
+1. En hPanel → Administrador de archivos, sube un nivel desde `public_html` (a la carpeta donde están `public_html` y `DO_NOT_UPLOAD_HERE`).
+2. Crea ahí el archivo `smtp-config.php` con este contenido, cambiando la contraseña:
+
+```php
+<?php return ['usuario' => 'contacto@factorh.co', 'clave' => 'LA_CONTRASEÑA_DEL_BUZÓN'];
+```
+
+Si el archivo no existe, el formulario sigue funcionando con el envío básico del servidor, que suele caer en spam. Si cambias la contraseña del buzón, cámbiala también en ese archivo.
+
 **Editor.** La primera vez que abras app.pagescms.org te pide instalar su app de GitHub. Autorízala para este repositorio.
 
 ## Cómo está hecho

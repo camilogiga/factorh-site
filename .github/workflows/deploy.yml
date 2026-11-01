@@ -46,3 +46,4 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/smtp-config.php
