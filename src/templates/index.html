@@ -34,6 +34,16 @@ a{color:#1F6B57}a:hover{color:#1E2227}
 @keyframes fhm{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.fh-marquee{animation:none}.fh-card,.fh-photo{transition:none}}
 @media (max-width: 700px){.fh-edge::after{display:none}}
+.fh-car-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px;outline-offset:4px}
+.fh-car-track::-webkit-scrollbar{display:none}
+.fh-car-item{flex:none;margin:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px}
+.fh-car-item img{display:block;height:clamp(260px,34vw,400px);width:auto;max-width:82vw;object-fit:cover;background:#E4E2DB}
+.fh-car-item figcaption{font-size:14px;color:#5B6068;max-width:300px}
+.fh-car-nav{display:flex;gap:8px;margin-top:16px}
+.fh-car-nav button{width:48px;height:48px;border:1px solid #1E2227;background:transparent;color:#1E2227;font-size:20px;cursor:pointer;font-family:inherit}
+.fh-car-nav button:hover{background:#1E2227;color:#F2F1EC}
+.fh-car-nav button:disabled{opacity:.3;cursor:default;background:transparent;color:#1E2227}
+@media (prefers-reduced-motion: reduce){.fh-car-track{scroll-behavior:auto}}
 .fh-hero-photo{position:absolute;z-index:-2;top:0;right:0;bottom:0;width:50%}
 .fh-hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 25%;display:block}
 .fh-hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1E2227 0%,rgba(30,34,39,.55) 30%,rgba(30,34,39,0) 60%),linear-gradient(0deg,#1E2227 0%,rgba(30,34,39,0) 25%)}
@@ -254,6 +264,22 @@ a{color:#1F6B57}a:hover{color:#1E2227}
 
   <section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: flex; flex-direction: column; gap: 32px">
     <h2 style="margin: 0; font-weight: 700; font-size: clamp(28px, 4vw, 40px); letter-spacing: -1px; line-height: 1.1">{{t:quienes_somos.h2_1}}</h2>
+    <div class="fh-carousel" role="region" aria-roledescription="carrusel" aria-label="{{a:quienes_somos.aria_1}}">
+      <div class="fh-car-track" tabindex="0">
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_3}}" alt="{{a:quienes_somos.alt_3}}" width="1200" height="800" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_3}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_4}}" alt="{{a:quienes_somos.alt_4}}" width="900" height="1200" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_4}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_5}}" alt="{{a:quienes_somos.alt_5}}" width="864" height="1080" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_5}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_6}}" alt="{{a:quienes_somos.alt_6}}" width="1200" height="800" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_6}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_7}}" alt="{{a:quienes_somos.alt_7}}" width="864" height="1080" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_7}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_8}}" alt="{{a:quienes_somos.alt_8}}" width="900" height="1200" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_8}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_9}}" alt="{{a:quienes_somos.alt_9}}" width="1200" height="800" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_9}}</figcaption></figure>
+        <figure class="fh-car-item"><img src="{{img:quienes_somos.foto_10}}" alt="{{a:quienes_somos.alt_10}}" width="1620" height="1080" loading="lazy"><figcaption>{{t:quienes_somos.figcaption_10}}</figcaption></figure>
+      </div>
+      <div class="fh-car-nav">
+        <button type="button" class="fh-car-prev" aria-label="{{a:quienes_somos.aria_2}}">&larr;</button>
+        <button type="button" class="fh-car-next" aria-label="{{a:quienes_somos.aria_3}}">&rarr;</button>
+      </div>
+    </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 32px">
       <div style="display: flex; gap: 20px; align-items: flex-start">
         <img src="{{img:quienes_somos.foto_1}}" alt="" style="width: 96px; height: 120px; flex: none; object-fit: cover; object-position: 50% 15%; background: #E4E2DB">

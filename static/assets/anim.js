@@ -1,3 +1,18 @@
+// Photo carousels: arrow buttons scroll the track by most of its width.
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.fh-carousel').forEach(function(c){
+    var track = c.querySelector('.fh-car-track'), prev = c.querySelector('.fh-car-prev'), next = c.querySelector('.fh-car-next');
+    if (!track || !prev || !next) return;
+    function update(){ prev.disabled = track.scrollLeft < 4; next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4; }
+    prev.addEventListener('click', function(){ track.scrollBy({ left: -track.clientWidth * 0.8 }); });
+    next.addEventListener('click', function(){ track.scrollBy({ left: track.clientWidth * 0.8 }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+    update();
+  });
+});
+
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!('IntersectionObserver' in window)) return;
@@ -21,7 +36,7 @@
   sections.forEach(function(sec){
     if (sec === hero || sec.tagName === 'HEADER') return;
     sec.querySelectorAll(sel).forEach(function(el){
-      if (el.closest('header,nav,.fh-marquee,.fh-strip,[hidden]')) return;
+      if (el.closest('header,nav,.fh-marquee,.fh-strip,.fh-carousel,[hidden]')) return;
       if (el.closest('.fh-hero-photo')) return;
       for (var i = 0; i < picked.length; i++) if (picked[i].contains(el)) return;
       picked.push(el);
