@@ -267,13 +267,16 @@ content:
       label: 'Elemento de lista: Asociación Colombiana de Coloproctología'
       type: string
     - name: li_2
-      label: 'Elemento de lista: Dr. Antonio Caycedo-Marulanda'
+      label: 'Elemento de lista: Asociación Colombiana de Endoscopia Digestiva (ACED)'
       type: string
     - name: li_3
       label: 'Elemento de lista: Dr. David R. Baquero Z.'
       type: string
     - name: li_4
       label: 'Elemento de lista: Dra. Eliana Cortés'
+      type: string
+    - name: li_5
+      label: 'Elemento de lista: Dra. Ángela Ortiz, Deportiz'
       type: string
   - name: quienes_somos
     label: 'Sección: Quiénes somos'
