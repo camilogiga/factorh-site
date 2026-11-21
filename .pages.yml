@@ -267,7 +267,7 @@ content:
       label: 'Elemento de lista: Asociación Colombiana de Coloproctología'
       type: string
     - name: li_2
-      label: 'Elemento de lista: Dr. Antonio Caycedo-Marulanda'
+      label: 'Elemento de lista: Asociación Colombiana de Endoscopia Digestiva (ACED)'
       type: string
     - name: li_3
       label: 'Elemento de lista: Dr. David R. Baquero Z.'
