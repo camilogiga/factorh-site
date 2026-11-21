@@ -86,6 +86,33 @@ confian_en_nosotros:
   li_4: Dra. Eliana Cortés
 quienes_somos:
   h2_1: Quiénes somos
+  aria_1: Fotos de Camilo y Rina trabajando
+  aria_2: Foto anterior
+  aria_3: Foto siguiente
+  foto_3: img/camilo-y-rina.jpg
+  alt_3: Camilo Giraldo Gallo y Rina Díaz Sánchez sonríen juntos durante un evento.
+  figcaption_3: Camilo y Rina, socios fundadores.
+  foto_4: img/accion-podcast-camara.jpg
+  alt_4: Cámara en primer plano durante la grabación de un episodio de podcast con dos especialistas.
+  figcaption_4: Grabación del podcast de Asocoloprocto.
+  foto_5: img/rina-endotour.jpg
+  alt_5: Rina Díaz Sánchez sonríe durante un evento.
+  figcaption_5: Rina Díaz Sánchez, socia fundadora.
+  foto_6: img/accion-aced-podio.jpg
+  alt_6: Rina Díaz Sánchez graba con su teléfono una conferencia en el Endotour 2026.
+  figcaption_6: Cobertura en vivo del Endotour 2026.
+  foto_7: img/camilo-retrato.jpg
+  alt_7: Camilo Giraldo Gallo sonríe con camisa de rayas.
+  figcaption_7: Camilo Giraldo Gallo, socio fundador.
+  foto_8: img/accion-podcast-set.jpg
+  alt_8: Dos especialistas conversan en el set del podcast de Asocoloprocto.
+  figcaption_8: En el set del podcast de Asocoloprocto.
+  foto_9: img/accion-aced-auditorio.jpg
+  alt_9: Rina Díaz Sánchez graba de pie entre el público del auditorio del Endotour 2026.
+  figcaption_9: Contenido para redes desde el auditorio.
+  foto_10: img/rina-aro-de-luz.jpg
+  alt_10: Silueta de Rina Díaz Sánchez junto a un aro de luz frente a una pared de hojas.
+  figcaption_10: Preparando una grabación.
   foto_1: img/camilo.jpg
   strong_1: Camilo Giraldo Gallo
   span_1: Consultor de comunicaciones con 15 años de trayectoria en Colombia y Estados Unidos. Magíster en Comunicación de Masas de la Universidad de la Florida.

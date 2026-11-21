@@ -282,6 +282,87 @@ content:
     - name: h2_1
       label: 'Título de sección: Quiénes somos'
       type: string
+    - name: aria_1
+      label: 'Nombre para lectores de pantalla: Fotos de Camilo y Rina trabajando'
+      type: string
+    - name: aria_2
+      label: 'Nombre para lectores de pantalla: Foto anterior'
+      type: string
+    - name: aria_3
+      label: 'Nombre para lectores de pantalla: Foto siguiente'
+      type: string
+    - name: foto_3
+      label: 'Foto: camilo-y-rina.jpg'
+      type: image
+    - name: alt_3
+      label: 'Descripción de la foto (Google y lectores de pantalla): Camilo Giraldo Gallo y Rina Díaz Sánchez sonríen juntos…'
+      type: text
+    - name: figcaption_3
+      label: 'Pie de foto: Camilo y Rina, socios fundadores.'
+      type: string
+    - name: foto_4
+      label: 'Foto: accion-podcast-camara.jpg'
+      type: image
+    - name: alt_4
+      label: 'Descripción de la foto (Google y lectores de pantalla): Cámara en primer plano durante la grabación de un episodio…'
+      type: text
+    - name: figcaption_4
+      label: 'Pie de foto: Grabación del podcast de Asocoloprocto.'
+      type: string
+    - name: foto_5
+      label: 'Foto: rina-endotour.jpg'
+      type: image
+    - name: alt_5
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez sonríe durante un evento.'
+      type: string
+    - name: figcaption_5
+      label: 'Pie de foto: Rina Díaz Sánchez, socia fundadora.'
+      type: string
+    - name: foto_6
+      label: 'Foto: accion-aced-podio.jpg'
+      type: image
+    - name: alt_6
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez graba con su teléfono una conferencia en…'
+      type: text
+    - name: figcaption_6
+      label: 'Pie de foto: Cobertura en vivo del Endotour 2026.'
+      type: string
+    - name: foto_7
+      label: 'Foto: camilo-retrato.jpg'
+      type: image
+    - name: alt_7
+      label: 'Descripción de la foto (Google y lectores de pantalla): Camilo Giraldo Gallo sonríe con camisa de rayas.'
+      type: string
+    - name: figcaption_7
+      label: 'Pie de foto: Camilo Giraldo Gallo, socio fundador.'
+      type: string
+    - name: foto_8
+      label: 'Foto: accion-podcast-set.jpg'
+      type: image
+    - name: alt_8
+      label: 'Descripción de la foto (Google y lectores de pantalla): Dos especialistas conversan en el set del podcast de…'
+      type: string
+    - name: figcaption_8
+      label: 'Pie de foto: En el set del podcast de Asocoloprocto.'
+      type: string
+    - name: foto_9
+      label: 'Foto: accion-aced-auditorio.jpg'
+      type: image
+    - name: alt_9
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez graba de pie entre el público del…'
+      type: text
+    - name: figcaption_9
+      label: 'Pie de foto: Contenido para redes desde el auditorio.'
+      type: string
+    - name: foto_10
+      label: 'Foto: rina-aro-de-luz.jpg'
+      type: image
+    - name: alt_10
+      label: 'Descripción de la foto (Google y lectores de pantalla): Silueta de Rina Díaz Sánchez junto a un aro de luz frente a…'
+      type: text
+    - name: figcaption_10
+      label: 'Pie de foto: Preparando una grabación.'
+      type: string
     - name: foto_1
       label: 'Foto: camilo.jpg'
       type: image
@@ -702,7 +783,7 @@ content:
       label: 'Foto: rina-endotour.jpg'
       type: image
     - name: alt_2
-      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez, socia fundadora de Factor H, con el…'
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez, socia fundadora de Factor H, sonríe…'
       type: text
     - name: h2_2
       label: 'Título de sección: Rina Díaz Sánchez'
@@ -721,7 +802,7 @@ content:
       label: 'Foto: camilo-y-rina.jpg'
       type: image
     - name: alt_1
-      label: 'Descripción de la foto (Google y lectores de pantalla): Selfie de Camilo Giraldo Gallo y Rina Díaz Sánchez…'
+      label: 'Descripción de la foto (Google y lectores de pantalla): Camilo Giraldo Gallo y Rina Díaz Sánchez sonríen juntos…'
       type: text
     - name: h2_1
       label: 'Título de sección: Dos socios, un mismo equipo.'
