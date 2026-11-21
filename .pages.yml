@@ -684,11 +684,11 @@ content:
     type: object
     fields:
     - name: foto_1
-      label: 'Foto: camilo.jpg'
+      label: 'Foto: camilo-retrato.jpg'
       type: image
     - name: alt_1
-      label: 'Descripción de la foto (Google y lectores de pantalla): Camilo Giraldo Gallo'
-      type: string
+      label: 'Descripción de la foto (Google y lectores de pantalla): Camilo Giraldo Gallo, socio fundador de Factor H, sonríe…'
+      type: text
     - name: h2_1
       label: 'Título de sección: Camilo Giraldo Gallo'
       type: string
@@ -699,11 +699,11 @@ content:
       label: 'Texto: Consultor de comunicaciones con 15 años de trayectoria en…'
       type: text
     - name: foto_2
-      label: 'Foto: rina.jpg'
+      label: 'Foto: rina-endotour.jpg'
       type: image
     - name: alt_2
-      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez'
-      type: string
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez, socia fundadora de Factor H, con el…'
+      type: text
     - name: h2_2
       label: 'Título de sección: Rina Díaz Sánchez'
       type: string
@@ -713,12 +713,77 @@ content:
     - name: p_4
       label: 'Texto: Abogada, coach profesional y especialista con enfoque de…'
       type: text
+  - name: dos_socios_un
+    label: 'Sección: Dos socios, un mismo equipo.'
+    type: object
+    fields:
+    - name: foto_1
+      label: 'Foto: camilo-y-rina.jpg'
+      type: image
+    - name: alt_1
+      label: 'Descripción de la foto (Google y lectores de pantalla): Selfie de Camilo Giraldo Gallo y Rina Díaz Sánchez…'
+      type: text
+    - name: h2_1
+      label: 'Título de sección: Dos socios, un mismo equipo.'
+      type: string
+    - name: p_1
+      label: 'Texto: Cada proyecto lo trabajamos juntos, de la primera…'
+      type: text
+  - name: nos_veras_en
+    label: 'Sección: Nos verás en el congreso y en el set de grabación.'
+    type: object
+    fields:
+    - name: p_1
+      label: 'Texto: En acción'
+      type: string
+    - name: h2_1
+      label: 'Título de sección: Nos verás en el congreso y en el set de grabación.'
+      type: string
+    - name: p_2
+      label: 'Texto: Hacemos cobertura en vivo de eventos médicos y producimos…'
+      type: text
+    - name: foto_1
+      label: 'Foto: accion-aced-podio.jpg'
+      type: image
+    - name: alt_1
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez graba con su teléfono una conferencia en…'
+      type: text
+    - name: figcaption_1
+      label: 'Pie de foto: Cobertura del Endotour 2026, congreso de la Asociación…'
+      type: text
+    - name: foto_2
+      label: 'Foto: accion-aced-auditorio.jpg'
+      type: image
+    - name: alt_2
+      label: 'Descripción de la foto (Google y lectores de pantalla): Rina Díaz Sánchez graba de pie entre el público del…'
+      type: text
+    - name: figcaption_2
+      label: 'Pie de foto: Contenido para redes desde el auditorio del Endotour 2026.'
+      type: string
+    - name: foto_3
+      label: 'Foto: accion-podcast-camara.jpg'
+      type: image
+    - name: alt_3
+      label: 'Descripción de la foto (Google y lectores de pantalla): Cámara en primer plano durante la grabación de un episodio…'
+      type: text
+    - name: figcaption_3
+      label: 'Pie de foto: Grabación del podcast de Asocoloprocto, la Asociación…'
+      type: text
+    - name: foto_4
+      label: 'Foto: accion-podcast-set.jpg'
+      type: image
+    - name: alt_4
+      label: 'Descripción de la foto (Google y lectores de pantalla): Dos especialistas conversan en el set del podcast de…'
+      type: text
+    - name: figcaption_4
+      label: 'Pie de foto: En el set del podcast de Asocoloprocto.'
+      type: string
   - name: foto_del_equipo
     label: Foto del equipo
     type: object
     fields:
     - name: foto_1
-      label: 'Foto: mj06-equipo.jpg'
+      label: 'Foto: rina-aro-de-luz.jpg'
       type: image
   - name: por_que_nos
     label: 'Sección: Por qué nos llamamos Factor H'
