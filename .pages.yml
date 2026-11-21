@@ -275,6 +275,9 @@ content:
     - name: li_4
       label: 'Elemento de lista: Dra. Eliana Cortés'
       type: string
+    - name: li_5
+      label: 'Elemento de lista: Dra. Ángela Ortiz, Deportiz'
+      type: string
   - name: quienes_somos
     label: 'Sección: Quiénes somos'
     type: object
