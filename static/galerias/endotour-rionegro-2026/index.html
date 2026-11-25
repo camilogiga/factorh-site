@@ -45,6 +45,28 @@ const CONFIG = {
   // 7) Correo para pedir que se retire una foto. Si se deja vacío, no se muestra.
   contactEmail: "",
 
+  // 8) Entrevistas 1:1 en video (carpeta "Entrevistas 1:1" en Drive).
+  //    "title" y "sub" son lo que se ve en la tarjeta; puede corregirlos aquí.
+  videos: [
+    {"id": "1g0xZy5F-N3ByOtXGI3gYQ0zwrMMBWWVq", "name": "Dr Walter Bejarano_Bienvenida.mp4", "title": "Dr. Walter Bejarano", "sub": "Bienvenida", "size": 127890406},
+    {"id": "15uhlgfZ1NXP_xEBb7sRDKYzNVVr3iv9A", "name": "Dr Alan Ovalle.mp4", "title": "Dr. Alan Ovalle", "sub": "", "size": 181289370},
+    {"id": "1Cfy7nqa5sXQ2glkkhOIrnX7ulPCi0Cyt", "name": "Dr. Alejandro Concha.mp4", "title": "Dr. Alejandro Concha", "sub": "", "size": 310748938},
+    {"id": "1ctJBNuFGaLyp6I3sZWdl3Cyl_VwGMJxZ", "name": "Dr Andres Ricardo.mp4", "title": "Dr. Andres Ricardo", "sub": "", "size": 195224485},
+    {"id": "1VdcdJpxhqYjk1YHTrbbmYxV8WI6ct3kI", "name": "Dr Camilo Blanco.mp4", "title": "Dr. Camilo Blanco", "sub": "", "size": 84648413},
+    {"id": "1dc7BM5GnV0Vdakts3PFZTaPKYPSyt8Jg", "name": "Dr Carlos Builes.mp4", "title": "Dr. Carlos Builes", "sub": "", "size": 94406901},
+    {"id": "1ocpoi7zVBOHgoiaoyAkT74H5GhnQPL8S", "name": "Dr Carlos Gonzalez.mp4", "title": "Dr. Carlos Gonzalez", "sub": "", "size": 299939625},
+    {"id": "1UJ3gdaHlLHbJ2tCNIiduh84An-Z3bUQ0", "name": "Dra Daniela Caceres.mp4", "title": "Dra. Daniela Caceres", "sub": "", "size": 292426523},
+    {"id": "1hDMms5X7p5kxQ-jfpqqMC-Q7mWiNcys1", "name": "Jefe Diana Diaz.mp4", "title": "Jefe Diana Diaz", "sub": "", "size": 260137123},
+    {"id": "1GNqcjC1WUVIPc_QFV2nONM0ZLIVs9ZEw", "name": "Dr Edgardo Sanchez.mp4", "title": "Dr. Edgardo Sanchez", "sub": "", "size": 1056876016},
+    {"id": "1dNFvw6YsT-Ye35oc2fSyWAMY157xb0Fr", "name": "Dr Gabriel Mosquera.mp4", "title": "Dr. Gabriel Mosquera", "sub": "", "size": 303950129},
+    {"id": "1wYRVjEhNemH__aMDLHbZGxCz_cwhas9-", "name": "Dr John Jaime Carvajal.mp4", "title": "Dr. John Jaime Carvajal", "sub": "", "size": 316247367},
+    {"id": "1xJOHl7B3OKBkTmVJoLQ_4iP_T1R7ThmW", "name": "Dr Juan Esteban Hernandez.mp4", "title": "Dr. Juan Esteban Hernandez", "sub": "", "size": 267472818},
+    {"id": "1X7_qk7OxTi4o4NdjkSF4zFEgHW-Hp3VR", "name": "Dr Margarita Rey.mp4", "title": "Dr. Margarita Rey", "sub": "", "size": 438905543},
+    {"id": "1NDs3OgRt2luUZvEbwlyVi-HGuF3e2c24", "name": "Dr Martin Gomez.mp4", "title": "Dr. Martin Gomez", "sub": "", "size": 212464559},
+    {"id": "1V4nmk0KeBkf1kB155SgujdjjxwRzj0jb", "name": "Dra Viviana Obando.mp4", "title": "Dra. Viviana Obando", "sub": "", "size": 99738603},
+    {"id": "1mvMUI9Wq8LzqudXDu8uA9z4zH7T7NLQ9", "name": "Dr Walter Bejarano_Cierre.mp4", "title": "Dr. Walter Bejarano", "sub": "Cierre", "size": 257336803}
+  ],
+
   // Solo para la vista previa: muestra fotos de ejemplo.
   demo: false,
 
@@ -188,6 +210,8 @@ main{padding:24px 0 56px;min-height:50vh}
 .lb.on{display:flex}
 .lb .head{display:flex;align-items:center;gap:8px;padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top))}
 .lb .head .name{margin-right:auto;font-size:13px;color:rgba(255,255,255,.75);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:4px}
+.lb .head a.btn-dl{background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:6px;text-decoration:none}
+.lb .head a.btn-dl:hover{background:rgba(255,255,255,.22)}
 .lb .head button{background:rgba(255,255,255,.1);border:0;color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:6px}
 .lb .head button:hover{background:rgba(255,255,255,.22)}
 .lb .head svg{width:16px;height:16px}
@@ -195,6 +219,26 @@ main{padding:24px 0 56px;min-height:50vh}
 .lb .body img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
 .lb .spin{position:absolute;width:36px;height:36px;border-radius:50%;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;animation:rot 1s linear infinite}
 @keyframes rot{to{transform:rotate(360deg)}}
+
+/* Entrevistas en video */
+body.vids .views,body.vids .actions{display:none}
+.vintro{margin:8px 0 20px;color:var(--texto2);max-width:60ch}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.vcard{border:0;padding:0;background:none;text-align:left;display:flex;flex-direction:column;gap:10px;cursor:pointer;color:inherit;font:inherit}
+.vthumb{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#14301b,#0c1a10)}
+.vthumb img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s,transform .35s}
+.vthumb img.ok{opacity:1}
+.vcard:hover .vthumb img{transform:scale(1.03)}
+.vthumb .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(7,152,18,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35);transition:transform .2s}
+.vcard:hover .play{transform:scale(1.08)}
+.vthumb .play svg{width:24px;height:24px;margin-left:3px;color:#fff}
+.vmeta b{display:block;font-size:16px;line-height:1.3}
+.vmeta small{display:block;color:var(--nota);font-size:13px;margin-top:2px}
+.vcard:focus-visible{outline:3px solid var(--verde);outline-offset:4px;border-radius:8px}
+.lb .vbody{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 56px 16px;position:relative}
+.lb .vbody .frame{width:100%;max-width:calc((100vh - 120px) * 16 / 9);aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden}
+.lb .vbody iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:720px){.lb .vbody{padding:0 0 16px}.lb .vbody .navbtn{display:none}}
 
 /* Diálogo de descarga */
 .dlg{position:fixed;inset:0;z-index:70;background:rgba(10,14,12,.55);display:none;align-items:center;justify-content:center;padding:16px}
@@ -296,7 +340,7 @@ body.carrusel .cr{display:block;position:fixed;inset:0;color:#fff}
   <div class="wrap">
     <p class="eyebrow">ACED · 19 y 20 de noviembre</p>
     <h1>Galería <span class="g">endoTour</span> Rionegro 2026</h1>
-    <p class="lead">Las fotos de las dos jornadas, organizadas por día y por espacio. Véalas aquí, ábralas en grande y descárguelas en resolución original, una por una o todas en un .zip.</p>
+    <p class="lead">Las fotos de las dos jornadas, organizadas por día y por espacio, y las entrevistas 1:1 con especialistas. Véalas aquí, ábralas en grande y descárguelas en resolución original, una por una o todas en un .zip.</p>
   </div>
 </section>
 
@@ -354,6 +398,19 @@ body.carrusel .cr{display:block;position:fixed;inset:0;color:#fff}
     <img id="lbImg" alt="">
     <button class="navbtn prev" id="lbPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 5-7 7 7 7"/></svg></button>
     <button class="navbtn next" id="lbNext" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<div class="lb" id="vp" role="dialog" aria-modal="true" aria-label="Entrevista en video">
+  <div class="head">
+    <span class="name" id="vpName"></span>
+    <a id="vpDl" class="btn-dl" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg><span class="t">Descargar video</span></a>
+    <button id="vpClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="t">Cerrar</span></button>
+  </div>
+  <div class="vbody" id="vpBody">
+    <div class="frame" id="vpFrame"></div>
+    <button class="navbtn prev" id="vpPrev" aria-label="Video anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 5-7 7 7 7"/></svg></button>
+    <button class="navbtn next" id="vpNext" aria-label="Video siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg></button>
   </div>
 </div>
 
@@ -480,7 +537,7 @@ function imgTag(p, size, cls){
   return `<img ${cls?`class="${cls}"`:""} src="${esc(src(p,size))}" data-fb="${esc(fallbackSrc(p,size))}" alt="${esc(p.section)}, foto ${esc(p.name)}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async">`;
 }
 document.addEventListener("load", e => { const t = e.target; if (t.tagName === "IMG") t.classList.add("ok"); }, true);
-document.addEventListener("error", e => { const t = e.target; if (t.tagName === "IMG" && t.dataset.fb && t.src !== t.dataset.fb) { t.src = t.dataset.fb; } else if (t.tagName === "IMG") t.classList.add("ok"); }, true);
+document.addEventListener("error", e => { const t = e.target; if (t.tagName === "IMG" && t.dataset.fb && t.src !== t.dataset.fb) { t.src = t.dataset.fb; } else if (t.tagName === "IMG" && t.closest(".vthumb")) t.remove(); else if (t.tagName === "IMG") t.classList.add("ok"); }, true);
 
 /* ---------- Descarga de originales ---------- */
 async function fetchOriginal(p, onProgress){
@@ -590,7 +647,7 @@ function toast(msg, ms){ const t = $("#toast"); t.textContent = msg; t.classList
 function current(){ const d = state.day; if (!d) return []; return state.section === "all" ? d.photos : (d.sections.find(s => s.name === state.section)||{photos:[]}).photos; }
 
 function renderDays(){
-  $("#days").innerHTML = state.days.map(d => `<button class="day" data-day="${d.id}" aria-pressed="${d===state.day}">${esc(d.label)}<small>${d.photos.length ? d.photos.length + " fotos" : "Fotos en camino"}</small></button>`).join("");
+  $("#days").innerHTML = state.days.map(d => `<button class="day" data-day="${d.id}" aria-pressed="${d===state.day}">${esc(d.label)}<small>${d.kind === "videos" ? d.videos.length + " videos" : d.photos.length ? d.photos.length + " fotos" : "Fotos en camino"}</small></button>`).join("");
 }
 function renderSections(){
   const d = state.day;
@@ -604,6 +661,8 @@ function tile(p, i){
 function renderMain(){
   const m = $("#main"); stopShow();
   const d = state.day;
+  document.body.classList.toggle("vids", !!(d && d.kind === "videos"));
+  if (d && d.kind === "videos"){ if (state.selecting) $("#selBtn").click(); renderVideos(); return; }
   document.querySelectorAll(".views button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === state.view));
   const has = d && d.photos.length;
   $("#zipAll").disabled = !has; $("#selBtn").disabled = !has || state.view === "show";
@@ -624,6 +683,29 @@ function renderMain(){
     m.innerHTML = `<div class="${cls}">${state.list.map(tile).join("")}</div>`;
   }
 }
+
+/* Entrevistas */
+function mb(n){ return n >= 1e9 ? (n/1e9).toFixed(1).replace(".", ",") + " GB" : Math.round(n/1e6) + " MB"; }
+function vThumb(v, w){ return `https://lh3.googleusercontent.com/d/${v.id}=w${w}`; }
+function vDl(v){ return `https://drive.usercontent.google.com/download?id=${v.id}&export=download`; }
+function renderVideos(){
+  const d = state.day; state.list = [];
+  $("#main").innerHTML = `<p class="vintro">Conversaciones 1:1 con especialistas durante el endoTour. Toque una entrevista para verla aquí mismo.</p><div class="vgrid">${d.videos.map((v,i) => `<button class="vcard" data-v="${i}" aria-label="Ver entrevista: ${esc(v.title)}${v.sub ? ", " + esc(v.sub) : ""}"><div class="vthumb"><img src="${esc(vThumb(v,640))}" data-fb="https://drive.google.com/thumbnail?id=${esc(v.id)}&sz=w640" alt="" loading="lazy" decoding="async"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></span></div><div class="vmeta"><b>${esc(v.title)}</b><small>${v.sub ? esc(v.sub) + " · " : ""}${mb(v.size)}</small></div></button>`).join("")}</div>`;
+}
+let vpI = 0;
+function openVP(i){ vpI = i; $("#vp").classList.add("on"); document.body.style.overflow = "hidden"; vpShow(); $("#vpClose").focus(); }
+function closeVP(){ $("#vp").classList.remove("on"); $("#vpFrame").innerHTML = ""; document.body.style.overflow = ""; }
+function vpShow(){
+  const vs = state.day.videos, n = vs.length; vpI = (vpI+n)%n; const v = vs[vpI];
+  $("#vpName").textContent = `${vpI+1} de ${n} · ${v.title}${v.sub ? " · " + v.sub : ""}`;
+  $("#vpFrame").innerHTML = `<iframe src="https://drive.google.com/file/d/${encodeURIComponent(v.id)}/preview" title="${esc(v.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+  $("#vpDl").href = vDl(v); $("#vpDl").setAttribute("aria-label", `Descargar video (${mb(v.size)})`);
+}
+$("#vpClose").onclick = closeVP;
+$("#vpPrev").onclick = () => { vpI--; vpShow(); };
+$("#vpNext").onclick = () => { vpI++; vpShow(); };
+$("#vpBody").addEventListener("click", e => { if (e.target.id === "vpBody") closeVP(); });
+$("#main").addEventListener("click", e => { const c = e.target.closest(".vcard"); if (c) openVP(+c.dataset.v); });
 
 /* Presentación */
 let showT = null, playing = false;
@@ -687,6 +769,7 @@ function swipe(el, left, right){ let x0 = null, y0 = 0;
   el.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? left : right)(); x0 = null; }); }
 swipe($("#lbBody"), () => { lbI++; lbShow(); }, () => { lbI--; lbShow(); });
 document.addEventListener("keydown", e => {
+  if ($("#vp").classList.contains("on")) { if (e.key === "Escape") closeVP(); return; }
   if ($("#dlg").classList.contains("on")) { if (e.key === "Escape") $("#dlg").classList.remove("on"); return; }
   if ($("#lb").classList.contains("on")) { if (e.key === "ArrowRight") { lbI++; lbShow(); } else if (e.key === "ArrowLeft") { lbI--; lbShow(); } else if (e.key === "Escape") closeLB(); return; }
   if (state.view === "show" && $("#show")) { if (e.key === "ArrowRight") { showAt(state.idx+1); restart(); } else if (e.key === "ArrowLeft") { showAt(state.idx-1); restart(); } }
@@ -754,6 +837,7 @@ async function start(){
   try { days = DEMO ? demoData() : STATIC ? staticDays() : await loadDrive(); }
   catch(e){ if (CARRUSEL){ document.body.classList.add("carrusel"); $("#crWait").textContent = "Galería endoTour Rionegro 2026"; console.warn(e); return; } renderEmbed(e); return; }
   if (CARRUSEL){ runCarrusel(days); return; }
+  if (!DEMO && Array.isArray(CONFIG.videos) && CONFIG.videos.length) days = [...days, { id: "entrevistas", label: "Entrevistas", full: "Entrevistas 1:1", kind: "videos", videos: CONFIG.videos, photos: [], sections: [] }];
   state.days = days;
   const want = params.get("dia");
   state.day = days.find(d => d.id === want) || days.find(d => d.photos.length) || days[0];
