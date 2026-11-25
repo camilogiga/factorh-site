@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galería endoTour Rionegro 2026 · ACED</title>
+<meta name="description" content="Fotos del endoTour Rionegro 2026 de la Asociación Colombiana de Endoscopia Digestiva, 19 y 20 de noviembre.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://factorh.co/galerias/endotour-rionegro-2026/">
+<meta property="og:title" content="Galería endoTour Rionegro 2026 · ACED">
+<meta property="og:description" content="Fotos del endoTour Rionegro 2026 de la Asociación Colombiana de Endoscopia Digestiva. Cobertura: Factor H.">
+<meta property="og:url" content="https://factorh.co/galerias/endotour-rionegro-2026/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* =====================================================================
+   CONFIGURACIÓN. Lo único que hay que tocar está en este bloque.
+   ===================================================================== */
+const CONFIG = {
+  // 1) Pegue aquí, entre las comillas, la clave de la API de Google Drive.
+  //    Sin clave, la página muestra la carpeta de Drive incrustada.
+  apiKey: "",
+
+  // 2) Carpeta principal de Drive (no hace falta cambiarla).
+  folderId: "1UsLcIJgx6jZEXbIlS9qz7caUuAOrpNG7",
+
+  // 3) Jornadas. "buscar" es una palabra del nombre de la subcarpeta en Drive.
+  days: [
+    { id: "viernes", label: "Viernes 19", full: "Viernes 19 de noviembre", buscar: "viernes", folderId: "18tuPYdSjkUV9vUrlTuDdq627JCHvd41C" },
+    { id: "sabado",  label: "Sábado 20",  full: "Sábado 20 de noviembre",  buscar: "sabado",  folderId: "1Cwv3k6vp_Ye9nvTH-dE7eWYgzO38tTOY" }
+  ],
+
+  // 4) Tamaño máximo de cada parte del .zip, en megas.
+  zipPartMB: 300,
+
+  // 5) Segundos entre fotos en la presentación y en el carrusel.
+  slideSeconds: 5,
+
+  // 6) Dirección pública de esta página (la usa el botón del carrusel).
+  //    Si se deja vacía, el carrusel enlaza a esta misma página.
+  galleryUrl: "https://factorh.co/galerias/endotour-rionegro-2026/",
+
+  // 7) Correo para pedir que se retire una foto. Si se deja vacío, no se muestra.
+  contactEmail: "",
+
+  // Solo para la vista previa: muestra fotos de ejemplo.
+  demo: false,
+
+  // Lista fija de fotos (solo para la versión publicada en Claude). No tocar.
+  photos: [{"id":"1y9edcrKL2PCfZPq_adquskSXeWem4AIV","name":"IMG_0303.JPG","size":7839566,"day":"viernes","section":"Salón Guayacán"},{"id":"10Macv1iot43B3idSU4nNdgfe2cRZbqnS","name":"IMG_0306.JPG","size":4869860,"day":"viernes","section":"Salón Guayacán"},{"id":"1E2icA4dA4YDwN8v4NwSnZzFw4N3HHbIl","name":"IMG_0314.JPG","size":6337391,"day":"viernes","section":"Salón Guayacán"},{"id":"1XetP4cqQJhsoYY6dturHaNdJxGxRwjyE","name":"IMG_0324.JPG","size":5168988,"day":"viernes","section":"Salón Guayacán"},{"id":"1rmiIqPd6uL3mmfJSmLeOyrq0_5mN2qBt","name":"IMG_0326.JPG","size":5101539,"day":"viernes","section":"Salón Guayacán"},{"id":"1s9o0WOn7oHXACZ4FJM9a7CQ4OInzXcrx","name":"IMG_0339.JPG","size":6662881,"day":"viernes","section":"Salón Guayacán"},{"id":"1mMiWG_TZU6w5IWjXfixShsznyvl7Ct44","name":"IMG_0345.JPG","size":5782530,"day":"viernes","section":"Salón Guayacán"},{"id":"1p_qIowYEwzNE1-uktmt_3U46I6DunTvO","name":"IMG_0347.JPG","size":5692278,"day":"viernes","section":"Salón Guayacán"},{"id":"1isuqmyC6FTnsDu-sbmF1piF3RY6s_MRg","name":"IMG_0354.JPG","size":7637546,"day":"viernes","section":"Salón Guayacán"},{"id":"1QkW4NS-uo51wAXSpvoNQ8VzNau2no55y","name":"IMG_0368.JPG","size":8249901,"day":"viernes","section":"Salón Guayacán"},{"id":"1LX-jcol3S-klVFPMfPQhYt6jg2jrgXE9","name":"IMG_0380.JPG","size":4955551,"day":"viernes","section":"Salón Guayacán"},{"id":"1cwnJMSV9-WlTGWff3UOkS9pztetUmdip","name":"IMG_0386.JPG","size":6375750,"day":"viernes","section":"Salón Guayacán"},{"id":"13B3oEFGHwz4ScTIsjeSM06H890_7w7fy","name":"IMG_0390.JPG","size":6193989,"day":"viernes","section":"Salón Guayacán"},{"id":"1ByuimUZJFC_APwSMd5XvxsAH6R1i1kFT","name":"IMG_0439.JPG","size":5894198,"day":"viernes","section":"Salón Guayacán"},{"id":"16vEDGx5KLD8-nsYkOPBgsUy-59ga2XM_","name":"IMG_0444.JPG","size":5249966,"day":"viernes","section":"Salón Guayacán"},{"id":"1EtRn4DNrkHoXh3JC7beWaiceKQmXV3DO","name":"IMG_0446.JPG","size":7890145,"day":"viernes","section":"Salón Guayacán"},{"id":"1EMmAr5vhzHoPiHnrhfeLihbCseupwu7L","name":"IMG_0504.JPG","size":7548946,"day":"viernes","section":"Salón Guayacán"},{"id":"1gtHOeW7XO6f6fN23FqOGzbEFfsZmVtD-","name":"IMG_0565.JPG","size":9294649,"day":"viernes","section":"Salón Guayacán"},{"id":"1YW3dGHnVg7_qeFhpFPPN7rQnqjPzvkRL","name":"IMG_0577.JPG","size":5527530,"day":"viernes","section":"Salón Guayacán"},{"id":"1MZgukyVNVN8wSEr_RLA6m4F-hqBO3chw","name":"IMG_0712.JPG","size":7705782,"day":"viernes","section":"Salón Guayacán"},{"id":"1m-yUPACTmJuTpTIssA1eG_zx3SyTXYfI","name":"IMG_0715.JPG","size":5735622,"day":"viernes","section":"Salón Guayacán"},{"id":"1SGn19Bt7U0Se0cM95snn17nSbOkffr3p","name":"IMG_0717.JPG","size":5359434,"day":"viernes","section":"Salón Guayacán"},{"id":"1wttCh_6ECJoV4F0htm-yoMWyEzM4bKaC","name":"IMG_0730.JPG","size":5737704,"day":"viernes","section":"Salón Guayacán"},{"id":"1lXEtagcc_2yoRqldrpCHBQ_VNttCFmz6","name":"IMG_0733.JPG","size":5509699,"day":"viernes","section":"Salón Guayacán"},{"id":"1xeSH2ksqo_VV2s4ie2jgeDy9bxurLzPt","name":"IMG_0736.JPG","size":6009739,"day":"viernes","section":"Salón Guayacán"},{"id":"1p3vi9_7rZpd1DWOX7ETFY54FzkbYKbGB","name":"IMG_0831.JPG","size":7524078,"day":"viernes","section":"Salón Guayacán"},{"id":"163UBUFvej5j88-TNPkd14d0pvU4d6-7Y","name":"IMG_0841.JPG","size":6151549,"day":"viernes","section":"Salón Guayacán"},{"id":"1Hh0SYDBn1oKCywSFEI7T1_jZcMUL-XzW","name":"IMG_0873.JPG","size":8159720,"day":"viernes","section":"Salón Guayacán"},{"id":"1F9OJAvTvh6iAzujvCKgZkZEKHPWHkDuU","name":"IMG_0878.JPG","size":6095484,"day":"viernes","section":"Salón Guayacán"},{"id":"1D3tUOM40aBUi9CgHXj3MOK_b1VEOIhQK","name":"IMG_0887.JPG","size":7302212,"day":"viernes","section":"Salón Guayacán"},{"id":"1Rm7vVVEghX_Jz4Y2vEBiRkM-ZYgTm9-h","name":"IMG_0895.JPG","size":9116343,"day":"viernes","section":"Salón Guayacán"},{"id":"1VBuKhuukqcNu1pM1eItKhWFXSnm1EKQS","name":"IMG_0908.JPG","size":5512818,"day":"viernes","section":"Salón Guayacán"},{"id":"1uZdu1IqFxuRsZrFuqI3ruvB_jU-W6S8g","name":"IMG_0913.JPG","size":6413625,"day":"viernes","section":"Salón Guayacán"},{"id":"1WzREfXqsvxEEqjfOm1MbYrrygWA4fqTJ","name":"IMG_0922.JPG","size":7306047,"day":"viernes","section":"Salón Guayacán"},{"id":"1D5EbwjjFXbehdxOs0DrGEp7kgOnHUHg1","name":"IMG_0929.JPG","size":12598787,"day":"viernes","section":"Salón Guayacán"},{"id":"1W37uay79gYnBQP4ot1qpGHkQ_2TX82sU","name":"IMG_0932.JPG","size":12631148,"day":"viernes","section":"Salón Guayacán"},{"id":"1Z5ZZrFQ56rT6xpH5E96vxIPTdtpzik62","name":"IMG_0940.JPG","size":6456350,"day":"viernes","section":"Salón Guayacán"},{"id":"1DGwA-5whYyQSjaMGu-vAp8Uvx5LAJQOV","name":"IMG_0951.JPG","size":4771648,"day":"viernes","section":"Salón Guayacán"},{"id":"1s8UZcf8PXlZQmTzZgpwb-oMu43m0gpTk","name":"IMG_0986.JPG","size":6763833,"day":"viernes","section":"Salón Guayacán"},{"id":"1RtZQHKRJszROg7sbQNWzx9ETIbIloJeE","name":"IMG_1040.JPG","size":8307067,"day":"viernes","section":"Salón Guayacán"},{"id":"1rK5z1iLYJgOKkWYboFd8D6x-5BE41Ept","name":"IMG_1046.JPG","size":7603445,"day":"viernes","section":"Salón Guayacán"},{"id":"1uk68i6F5TKem1g6Ss_fnOVRaOibrh6Up","name":"IMG_1049.JPG","size":5791859,"day":"viernes","section":"Salón Guayacán"},{"id":"1lPxM2BZ0LEPh9UFZJce53zIuv0RPPLK0","name":"IMG_1060.JPG","size":6207981,"day":"viernes","section":"Salón Guayacán"},{"id":"1EMHanVaT5m29NfwDYmNQDGdiE3tQ-6c0","name":"IMG_1076.JPG","size":6608987,"day":"viernes","section":"Salón Guayacán"},{"id":"1j8zf4zaGQyGgFHC3v3aCM8YwR0En-vxw","name":"IMG_1077.JPG","size":6010504,"day":"viernes","section":"Salón Guayacán"},{"id":"1SNrNJqhOrN4dRyeu0c99A9KCkGVA04nS","name":"IMG_1078.JPG","size":6088059,"day":"viernes","section":"Salón Guayacán"},{"id":"1c__LQ6Gh48-nhf3OqH8uKxwc8BYk-bfx","name":"IMG_1084.JPG","size":6161712,"day":"viernes","section":"Salón Guayacán"},{"id":"1ZbegPIKMUHoGIqPF5bTVNn0AAWka5RWT","name":"IMG_1087.JPG","size":5798908,"day":"viernes","section":"Salón Guayacán"},{"id":"1BvqfEEHbsMft5zw9RjRKYEvdBoLMucOS","name":"IMG_1093.JPG","size":5752239,"day":"viernes","section":"Salón Guayacán"},{"id":"13_CY8SuFHu8uxGdazibDUaNrDuJfM3QM","name":"IMG_1101.JPG","size":4772764,"day":"viernes","section":"Salón Guayacán"},{"id":"1qKG3-xdPysbl86t0lxO8K99kaZDONvVQ","name":"IMG_1108.JPG","size":8173617,"day":"viernes","section":"Salón Guayacán"},{"id":"1KQ1m2rNDO2rmvjWeFZTBKA8XeG9ckIA3","name":"IMG_1113.JPG","size":8280282,"day":"viernes","section":"Salón Guayacán"},{"id":"1IHiZ513FfCsmldoJso5E0InW_RYk5ePu","name":"IMG_1123.JPG","size":7324723,"day":"viernes","section":"Salón Guayacán"},{"id":"1f6ryzBLdHJQhbbfUxblmmZxxMt2rQ393","name":"IMG_1129.JPG","size":8269009,"day":"viernes","section":"Salón Guayacán"},{"id":"1sOpjkSiB5mMdyb--huCODlcTl2yRqjDK","name":"IMG_1136.JPG","size":8959246,"day":"viernes","section":"Salón Guayacán"},{"id":"1Bnb10jUwJWwwjTeF-P6XMobru2gWS6Um","name":"IMG_1153.JPG","size":4688573,"day":"viernes","section":"Salón Guayacán"},{"id":"1G92VEzcCv6Gn_OhEcH4larrwTvghkDYD","name":"IMG_1154.JPG","size":6291615,"day":"viernes","section":"Salón Guayacán"},{"id":"1CsjdQq5AZMc8J1os2bjfDoqp4Q83V8UB","name":"IMG_1158.JPG","size":4898208,"day":"viernes","section":"Salón Guayacán"},{"id":"1FlTH8tkcj-Jm-ueWTlrrR9QZRUAFyjQE","name":"IMG_1161.JPG","size":5363875,"day":"viernes","section":"Salón Guayacán"},{"id":"1kkAjF5fe5k-pkT2q4FyKno6MyaJ7_ZkG","name":"IMG_1165.JPG","size":4958301,"day":"viernes","section":"Salón Guayacán"},{"id":"196plLrkz6WkxI-UfQHIe995tcyMnLPOf","name":"IMG_1172.JPG","size":5712242,"day":"viernes","section":"Salón Guayacán"},{"id":"1sgEwyUZXKPhb5bocDR5sRKQfiO5EmwdF","name":"IMG_1175.JPG","size":5507625,"day":"viernes","section":"Salón Guayacán"},{"id":"1orV_6OfV03BFU3zh_8legxHD3epJ-iog","name":"IMG_1178.JPG","size":5437443,"day":"viernes","section":"Salón Guayacán"},{"id":"1ljHGxVZAx6F0B-_8ZHnbrzGLgWU1UJuO","name":"IMG_1181.JPG","size":4221460,"day":"viernes","section":"Salón Guayacán"},{"id":"1etyes_-c32t8w0RqnaWunKydgJCBqpZg","name":"IMG_1184.JPG","size":7311870,"day":"viernes","section":"Salón Guayacán"},{"id":"1DeZRca27Mi_AHI5LZFgbpDbpCmY_3Xr_","name":"IMG_1191.JPG","size":5039185,"day":"viernes","section":"Salón Guayacán"},{"id":"15-KMhfzrZ5HvjnLwBL5COSCLyRjDgY6C","name":"IMG_1216.JPG","size":5909349,"day":"viernes","section":"Salón Guayacán"},{"id":"1SmELFnPSQaxG6dV9C9swLUAJyjSNppcL","name":"IMG_1220.JPG","size":4851826,"day":"viernes","section":"Salón Guayacán"},{"id":"1HNaFSBeYFP0MlV7euCvG8a7MftCt8dyG","name":"IMG_1223.JPG","size":5390305,"day":"viernes","section":"Salón Guayacán"},{"id":"1UarNMmy3kbn8s5r1weLDeGkkOJbRBk6o","name":"IMG_1232.JPG","size":5561638,"day":"viernes","section":"Salón Guayacán"},{"id":"1kknt00FwiGGn_a6bors6LhSDm071IPQp","name":"IMG_0400.JPG","size":7456908,"day":"viernes","section":"Salón Sapán"},{"id":"1k2LafD3h63Ja1zYBB2Lznt228hF0HtHx","name":"IMG_0406.JPG","size":6494987,"day":"viernes","section":"Salón Sapán"},{"id":"10_RzFd6UZJTCVz1e_atUtCM7qW0GxyCD","name":"IMG_0409.JPG","size":10574460,"day":"viernes","section":"Salón Sapán"},{"id":"1YRRIcacitHYcxsybqZcDDbFDtyvJoN2G","name":"IMG_0414.JPG","size":10831483,"day":"viernes","section":"Salón Sapán"},{"id":"1Ie7dAYpnqH7v5dITSnPvmrmdg3w6dgbQ","name":"IMG_0467.JPG","size":4708363,"day":"viernes","section":"Salón Sapán"},{"id":"1TV26XBQHoV3Dt8jHLzhCH6sVj2q3mIhD","name":"IMG_0470.JPG","size":4596703,"day":"viernes","section":"Salón Sapán"},{"id":"1BzIOhfqxRVamhZc-bJufSCaDTKT9keca","name":"IMG_0485.JPG","size":6084692,"day":"viernes","section":"Salón Sapán"},{"id":"1VaTPbVz9m2rX-f2IUjeNCfLfGxhjS9xb","name":"IMG_0487.JPG","size":6966780,"day":"viernes","section":"Salón Sapán"},{"id":"1e4cypO5njOgQVhPrn7-2ancjrhCiO1B1","name":"IMG_0492.JPG","size":5434747,"day":"viernes","section":"Salón Sapán"},{"id":"1bMcbYbuVfS-d977DWrhmC5mqyKnop4y3","name":"IMG_0498.JPG","size":5174916,"day":"viernes","section":"Salón Sapán"},{"id":"1uOXuglczFtVUxPnmw89YOb3HBYQ7sKyi","name":"IMG_0525.JPG","size":9153988,"day":"viernes","section":"Salón Sapán"},{"id":"1cgSkshPAO0XRZuK3eYf6BdfdRvnqndSb","name":"IMG_0534.JPG","size":7406616,"day":"viernes","section":"Salón Sapán"},{"id":"1QS1HB9lnfOPc0vbrBPY63GaPGqrE9mwt","name":"IMG_0599.JPG","size":6025388,"day":"viernes","section":"Salón Sapán"},{"id":"1PhBndF1Tu2v9A1Yps7tD-YBxxmnEujPr","name":"IMG_0604.JPG","size":8353824,"day":"viernes","section":"Salón Sapán"},{"id":"1m6Bue-qxDzsiZbQCkHCIu2yLOWRfa08-","name":"IMG_0618.JPG","size":6571776,"day":"viernes","section":"Salón Sapán"},{"id":"10qYfVDJDDK6Tn-hX6XWET9TGFTkSWw9u","name":"IMG_0627.JPG","size":7023553,"day":"viernes","section":"Salón Sapán"},{"id":"1yWljnpT_RG_qla6gA0pgMtRh-tEE7J5A","name":"IMG_0632.JPG","size":6968588,"day":"viernes","section":"Salón Sapán"},{"id":"1XOKfGQKUXimkhve6dYjh4yIm517gSld5","name":"IMG_0637.JPG","size":7891256,"day":"viernes","section":"Salón Sapán"},{"id":"1_g2T-_1BqU9-cl2_3V_8Af_ayRMcikFm","name":"IMG_0655.JPG","size":3276116,"day":"viernes","section":"Salón Sapán"},{"id":"11QaUh1jaQ-lwQZR0BOB-otb6GGsKQhNw","name":"IMG_0657.JPG","size":2994995,"day":"viernes","section":"Salón Sapán"},{"id":"1Ozm3-yJA9GHkiiVgQ9cIH3F7EGOCmQ-8","name":"IMG_0662.JPG","size":7946098,"day":"viernes","section":"Salón Sapán"},{"id":"1EpsgyLZzGp3l1Xu7LDYu0fE1KRhtSSqN","name":"IMG_0668.JPG","size":8079488,"day":"viernes","section":"Salón Sapán"},{"id":"1SeaWDGQTux-KgrDkf8tGew_O7LLqaj5l","name":"IMG_0692.JPG","size":7387566,"day":"viernes","section":"Salón Sapán"},{"id":"1b6JZ-qMWYgXjQWCmAOFibj5qA0-p6hP7","name":"IMG_0695.JPG","size":6769089,"day":"viernes","section":"Salón Sapán"},{"id":"13mcZ2ohOsP3zn7QeqZDNx2T7GTO5jrnM","name":"IMG_0705.JPG","size":10339462,"day":"viernes","section":"Salón Sapán"},{"id":"1ZMUPAxYrmvkd58zZbnrrME3APfLwl6f7","name":"IMG_0204.JPG","size":6988194,"day":"viernes","section":"Muestra Comercial"},{"id":"1_TuKUMkNxvTz-uo41NQZQsNtbeuDYrVR","name":"IMG_0253.JPG","size":6102714,"day":"viernes","section":"Muestra Comercial"},{"id":"1G0dMjMCPGwdvThLaoNNcZqKAAZurd1QP","name":"IMG_0262.JPG","size":9025142,"day":"viernes","section":"Muestra Comercial"},{"id":"1cBHvUQ6Kej2w1bjyCb7vuZWLLGKL7afp","name":"IMG_0265.JPG","size":8648229,"day":"viernes","section":"Muestra Comercial"},{"id":"1UXW_1x8e0T-3LVQEn3Nva6zs5h-3Mj97","name":"IMG_0542.JPG","size":8932340,"day":"viernes","section":"Muestra Comercial"},{"id":"1UeCXq6VJCi91UrFkhCbA0fjNKORRrSN4","name":"IMG_0546.JPG","size":6944594,"day":"viernes","section":"Muestra Comercial"},{"id":"1LOP808AzXy8snxw76i1SpN89d7dnS41i","name":"IMG_0548.JPG","size":6386994,"day":"viernes","section":"Muestra Comercial"},{"id":"1wt7qJqjIM2AAnZlbyAoa9olC776ZP0SC","name":"IMG_0555.JPG","size":4995314,"day":"viernes","section":"Muestra Comercial"},{"id":"1M0YX7_RI6guVhw9MUG-H4qIhTA1omoXC","name":"IMG_0559.JPG","size":6720886,"day":"viernes","section":"Muestra Comercial"},{"id":"1KaoP72QdBXBDaCT7jgThn08wR81NAlpz","name":"IMG_0561.JPG","size":7262976,"day":"viernes","section":"Muestra Comercial"},{"id":"1sS3oAvntowQOv-I2hVBXX9DXJDXcBjQA","name":"IMG_0206.JPG","size":5716631,"day":"viernes","section":"Sociales"},{"id":"1_BX828RdzbtPlPcrs1dUrWdAf0rvIYip","name":"IMG_0214.JPG","size":8128634,"day":"viernes","section":"Sociales"},{"id":"1AyUpZz8tl0hbUhyEBHbczw0PGbjW8xZ6","name":"IMG_0236.JPG","size":8299748,"day":"viernes","section":"Sociales"},{"id":"1sQTS3s6gv3ANIHhQBKVZLcBtNDipJ_Q4","name":"IMG_0237.JPG","size":8676865,"day":"viernes","section":"Sociales"},{"id":"1YFcaroeHc-QwTEXf8S7kGgAKYl8zUJml","name":"IMG_0248.JPG","size":7580642,"day":"viernes","section":"Sociales"},{"id":"1E2RguWIiM5E8EsD8VLH_fDUMpibJS4Yk","name":"IMG_0250.JPG","size":7519061,"day":"viernes","section":"Sociales"},{"id":"1tsIz8yh_jppMUjoisxjiEW5ethdTT1fs","name":"IMG_0267.JPG","size":5723495,"day":"viernes","section":"Sociales"},{"id":"1x3jDf7F7CdURR5qaJpk0EbjbpbT15Ob2","name":"IMG_0271.JPG","size":4438455,"day":"viernes","section":"Sociales"},{"id":"1XCxFsd88UAbhEYcIaQCIvOuTlMDdrSVO","name":"IMG_0273.JPG","size":6258147,"day":"viernes","section":"Sociales"},{"id":"1w91qfbhO-BEmUcBr2c_GGuNmQiqf3XFX","name":"IMG_0280.JPG","size":6059675,"day":"viernes","section":"Sociales"},{"id":"1hXGxou73PhqXu6Cppyg0rauKmHXT4gx5","name":"IMG_0287.JPG","size":6682124,"day":"viernes","section":"Sociales"},{"id":"1ZXalHTwRCTmLLPCoVUKzCQRTdmgwaoOf","name":"IMG_0299.JPG","size":5577278,"day":"viernes","section":"Sociales"},{"id":"1Nht8FkSA-dI4koIinLwtixwguqNwjpbS","name":"IMG_0422.JPG","size":7099977,"day":"viernes","section":"Sociales"},{"id":"1YRzwTy70kFVMgKjSf0pmCnw2FJ_SJrEr","name":"IMG_0424.JPG","size":7274768,"day":"viernes","section":"Sociales"},{"id":"1zAX-45t2qCGlr2XOYE4JR2esyNCdWIY3","name":"IMG_0507.JPG","size":7309451,"day":"viernes","section":"Sociales"},{"id":"1UFFiJs49WWZjCoySJN5D9gHgu8uSp-O5","name":"IMG_0508.JPG","size":8873990,"day":"viernes","section":"Sociales"},{"id":"1Y5P5H87lVFPJwQh4fxONvPj89tgr1S4Y","name":"IMG_0744.JPG","size":7984927,"day":"viernes","section":"Sociales"},{"id":"1Q5j14QrYNKxUK2sNDF1ugh9StVqRRku-","name":"IMG_0748.JPG","size":8059749,"day":"viernes","section":"Sociales"},{"id":"1iHv5LpqLaYYwmmdZCYooE7p4UgGFoB7U","name":"IMG_0751.JPG","size":7804643,"day":"viernes","section":"Sociales"},{"id":"15AmhPIfcKIzma3fY_ffnDSKxlZYThv60","name":"IMG_0756.JPG","size":8809394,"day":"viernes","section":"Sociales"},{"id":"1XzQkuSYsQ2DGs8-_clR3JTvPKsQ1b_EB","name":"IMG_0760.JPG","size":7327743,"day":"viernes","section":"Sociales"},{"id":"1qPiBtRvv-hKnNpKLQ1vPP97sGCStKCxB","name":"IMG_0763.JPG","size":7665360,"day":"viernes","section":"Sociales"},{"id":"1h7wkWv6i78aad1nesJ6kr5MmeAivEf_e","name":"IMG_0766.JPG","size":7385327,"day":"viernes","section":"Sociales"},{"id":"1r9AH8c5mn7AUofAVNhWk76zQlukRnEX_","name":"IMG_0770.JPG","size":8803361,"day":"viernes","section":"Sociales"},{"id":"1TAqn8lYV38Wc6WmNuzEuDmCpZyEWEc-P","name":"IMG_0772.JPG","size":9649200,"day":"viernes","section":"Sociales"},{"id":"1JjRCrj6RF8rpiBnsvPE-cUuOqCPLFAGE","name":"IMG_0776.JPG","size":9673225,"day":"viernes","section":"Sociales"},{"id":"1XXslKEXk_rUex7cFSzyCU9s2PzECzAj7","name":"IMG_0779.JPG","size":7995343,"day":"viernes","section":"Sociales"},{"id":"1Z_yTplJ99Fpmum7wrPscSwMr3EVeHDig","name":"IMG_0781.JPG","size":8384518,"day":"viernes","section":"Sociales"},{"id":"16Od7AqNhBSZ-2cyc63z85rAbLCcO6b-m","name":"IMG_0787.JPG","size":9059627,"day":"viernes","section":"Sociales"},{"id":"1iV7rGxvGgxCnijlOntBrdMUEJa57Jr86","name":"IMG_0788.JPG","size":6265892,"day":"viernes","section":"Sociales"},{"id":"1B8yDgCYqy9NEsmFRbVoJcIvQ5U54eoa4","name":"IMG_0791.JPG","size":6872552,"day":"viernes","section":"Sociales"},{"id":"1-WqHow9gu54OhoXf-r1NT1mXjq1zdqNZ","name":"IMG_0806.JPG","size":8109749,"day":"viernes","section":"Sociales"},{"id":"1wNzlAqX6cf_kGjWYGHTljyXlsIuMfBjq","name":"IMG_0850.JPG","size":5228728,"day":"viernes","section":"Sociales"},{"id":"14qQ4z3jbhcjcVnBPVfuhCHg8CmIKcy30","name":"IMG_0852.JPG","size":5405528,"day":"viernes","section":"Sociales"},{"id":"18aoOvMtBsKYmbqcVW74UqMLZZM98kx7G","name":"IMG_0857.JPG","size":5304119,"day":"viernes","section":"Sociales"},{"id":"1n1XThparXOnNZICrJJsCuXAzR28K8IR7","name":"IMG_0869.JPG","size":5044241,"day":"viernes","section":"Sociales"},{"id":"1VyqQzGJSgl4vDUW0K2hBZin3vxWVmkgj","name":"IMG_0960.JPG","size":10022148,"day":"viernes","section":"Sociales"},{"id":"1dX09Ur0ocC4keOnNSPic8qfTeterVUvB","name":"IMG_1242.JPG","size":6236091,"day":"sabado","section":"Salón Guayacán"},{"id":"178T4SBwNyymBfGD0Y1gg7zsQTizMxU2i","name":"IMG_1246.JPG","size":7016150,"day":"sabado","section":"Salón Guayacán"},{"id":"18ZFobQYoJWoeI8XAJgA70faq6KIWcLZv","name":"IMG_1247.JPG","size":6839605,"day":"sabado","section":"Salón Guayacán"},{"id":"1eGEN2KdkLFP279pt7P4jjVV9O-smrupZ","name":"IMG_1249.JPG","size":6350861,"day":"sabado","section":"Salón Guayacán"},{"id":"1sdCv0PRAAB7Tt54cVHA12-eOsWKETp9M","name":"IMG_1252.JPG","size":6293288,"day":"sabado","section":"Salón Guayacán"},{"id":"1FG67fn9tNWG9g-XU5k_z7Bbluu702mq8","name":"IMG_1255.JPG","size":5789762,"day":"sabado","section":"Salón Guayacán"},{"id":"14pD_VtSZsbsojjCWcgyERJSP9rPZYFxN","name":"IMG_1260.JPG","size":11463149,"day":"sabado","section":"Salón Guayacán"},{"id":"1RHaoh3ZtZgBm-4qMpJ5tN_QSCGzTciL0","name":"IMG_1266.JPG","size":11788250,"day":"sabado","section":"Salón Guayacán"},{"id":"1aFGYfZkTPytMxq37DNuOekmAh2HzigaE","name":"IMG_1274.JPG","size":5458712,"day":"sabado","section":"Salón Guayacán"},{"id":"1N454leZWKJQ6D3Mm7ghf6K0t1u7cskvO","name":"IMG_1277.JPG","size":5144231,"day":"sabado","section":"Salón Guayacán"},{"id":"1HVEScKagdFUY18pRw4AWQfR03UlZnvbQ","name":"IMG_1287.JPG","size":7484272,"day":"sabado","section":"Salón Guayacán"},{"id":"1gkGtrn6jFANJ3YZ2CGnigxOi2Aan-puS","name":"IMG_1294.JPG","size":5857818,"day":"sabado","section":"Salón Guayacán"},{"id":"1alTGNgXvVkvd4RbmWsWuCm3Y_d_dE8Xr","name":"IMG_1296.JPG","size":7058722,"day":"sabado","section":"Salón Guayacán"},{"id":"1kqrG0cI5-mDgDks8Pg3jc2Itx8sZecnF","name":"IMG_1682.JPG","size":8249498,"day":"sabado","section":"Salón Guayacán"},{"id":"1qNF7KV1Mmoi0jP-VNrS4v0A8JhHFwTP9","name":"IMG_1722.JPG","size":5994852,"day":"sabado","section":"Salón Guayacán"},{"id":"1wdKJvP85BW4EMnjr0oybrYKnT2Yr8zby","name":"IMG_1726.JPG","size":8195802,"day":"sabado","section":"Salón Guayacán"},{"id":"15DI7ZlO4PhoSeiQCVlbK7ThInsk6ohLJ","name":"IMG_1759.JPG","size":9058429,"day":"sabado","section":"Salón Guayacán"},{"id":"1a4mLFH6AT0oG98sy40vLC8_O4FiOWgIj","name":"IMG_1818.JPG","size":8387125,"day":"sabado","section":"Salón Guayacán"},{"id":"1uH8DN2nywwuKkCEO55_HI6tRYDWFIaZI","name":"IMG_1822.JPG","size":5824683,"day":"sabado","section":"Salón Guayacán"},{"id":"1HsFhljcwAhIuZdpIFhT_GjU09i1_bv3c","name":"IMG_1829.JPG","size":5336330,"day":"sabado","section":"Salón Guayacán"},{"id":"1boATiUoRJ-AOG9b8aySKi88a5Ejbatuy","name":"IMG_1832.JPG","size":5537144,"day":"sabado","section":"Salón Guayacán"},{"id":"1bFawtcPiBditRjTJpKy0uqhedMgRRFwO","name":"IMG_1836.JPG","size":6879609,"day":"sabado","section":"Salón Guayacán"},{"id":"1ye5CpFXY4m0tJKai2nssjLlLXiTKLiMB","name":"IMG_1860.JPG","size":12663818,"day":"sabado","section":"Salón Guayacán"},{"id":"1Sc4pUE2ZnlUHfxZp8YE66xPg9_23FPZu","name":"IMG_1863.JPG","size":6036462,"day":"sabado","section":"Salón Guayacán"},{"id":"1Ibz4S7iUHpQncjhV6ZQpuI1Irm5IIb1Q","name":"IMG_1869.JPG","size":11241461,"day":"sabado","section":"Salón Guayacán"},{"id":"1gCrL6bCxUvcEog8YToQ95VILf0znbcU-","name":"IMG_1876.JPG","size":5283458,"day":"sabado","section":"Salón Guayacán"},{"id":"1bleNWDdLiEpVPS_dWxcSUe_qqrG7n-DQ","name":"IMG_1882.JPG","size":5581322,"day":"sabado","section":"Salón Guayacán"},{"id":"1nP97LX1sm5DmuawBXDouYSvHLiElLgt2","name":"IMG_1888.JPG","size":5495935,"day":"sabado","section":"Salón Guayacán"},{"id":"1Zag_Ak2lImHz8VYm_xjOxvvT02J6SQay","name":"IMG_1895.JPG","size":6187548,"day":"sabado","section":"Salón Guayacán"},{"id":"1dlGedH0JgY75u1Ec063Ih83iicffVVoe","name":"IMG_1900.JPG","size":8526673,"day":"sabado","section":"Salón Guayacán"},{"id":"1mAmvyrRQ5JgwsaENE131fKBwbaGj61p-","name":"IMG_1902.JPG","size":13007028,"day":"sabado","section":"Salón Guayacán"},{"id":"1d9zXuOhxwnA6t_vklY7IVE4qhlpwxqrX","name":"IMG_1919.JPG","size":5220389,"day":"sabado","section":"Salón Guayacán"},{"id":"125ypxF_nBgunb59E0eHbU0Z3p_vh7hTv","name":"IMG_1922.JPG","size":5185694,"day":"sabado","section":"Salón Guayacán"},{"id":"1DlU3BzfUJSvqktInGQ-0lcBFumO5fDk5","name":"IMG_1934.JPG","size":5586186,"day":"sabado","section":"Salón Guayacán"},{"id":"1IrYP2IA1qA9tBOGd-s5gWxi00lMi2lQ_","name":"IMG_1937.JPG","size":5286832,"day":"sabado","section":"Salón Guayacán"},{"id":"1aUP9BnUDh5JzW8F-FKaSAxESOmRMq2q7","name":"IMG_1939.JPG","size":5346856,"day":"sabado","section":"Salón Guayacán"},{"id":"1D6yw6sXWZN8-H26smdrHarBN2IGA_vfV","name":"IMG_1942.JPG","size":5614811,"day":"sabado","section":"Salón Guayacán"},{"id":"18p5fAILvDOBXUy2AvkU7d7LWDdSypQVU","name":"IMG_1946.JPG","size":6042868,"day":"sabado","section":"Salón Guayacán"},{"id":"1_-hE0whnCivkEF_yM0UFgAHKiY7ys5J9","name":"IMG_1949.JPG","size":6213424,"day":"sabado","section":"Salón Guayacán"},{"id":"13t1TFwU0bwsfNDaT3hbIT9zfVLyad-GE","name":"IMG_1952.JPG","size":6330259,"day":"sabado","section":"Salón Guayacán"},{"id":"1k5IPrTTa1KMpb-SjXzWqNF526Q7B_rzT","name":"IMG_1955.JPG","size":5749151,"day":"sabado","section":"Salón Guayacán"},{"id":"1x1ixGfYSr6ucyYUecPuzx6IlSRkKADe-","name":"IMG_1958.JPG","size":16092968,"day":"sabado","section":"Salón Guayacán"},{"id":"1lwSXQxjciOj_3zzG9SxSok2s073qiQBW","name":"IMG_1960.JPG","size":11456132,"day":"sabado","section":"Salón Guayacán"},{"id":"1-ycP_vnAz-KpOt8zYWlVKiLyUBjUTtJl","name":"IMG_1299.JPG","size":6103154,"day":"sabado","section":"Salón Sapán"},{"id":"1oDMfDPlepbj2aA90z5CVlI9xFQYmp0nd","name":"IMG_1312.JPG","size":6544795,"day":"sabado","section":"Salón Sapán"},{"id":"1GEnbrLeRKyCWwG91efFoDCRZ82-5cWWv","name":"IMG_1317.JPG","size":6623146,"day":"sabado","section":"Salón Sapán"},{"id":"1YxraORhJgfdMIpILr1WlG91mUElTzB3e","name":"IMG_1319.JPG","size":6593480,"day":"sabado","section":"Salón Sapán"},{"id":"1Ynx3RNYhrlnYbOI1bLINwI574BpXeqod","name":"IMG_1328.JPG","size":6879773,"day":"sabado","section":"Salón Sapán"},{"id":"1-ftGDJWvcB7zB1ltMNq9NqBLXGR-cSjR","name":"IMG_1331.JPG","size":7791791,"day":"sabado","section":"Salón Sapán"},{"id":"1O7bPcmHrum9EPmgAWIkTuJ60CmLoSXes","name":"IMG_1340.JPG","size":6621830,"day":"sabado","section":"Salón Sapán"},{"id":"1WGXyykPDvetMOaSzwQJD4JKwR_IdgXN5","name":"IMG_1345.JPG","size":5661702,"day":"sabado","section":"Salón Sapán"},{"id":"1VFq7NBDNq3uDnkTX25ElNqwWaBEq6nAs","name":"IMG_1356.JPG","size":6603305,"day":"sabado","section":"Salón Sapán"},{"id":"12IsGoTA4Fb83NJ3o4qr5UXNdxLqihxV7","name":"IMG_1361.JPG","size":8656806,"day":"sabado","section":"Salón Sapán"},{"id":"1Z1l6BNnnhRMCGqKyHIsurTqWv1GXJLgB","name":"IMG_1369.JPG","size":5740302,"day":"sabado","section":"Salón Sapán"},{"id":"1PH4n_pOx6eMKkk_A5sBgoO3nS6DmZA5A","name":"IMG_1372.JPG","size":6112413,"day":"sabado","section":"Salón Sapán"},{"id":"1_qCmHV_oHrMcvfTxOsd3ix116HGMFYL8","name":"IMG_1729.JPG","size":7895494,"day":"sabado","section":"Salón Sapán"},{"id":"1FU8NmQeevYpD9vyJie0F7F5azlR2bYOL","name":"IMG_1735.JPG","size":6908687,"day":"sabado","section":"Salón Sapán"},{"id":"1eN7NVJ_SczsEtKpJ8fp807cbJDvAD95s","name":"IMG_1738.JPG","size":7496753,"day":"sabado","section":"Salón Sapán"},{"id":"1QVtcNxrBanyb4VF8MPafrgliUEcYuitB","name":"IMG_1742.JPG","size":8070007,"day":"sabado","section":"Salón Sapán"},{"id":"1XDGRoc3dN_xJaHhkJQtDiAiNOhsmgost","name":"IMG_1743.JPG","size":14889715,"day":"sabado","section":"Salón Sapán"},{"id":"1qyYRNAGnU0YlnJdWfvAk1dwaKYueiSsr","name":"IMG_1747.JPG","size":11431778,"day":"sabado","section":"Salón Sapán"},{"id":"1JR_0uYFXWKGfsMWkiM3Di5StC7riu1Sg","name":"IMG_1752.JPG","size":7245491,"day":"sabado","section":"Salón Sapán"},{"id":"1q6nszmF4Hwhs_bi1MVFjFKP6yj4n5bTk","name":"IMG_1756.JPG","size":7707486,"day":"sabado","section":"Salón Sapán"},{"id":"1sxDQKCEGzAVNhbt7Tw9Pl0nmskLTeQdz","name":"IMG_1762.JPG","size":10372192,"day":"sabado","section":"Salón Sapán"},{"id":"1b-HLUsl9zTAqyGX9tDXN3j-bZZYWF8NN","name":"IMG_1770.JPG","size":5724520,"day":"sabado","section":"Salón Sapán"},{"id":"1eofCQKk9WOEbfOh2pkACmikn69iZVR1p","name":"IMG_1778.JPG","size":5930442,"day":"sabado","section":"Salón Sapán"},{"id":"1ry2QS_bcN29FGhIzrXxT8RxDTNor1Xsq","name":"IMG_1787.JPG","size":5341796,"day":"sabado","section":"Salón Sapán"},{"id":"1GuFvKgbDYW933ZxF7jL2p504sMJakQDo","name":"IMG_1791.JPG","size":7312523,"day":"sabado","section":"Salón Sapán"},{"id":"1vmUa-7AXJDcDF0XfTsdYKtKllRKxVazJ","name":"IMG_1795.JPG","size":8226470,"day":"sabado","section":"Salón Sapán"},{"id":"1VnfHYalbh2s5iQxrSZCrzz7zUUo6dYDR","name":"IMG_1991.JPG","size":5601143,"day":"sabado","section":"Salón Sapán"},{"id":"18geFlmJkeFjDJZp7v4t5CEFCoSXWeFDq","name":"IMG_1999.JPG","size":6995515,"day":"sabado","section":"Salón Sapán"},{"id":"1sp_aVcKjFIxzsppxMDyF9JVadREOy6tL","name":"IMG_2003.JPG","size":7407224,"day":"sabado","section":"Salón Sapán"},{"id":"1MRAdvGjokvm08aTa3Zh2o0T4TBDMFKq8","name":"IMG_2008.JPG","size":8782447,"day":"sabado","section":"Salón Sapán"},{"id":"1P9QFDow4YKCsDWjau3hf8jcPd5d3bptq","name":"IMG_2019.JPG","size":6782690,"day":"sabado","section":"Salón Sapán"},{"id":"1c8zjb52nlZVaiXnMZzNzZzSwwDLrmD2D","name":"IMG_2023.JPG","size":6184777,"day":"sabado","section":"Salón Sapán"},{"id":"1yxcrQoI3l7NUkH88nO6qui_kMxPd3WeH","name":"IMG_2027.JPG","size":5885814,"day":"sabado","section":"Salón Sapán"},{"id":"1FoKcaGJ8vasNaymPyzMrwU9fTJCCsEKg","name":"IMG_1416.JPG","size":8982152,"day":"sabado","section":"Muestra Comercial"},{"id":"1QEo_AKa9DN8Yt7ec0WMcKyXMqUrgNRuM","name":"IMG_1435.JPG","size":6266292,"day":"sabado","section":"Muestra Comercial"},{"id":"1tXvADl_dqNmAbqrueFJb9FJCuXwtUjB3","name":"IMG_1441.JPG","size":6293562,"day":"sabado","section":"Muestra Comercial"},{"id":"1qTBlR6NDNQh_k4xI_kB6_e0cV5Kl-QqK","name":"IMG_1457.JPG","size":6313821,"day":"sabado","section":"Muestra Comercial"},{"id":"1_H0HqFSa95jaVB4mq7f4CYf-KXeWIS0-","name":"IMG_1474.JPG","size":6222473,"day":"sabado","section":"Muestra Comercial"},{"id":"1i3wWVBmAIuj3028VvF-7EKS_QfFpErRS","name":"IMG_1496.JPG","size":4492811,"day":"sabado","section":"Muestra Comercial"},{"id":"1_u9DVRQlMjBxnoPbiisMW48Z8U1904ho","name":"IMG_1502.JPG","size":6496894,"day":"sabado","section":"Muestra Comercial"},{"id":"18-NlnDSFhNk9ZM7Vvf8xqirhvh3m0r8n","name":"IMG_1534.JPG","size":7473930,"day":"sabado","section":"Muestra Comercial"},{"id":"1BpCJkcjiwrj3VI1Gg-gBXFaYzBSWKzq9","name":"IMG_1542.JPG","size":8219673,"day":"sabado","section":"Muestra Comercial"},{"id":"1M3NF8QJXBVPsk18T_jw0-wmwC12XK4f4","name":"IMG_1549.JPG","size":6615653,"day":"sabado","section":"Muestra Comercial"},{"id":"1t__LJ0AYRl98NN49zeZ1KL5JyAOhwpb4","name":"IMG_1552.JPG","size":9759132,"day":"sabado","section":"Muestra Comercial"},{"id":"10rZeZhussx2Ebykyw1ya0naaPZdGhGi6","name":"IMG_1555.JPG","size":6336247,"day":"sabado","section":"Muestra Comercial"},{"id":"17-QjN3dbym82AISCYs1fYiMjFCIK6jed","name":"IMG_1556.JPG","size":7228907,"day":"sabado","section":"Muestra Comercial"},{"id":"1CwdgYyYr_oQDzlq7EwnhobzYfhd01Ugi","name":"IMG_1632.JPG","size":8578222,"day":"sabado","section":"Muestra Comercial"},{"id":"19f9klrlZ3nHqN4YTTaAu7UdFexqXrQB0","name":"IMG_1642.JPG","size":9747888,"day":"sabado","section":"Muestra Comercial"},{"id":"1_nsAyLR3jklBk6AAI-Cw42zCZ5SzCvRg","name":"IMG_1647.JPG","size":5723271,"day":"sabado","section":"Muestra Comercial"},{"id":"1RiIZfIjmGc5XUZ9uQ4sFGCJ2hpqh1tjY","name":"IMG_1651.JPG","size":7149233,"day":"sabado","section":"Muestra Comercial"},{"id":"1uFzCOLLAZ8GDFsUBSsQOeh9B8PWRCyoY","name":"IMG_1662.JPG","size":6734799,"day":"sabado","section":"Muestra Comercial"},{"id":"1tqXdJUt_dDggxONdyrVuyCw9eE_Fx5BV","name":"IMG_1665.JPG","size":4768655,"day":"sabado","section":"Muestra Comercial"},{"id":"1Yz2QrYETguiM9vz2_P45uWQIMttz8dGq","name":"IMG_1667.JPG","size":6978302,"day":"sabado","section":"Muestra Comercial"},{"id":"1hw4S1ufpIAvRyOZu21iwfmpjQfvoUmvY","name":"IMG_1670.JPG","size":6096566,"day":"sabado","section":"Muestra Comercial"},{"id":"14Pd_4sBRulu7pgpDbXU9QmXPtjqxo7TJ","name":"IMG_1674.JPG","size":6993165,"day":"sabado","section":"Muestra Comercial"},{"id":"1IbUt_cyipp8Sw6695nr9AcCN14KsmvnJ","name":"IMG_2034.JPG","size":5428374,"day":"sabado","section":"Muestra Comercial"},{"id":"14rH1-6KFHtAY2UFibqxDXNOXTA6Ag_W_","name":"IMG_2035.JPG","size":6526270,"day":"sabado","section":"Muestra Comercial"},{"id":"1HKFoAbxOIfRCYBg_l6Wi__qY0jx-LJuk","name":"IMG_2036.JPG","size":7521942,"day":"sabado","section":"Muestra Comercial"},{"id":"1k2FoW6D0po1Z7ISpnVyiElIvQ22yueFp","name":"IMG_1379.JPG","size":6533280,"day":"sabado","section":"Sociales"},{"id":"1xFg1IXB-vP5UkuXAu1Ds8W3oIB-VT3YF","name":"IMG_1385.JPG","size":5407554,"day":"sabado","section":"Sociales"},{"id":"1R5ACobKZLVggSGjJ8EjY47tMcdmQniAE","name":"IMG_1387.JPG","size":7661307,"day":"sabado","section":"Sociales"},{"id":"1IAd6a3E5VPXpeHC901hO7-EVHdS6V3mq","name":"IMG_1391.JPG","size":8747292,"day":"sabado","section":"Sociales"},{"id":"17yqrLC_WDYfsy-FNyUqWXguFf7ox4WuT","name":"IMG_1393.JPG","size":7680366,"day":"sabado","section":"Sociales"},{"id":"1o_zFhLZZJeA02JKbi9yn8-FCRJwq97pN","name":"IMG_1400.JPG","size":9234080,"day":"sabado","section":"Sociales"},{"id":"1wZSkOg-fMGZotrtzTfYXjXp-2JvZfYzw","name":"IMG_1403.JPG","size":7319241,"day":"sabado","section":"Sociales"},{"id":"12Mpxl8tu2rvy8u4LgEbQt_aJXVstcIgs","name":"IMG_1406.JPG","size":7143435,"day":"sabado","section":"Sociales"},{"id":"1nVEYW0gwynzUvPXXLslgEfStJlccj97o","name":"IMG_1409.JPG","size":8165528,"day":"sabado","section":"Sociales"},{"id":"14df3U3kVT0nqFF5Xc0sQFz5P_NaG2nMw","name":"IMG_1423.JPG","size":9174408,"day":"sabado","section":"Sociales"},{"id":"1K5imyrv0WEaY5Aeeuq4F8YyPp5lx-757","name":"IMG_1427.JPG","size":5340346,"day":"sabado","section":"Sociales"},{"id":"1E8VJBTfiEGpgqFEV9g2Ldd_xsv1LJl-M","name":"IMG_1430.JPG","size":5880210,"day":"sabado","section":"Sociales"},{"id":"1GpQbHXloH4G6ySMtTAIdu6Kz0G1VoU5G","name":"IMG_1463.JPG","size":7571730,"day":"sabado","section":"Sociales"},{"id":"12T6rT5OYhpsYVxWTDid6Wrf2jMYWZKfO","name":"IMG_1466.JPG","size":7421427,"day":"sabado","section":"Sociales"},{"id":"1lkXiUCfHH-lWpSwoRkSc76mPx0y_c6uK","name":"IMG_1478.JPG","size":6879755,"day":"sabado","section":"Sociales"},{"id":"1Vh3W4H33gFGm8UctM5zZr1htCqHmafR6","name":"IMG_1485.JPG","size":8927911,"day":"sabado","section":"Sociales"},{"id":"13Wp8SQYNURuDoIWGoqsfmWJnQRSI8oY4","name":"IMG_1509.JPG","size":7869103,"day":"sabado","section":"Sociales"},{"id":"1yJoR9y21F3r8M2lfFZO_Nr1FpdiZqLaD","name":"IMG_1516.JPG","size":6128823,"day":"sabado","section":"Sociales"},{"id":"1ae_HePUII49crH_bjS272Er8J90fJYsl","name":"IMG_1525.JPG","size":8239410,"day":"sabado","section":"Sociales"},{"id":"19XoHigorUz6tuYdc_jQ3pxQucRxBjEIm","name":"IMG_1528.JPG","size":7189278,"day":"sabado","section":"Sociales"},{"id":"1wlf4sT3_IOFuLtbmKQg0SMrGqBebMeR0","name":"IMG_1538.JPG","size":8982850,"day":"sabado","section":"Sociales"},{"id":"1ZFN5DPmOU4zvVqb8qbLmvvcCCMplaNlh","name":"IMG_1540.JPG","size":8971894,"day":"sabado","section":"Sociales"},{"id":"1nwyN6MeWhFiO4CTMeuk9tE0WXjW--lPq","name":"IMG_1577.JPG","size":7468174,"day":"sabado","section":"Sociales"},{"id":"1oYQstijm7pjTOwSF8SzMqH2OK44rFvFq","name":"IMG_1616.JPG","size":7423383,"day":"sabado","section":"Sociales"},{"id":"1zCZq8YTu2MkmPRIP-J5WDhF9kZtbALd6","name":"IMG_1623.JPG","size":7076269,"day":"sabado","section":"Sociales"},{"id":"1h58MRWnmsr_SyUlih47aHHEvmyBQbW1d","name":"IMG_1636.JPG","size":8884038,"day":"sabado","section":"Sociales"},{"id":"1vlJMqzRtHV-hUf9trx1p0Ty4RoXpIfC-","name":"IMG_1807.JPG","size":8290996,"day":"sabado","section":"Sociales"},{"id":"1PeYEOZqWsUVxF2-AuL0TJgOZAemzRNyF","name":"IMG_1873.JPG","size":6485682,"day":"sabado","section":"Sociales"},{"id":"1Cppnv41Vglh_yCvIrqejJNjHfXLXX3or","name":"IMG_1959.JPG","size":16517585,"day":"sabado","section":"Sociales"},{"id":"1pBUwwBVTNIjsRizvLmOlgtF9sPYLmvMs","name":"IMG_1964.JPG","size":14846165,"day":"sabado","section":"Sociales"},{"id":"1SXs3F-ShqLWa1WmJEPqct1CUDe2ufw2C","name":"IMG_1982.JPG","size":7106684,"day":"sabado","section":"Sociales"},{"id":"1QXgmlCNMIxlcObdGiFdQQjbll3ayGjgM","name":"IMG_1983.JPG","size":7750632,"day":"sabado","section":"Sociales"},{"id":"1h5jxEKKdbqChd_eaF5dFwieFI6TEMBWI","name":"IMG_2030.JPG","size":6287654,"day":"sabado","section":"Sociales"},{"id":"19nyOItHev53m17Cg6kTm_rmxd7NdksWx","name":"IMG_2033.JPG","size":5634723,"day":"sabado","section":"Sociales"}]
+
+};
+</script>
+<style>
+:root{
+  --verde:#079812;        /* verde del logo ACED */
+  --verde-hover:#067E0F;
+  --verde-claro:#1EB920;  /* segundo verde del logo, solo acentos */
+  --verde-suave:#E8F5E9;
+  --tinta:#111814;        /* negro del logo */
+  --texto2:#47524B;
+  --nota:#6B756E;
+  --linea:#DDE3DE;
+  --fondo:#FFFFFF;
+  --fondo2:#F4F7F4;
+  /* Factor H */
+  --fh-grafito:#1E2227; --fh-hueso:#F2F1EC; --fh-verde:#1F6B57; --fh-gris:#5B6068;
+  --radio:10px;
+  --gutter:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tinta);background:var(--fondo);line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--verde)}
+img{display:block}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--verde-claro);outline-offset:2px}
+
+/* Encabezado */
+.top{border-bottom:1px solid var(--linea);background:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.top .aced img{height:52px;width:auto}
+.credit-top{font-size:12px;color:var(--nota);text-decoration:none;display:flex;align-items:center;gap:8px;text-align:right}
+.credit-top img{height:20px;width:auto}
+.credit-top:hover{color:var(--tinta)}
+
+.hero{background:var(--fondo2);border-bottom:1px solid var(--linea)}
+.hero .wrap{padding-top:clamp(28px,5vw,56px);padding-bottom:clamp(24px,4vw,40px)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--verde);margin:0 0 8px}
+h1{font-size:clamp(28px,5.2vw,52px);line-height:1.08;margin:0 0 12px;font-weight:700;letter-spacing:-.02em}
+h1 .g{color:var(--verde)}
+.lead{font-size:clamp(15px,1.6vw,18px);color:var(--texto2);margin:0;max-width:62ch}
+
+/* Barra de controles */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--linea)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-top:12px;padding-bottom:12px}
+.days{display:flex;gap:8px;flex-wrap:wrap}
+.day{border:1.5px solid var(--linea);background:#fff;border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px}
+.day small{font-weight:500;font-size:12px;color:var(--nota)}
+.day[aria-pressed="true"]{background:var(--verde);border-color:var(--verde);color:#fff}
+.day[aria-pressed="true"] small{color:rgba(255,255,255,.85)}
+.day:hover:not([aria-pressed="true"]){border-color:var(--verde)}
+.views{display:flex;border:1.5px solid var(--linea);border-radius:999px;overflow:hidden;margin-left:auto}
+.views button{border:0;background:#fff;padding:8px 14px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:6px}
+.views button+button{border-left:1.5px solid var(--linea)}
+.views button[aria-pressed="true"]{background:var(--tinta);color:#fff}
+.views svg{width:16px;height:16px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1.5px solid var(--linea);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--tinta)}
+.btn:hover{border-color:var(--verde)}
+.btn.primary{background:var(--verde);border-color:var(--verde);color:#fff}
+.btn.primary:hover{background:var(--verde-hover)}
+.btn[aria-pressed="true"]{background:var(--verde-suave);border-color:var(--verde);color:var(--verde-hover)}
+.btn svg{width:16px;height:16px;flex:none}
+.sections{display:flex;gap:6px;flex-wrap:wrap;width:100%}
+.chip{border:1px solid var(--linea);background:var(--fondo2);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--texto2)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.sections:empty{display:none}
+
+main{padding:24px 0 56px;min-height:50vh}
+.sec-title{display:flex;align-items:baseline;gap:10px;margin:28px 0 12px;font-size:18px;font-weight:600}
+.sec-title:first-child{margin-top:4px}
+.sec-title span{font-size:13px;font-weight:500;color:var(--nota)}
+
+/* Cuadrícula */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.tile{position:relative;border:0;padding:0;background:var(--fondo2);border-radius:6px;overflow:hidden;display:block;width:100%}
+.grid .tile{aspect-ratio:1/1}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease,opacity .3s;opacity:0}
+.tile img.ok{opacity:1}
+.tile:hover img{transform:scale(1.03)}
+.check{position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.25);display:none;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.check svg{width:14px;height:14px;color:#fff;opacity:0}
+.selecting .check{display:flex}
+.tile.sel .check{background:var(--verde);border-color:#fff}
+.tile.sel .check svg{opacity:1}
+.tile.sel{outline:3px solid var(--verde);outline-offset:-3px}
+.tile.sel img{opacity:.82}
+
+/* Mosaico */
+.mosaic{columns:280px;column-gap:8px}
+.mosaic .tile{margin:0 0 8px;break-inside:avoid;height:auto}
+.mosaic .tile img{height:auto}
+
+/* Presentación */
+.show{background:#0C110E;border-radius:var(--radio);overflow:hidden;color:#fff}
+.show .stage{position:relative;height:min(72vh,760px);display:flex;align-items:center;justify-content:center}
+.show .stage img{max-width:100%;max-height:100%;object-fit:contain;transition:opacity .4s}
+.show:fullscreen .stage{height:calc(100vh - 120px)}
+.navbtn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;display:flex;align-items:center;justify-content:center}
+.navbtn:hover{background:rgba(255,255,255,.28)}
+.navbtn.prev{left:14px}.navbtn.next{right:14px}
+.navbtn svg{width:22px;height:22px}
+.show .ctrl{display:flex;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.show .ctrl .count{font-size:13px;color:rgba(255,255,255,.75);margin-right:auto}
+.show .ctrl button{background:rgba(255,255,255,.1);border:0;color:#fff;border-radius:999px;padding:7px 14px;font-size:13px;display:flex;align-items:center;gap:6px}
+.show .ctrl button:hover{background:rgba(255,255,255,.22)}
+.show .ctrl svg{width:15px;height:15px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:0 14px 14px;scrollbar-width:thin}
+.strip button{flex:none;border:2px solid transparent;padding:0;border-radius:4px;overflow:hidden;width:72px;height:52px;background:#222;opacity:.6}
+.strip button[aria-current="true"]{border-color:var(--verde-claro);opacity:1}
+.strip img{width:100%;height:100%;object-fit:cover}
+
+/* Vacío / estados */
+.empty{text-align:center;padding:72px 16px;background:var(--fondo2);border-radius:var(--radio);border:1px dashed var(--linea)}
+.empty .ic{width:56px;height:56px;margin:0 auto 14px;color:var(--verde)}
+.empty h2{margin:0 0 6px;font-size:22px}
+.empty p{margin:0 auto;color:var(--texto2);max-width:46ch}
+.loading{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.loading div{aspect-ratio:1;border-radius:6px;background:linear-gradient(90deg,#eef2ef 0,#f7f9f7 50%,#eef2ef 100%);background-size:200% 100%;animation:sh 1.2s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.embed{width:100%;height:75vh;border:1px solid var(--linea);border-radius:var(--radio);background:#fff}
+.embed-note{font-size:13px;color:var(--nota);margin:0 0 10px}
+
+/* Barra de selección */
+.selbar{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);transition:transform .25s;z-index:40;background:var(--tinta);color:#fff;border-radius:999px;padding:8px 8px 8px 18px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 30px rgba(0,0,0,.25);max-width:calc(100% - 24px)}
+.selbar.on{transform:translate(-50%,0)}
+.selbar b{font-weight:600;white-space:nowrap}
+.selbar .btn{border-color:transparent}
+.selbar .ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+
+/* Visor */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(8,11,9,.96);display:none;flex-direction:column;color:#fff}
+.lb.on{display:flex}
+.lb .head{display:flex;align-items:center;gap:8px;padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top))}
+.lb .head .name{margin-right:auto;font-size:13px;color:rgba(255,255,255,.75);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:4px}
+.lb .head button{background:rgba(255,255,255,.1);border:0;color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;display:flex;align-items:center;gap:6px}
+.lb .head button:hover{background:rgba(255,255,255,.22)}
+.lb .head svg{width:16px;height:16px}
+.lb .body{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 8px 16px}
+.lb .body img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.lb .spin{position:absolute;width:36px;height:36px;border-radius:50%;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;animation:rot 1s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* Diálogo de descarga */
+.dlg{position:fixed;inset:0;z-index:70;background:rgba(10,14,12,.55);display:none;align-items:center;justify-content:center;padding:16px}
+.dlg.on{display:flex}
+.dlg .card{background:#fff;border-radius:14px;max-width:480px;width:100%;padding:24px;max-height:90vh;overflow:auto}
+.dlg h3{margin:0 0 6px;font-size:20px}
+.dlg p{margin:0 0 14px;color:var(--texto2);font-size:14px}
+.parts{display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+.part{display:flex;align-items:center;gap:12px;border:1px solid var(--linea);border-radius:10px;padding:10px 12px}
+.part .info{flex:1;font-size:14px}
+.part .info small{display:block;color:var(--nota);font-size:12px}
+.part .prog{height:4px;background:var(--fondo2);border-radius:2px;margin-top:6px;overflow:hidden;display:none}
+.part .prog i{display:block;height:100%;width:0;background:var(--verde);transition:width .2s}
+.part.busy .prog{display:block}
+.part.done .btn{background:var(--verde-suave);border-color:var(--verde);color:var(--verde-hover)}
+.dlg .close{float:right;border:0;background:none;font-size:22px;line-height:1;color:var(--nota);padding:0 0 0 8px}
+
+.toast{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--tinta);color:#fff;padding:12px 16px;border-radius:10px;font-size:14px;max-width:340px;box-shadow:0 8px 30px rgba(0,0,0,.25);display:none}
+.toast.on{display:block}
+
+/* Pie con Factor H */
+.privacy{font-size:13px;color:var(--nota);text-align:center;padding:0 var(--gutter) 28px}
+.fh{background:var(--fh-hueso);border-top:1px solid #D9D8D2;color:var(--fh-grafito)}
+.fh .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+.fh .who{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.fh .lbl{font-family:"JetBrains Mono",Consolas,ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fh-gris);display:block;margin-bottom:6px}
+.fh .who img{height:34px;width:auto}
+.fh .tag{font-size:14px;color:#33373D;margin:0}
+.fh a.go{color:var(--fh-verde);font-weight:600;text-decoration:none;font-size:15px;border-bottom:1.5px solid var(--fh-verde);padding-bottom:1px}
+.fh a.go:hover{color:var(--fh-grafito);border-color:var(--fh-grafito)}
+
+/* Celular */
+@media (max-width:720px){
+  .top .aced img{height:42px}
+  .credit-top span{display:none}
+  .bar{position:static}
+  .bar .wrap{gap:10px}
+  .days{flex-wrap:nowrap;width:100%}
+  .day{flex:1;justify-content:center;padding:7px 10px;font-size:14px;flex-direction:column;gap:0;line-height:1.25;border-radius:12px}
+  .sections{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter)}
+  .sections::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap}
+  .sections{order:2}
+  .lg{display:none}
+  #zipAllLbl{display:inline-block}
+  #zipAllLbl::first-letter{text-transform:uppercase}
+  .views{margin-left:0;order:3}
+  .views button{padding:7px 11px;font-size:13px}
+  .views button .t{display:none}
+  .actions{order:4;flex:1;flex-wrap:nowrap}
+  .actions .btn{flex:1;justify-content:center;padding:8px 10px;font-size:13px;white-space:nowrap}
+  .grid,.loading{grid-template-columns:repeat(3,1fr);gap:4px}
+  .mosaic{columns:2;column-gap:4px}
+  .mosaic .tile{margin-bottom:4px}
+  .show .stage{height:58vh}
+  .navbtn{width:40px;height:40px}
+  .navbtn.prev{left:6px}.navbtn.next{right:6px}
+  .lb .head button .t{display:none}
+  .selbar{left:12px;right:12px;transform:translateY(140%);border-radius:14px}
+  .selbar.on{transform:none}
+}
+
+/* Modo carrusel (para incrustar en el inicio del sitio) */
+body.carrusel{background:#0C110E;overflow:hidden}
+body.carrusel .top,body.carrusel .hero,body.carrusel .bar,body.carrusel main,body.carrusel .privacy,body.carrusel .fh,body.carrusel .selbar,body.carrusel .toast{display:none!important}
+.cr{display:none}
+body.carrusel .cr{display:block;position:fixed;inset:0;color:#fff}
+.cr .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.cr .slide.on{opacity:1}
+.cr .slide img{width:100%;height:100%;object-fit:cover}
+.cr .shade{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,0))}
+.cr .cap{position:absolute;left:clamp(14px,3vw,32px);right:clamp(14px,3vw,32px);bottom:clamp(14px,3vw,28px);display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cr .cap .t1{font-size:clamp(11px,1.4vw,13px);letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin:0 0 2px;font-weight:600}
+.cr .cap .t2{font-size:clamp(18px,3vw,30px);font-weight:700;margin:0;line-height:1.15}
+.fh .links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.fh a.mail{color:#33373D;font-size:14px;text-decoration:none}
+.fh a.mail:hover{color:var(--fh-verde);text-decoration:underline}
+.cr .fhc{position:absolute;top:clamp(10px,2vw,18px);right:clamp(10px,2vw,18px);background:rgba(0,0,0,.45);color:#fff;text-decoration:none;font-size:clamp(11px,1.3vw,13px);font-weight:500;border-radius:999px;padding:6px 12px;display:flex;align-items:center;gap:6px}
+.cr .fhc:hover{background:rgba(0,0,0,.7)}
+.cr .fhc b{font-weight:700}
+.cr .cap a{background:var(--verde);color:#fff;text-decoration:none;font-weight:600;border-radius:999px;padding:10px 18px;font-size:clamp(13px,1.5vw,15px);white-space:nowrap}
+.cr .cap a:hover{background:var(--verde-hover)}
+.cr .bar2{position:absolute;left:0;top:0;height:3px;background:var(--verde-claro);width:0}
+.cr .wait{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;opacity:.8}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="aced" href="https://aced.org.co" target="_top" rel="noopener" aria-label="Asociación Colombiana de Endoscopia Digestiva, ir al sitio"><img src="data:image/png;base64,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" alt="ACED, Asociación Colombiana de Endoscopia Digestiva" width="219" height="139"></a>
+    <a class="credit-top" href="https://factorh.co" target="_blank" rel="noopener"><span>Cobertura del evento</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjQzIDMyMCIgd2lkdGg9IjEyNDMiIGhlaWdodD0iMzIwIiB4bWxuczpjMnBhPSJodHRwOi8vYzJwYS5vcmcvbWFuaWZlc3QiPjxyZWN0IHg9IjM4LjQwIiB5PSIyNS42MCIgd2lkdGg9IjY0LjAwIiBoZWlnaHQ9IjI2OC44MCIgZmlsbD0iIzFFMjIyNyIvPjxyZWN0IHg9IjEwMi40MCIgeT0iMTY2LjQwIiB3aWR0aD0iMTE1LjIwIiBoZWlnaHQ9IjQ0LjgwIiBmaWxsPSIjMUUyMjI3Ii8+PHJlY3QgeD0iMjE3LjYwIiB5PSIxMjEuNjAiIHdpZHRoPSI2NC4wMCIgaGVpZ2h0PSIxNzIuODAiIGZpbGw9IiMxRjZCNTciLz48cmVjdCB4PSIyMTcuNjAiIHk9IjcwLjQwIiB3aWR0aD0iNjQuMDAiIGhlaWdodD0iMzguNDAiIGZpbGw9IiNDNjhBMkUiLz48cGF0aCBkPSJNNDQ1LjU5OTg4NzY5NTMxMjUgMjQ2LjM5OTk5OTk5OTk5OTk4VjExMi44MDAxODU1NDY4NzQ5OVE0NDUuNTk5ODg3Njk1MzEyNSA5Mi40ODAwNzgxMjQ5OTk5OCA0NTYuODM5OTM0MDgyMDMxMyA4MS44NDAwMzkwNjI0OTk5OFE0NjguMDc5OTgwNDY4NzUgNzEuMTk5OTk5OTk5OTk5OTkgNDkwLjQwMDA1MzcxMDkzNzUgNzEuMTk5OTk5OTk5OTk5OTlRNDk1LjM2MDA1ODU5Mzc1IDcxLjE5OTk5OTk5OTk5OTk5IDQ5OC43NjAwNzgxMjUgNzEuNjc5OTk5OTk5OTk5OTlRNTAyLjE2MDA5NzY1NjI1IDcyLjE2IDUwNS4yMDAxMzE4MzU5Mzc1IDczLjIwMDAwOTc2NTYyNVY5Ni42NDAyNjM2NzE4NzQ5OFE1MDMuNTIwMTMxODM1OTM3NSA5Ni4wMDAyNTg3ODkwNjI0OSA1MDAuOTIwMTQ0MDQyOTY4NzMgOTUuNjAwMjYxMjMwNDY4NzNRNDk4LjMyMDE1NjI0OTk5OTk3IDk1LjIwMDI2MzY3MTg3NDk4IDQ5NC45NjAxNTYyNSA5NS4yMDAyNjM2NzE4NzQ5OFE0ODUuMjAwMTk1MzEyNSA5NS4yMDAyNjM2NzE4NzQ5OCA0ODAuNjAwMjEyNDAyMzQzNzQgOTkuOTIwMjM5MjU3ODEyNDhRNDc2LjAwMDIyOTQ5MjE4NzUgMTA0LjY0MDIxNDg0Mzc0OTk5IDQ3Ni4wMDAyMjk0OTIxODc1IDExMy40NDAxNzU3ODEyNDk5OVYyNDYuMzk5OTk5OTk5OTk5OThaTTQyMy41OTk5ODUzNTE1NjI1IDE0Ny42ODAyMjQ2MDkzNzVWMTIzLjk5OTk5OTk5OTk5OTk5SDUwMi41NjAxMzE4MzU5Mzc1VjE0Ny42ODAyMjQ2MDkzNzVaTTU5MS4xOTk5NDE0MDYyNSAyNDYuMzk5OTk5OTk5OTk5OThRNTg5LjkxOTkzMTY0MDYyNSAyNDEuNTE5OTc1NTg1OTM3NSA1ODkuMzk5OTI2NzU3ODEyNSAyMzUuNzU5OTYwOTM3NDk5OThRNTg4Ljg3OTkyMTg3NSAyMjkuOTk5OTQ2Mjg5MDYyNDggNTg4Ljg3OTkyMTg3NSAyMjEuOTk5OTUxMTcxODc0OThINTg3LjgzOTkyNjc1NzgxMjVWMTYzLjkxOTk2NTgyMDMxMjQ4UTU4Ny44Mzk5MjY3NTc4MTI1IDE1NC4zMjAwOTc2NTYyNDk5NyA1ODIuNDM5OTU2MDU0Njg3NSAxNDkuMzIwMTQ2NDg0Mzc0OTZRNTc3LjAzOTk4NTM1MTU2MjYgMTQ0LjMyMDE5NTMxMjQ5OTk4IDU2NS45MjAwNzgxMjUgMTQ0LjMyMDE5NTMxMjQ5OTk4UTU1NS4yMDAxNzU3ODEyNSAxNDQuMzIwMTk1MzEyNDk5OTggNTQ4Ljg0MDIzNDM3NSAxNDguMjgwMTQ0MDQyOTY4NzRRNTQyLjQ4MDI5Mjk2ODc1MDEgMTUyLjI0MDA5Mjc3MzQzNzQ4IDU0MS4wNDAyNzgzMjAzMTI1IDE1OS42ODAwMDQ4ODI4MTI0OEg1MTEuOTk5OTU2MDU0Njg3NVE1MTMuOTk5OTgwNDY4NzUgMTQyLjcyMDAyOTI5Njg3NSA1MjguMzE5OTk5OTk5OTk5OSAxMzIuMTYwMDE0NjQ4NDM3NDhRNTQyLjY0MDAxOTUzMTI1IDEyMS41OTk5OTk5OTk5OTk5OCA1NjYuOTYwMDg3ODkwNjI1IDEyMS41OTk5OTk5OTk5OTk5OFE1OTIuMTYwMTYxMTMyODEyNSAxMjEuNTk5OTk5OTk5OTk5OTggNjA1LjEyMDIxOTcyNjU2MjUgMTMzLjA0MDAxOTUzMTI0OTk4UTYxOC4wODAyNzgzMjAzMTI1IDE0NC40ODAwMzkwNjI1IDYxOC4wODAyNzgzMjAzMTI1IDE2Ni40MDAwNDg4MjgxMjQ5N1YyMjEuOTk5OTUxMTcxODc0OThRNjE4LjA4MDI3ODMyMDMxMjUgMjI3Ljc1OTk2NTgyMDMxMjUgNjE4Ljg4MDI4MDc2MTcxODcgMjMzLjcxOTk3NTU4NTkzNzQ4UTYxOS42ODAyODMyMDMxMjUgMjM5LjY3OTk4NTM1MTU2MjQ2IDYyMS4zNjAyOTc4NTE1NjI2IDI0Ni4zOTk5OTk5OTk5OTk5OFpNNTQ4LjcxOTkyNjc1NzgxMjUgMjQ4Ljc5OTk5OTk5OTk5OTk4UTUzMC4yMzk5NDE0MDYyNSAyNDguNzk5OTk5OTk5OTk5OTggNTE5LjMxOTk0ODczMDQ2ODcgMjM5LjU2UTUwOC4zOTk5NTYwNTQ2ODc1IDIzMC4zMiA1MDguMzk5OTU2MDU0Njg3NSAyMTQuNzIwMDE0NjQ4NDM3NDhRNTA4LjM5OTk1NjA1NDY4NzUgMTk3Ljk5OTk5NTExNzE4NzUgNTIwLjYzOTk5MjY3NTc4MTMgMTg4LjA3OTk2MzM3ODkwNjIzUTUzMi44ODAwMjkyOTY4NzUgMTc4LjE1OTkzMTY0MDYyNDk2IDU1NS4yODAwNjgzNTkzNzUgMTc0Ljg3OTk0MTQwNjI1TDU5My4zNTk5MjY3NTc4MTI0IDE2OS4xMTk5ODUzNTE1NjI1VjE4OC4zMjAwODc4OTA2MjVMNTYwLjI0MDEzMTgzNTkzNzUgMTkzLjQ0MDA1MzcxMDkzNzVRNTQ5LjM2MDIwOTk2MDkzNzUgMTk1LjEyMDAzOTA2MjQ5OTk4IDU0NC4wMDAyNTg3ODkwNjI1IDE5OS4zNjAwMTQ2NDg0Mzc0N1E1MzguNjQwMzA3NjE3MTg3NSAyMDMuNTk5OTkwMjM0Mzc0OTkgNTM4LjY0MDMwNzYxNzE4NzUgMjExLjI3OTkzMTY0MDYyNDk3UTUzOC42NDAzMDc2MTcxODc1IDIxOC4zOTk4NjMyODEyNDk5NiA1NDMuNjQwMjY2MTEzMjgxMyAyMjIuMDc5ODI5MTAxNTYyNDdRNTQ4LjY0MDIyNDYwOTM3NSAyMjUuNzU5Nzk0OTIxODc0OTcgNTU3LjYwMDExNzE4NzUgMjI1Ljc1OTc5NDkyMTg3NDk3UTU3MC40ODAwMTk1MzEyNSAyMjUuNzU5Nzk0OTIxODc0OTcgNTc5LjE1OTk3MzE0NDUzMTIgMjE5LjIzOTgxOTMzNTkzNzQ4UTU4Ny44Mzk5MjY3NTc4MTI1IDIxMi43MTk4NDM3NSA1ODcuODM5OTI2NzU3ODEyNSAyMDMuMzU5OTE2OTkyMTg3NUw1OTEuMTE5OTMxNjQwNjI1IDIyMS44Mzk5NjA5Mzc0OTk5N1E1ODYuMzE5OTAyMzQzNzUgMjM1LjAzOTk5MDIzNDM3NDk4IDU3NS4zOTk5MDk2Njc5Njg4IDI0MS45MTk5OTUxMTcxODc0OFE1NjQuNDc5OTE2OTkyMTg3NiAyNDguNzk5OTk5OTk5OTk5OTggNTQ4LjcxOTkyNjc1NzgxMjUgMjQ4Ljc5OTk5OTk5OTk5OTk4Wk02OTEuODQwMDQzOTQ1MzEyNiAyNDguNzk5OTk5OTk5OTk5OThRNjczLjQzOTk5NTExNzE4NzYgMjQ4Ljc5OTk5OTk5OTk5OTk4IDY1OS4zMTk5NjMzNzg5MDYzIDI0MC42MDAwMDI0NDE0MDYyMlE2NDUuMTk5OTMxNjQwNjI1IDIzMi40MDAwMDQ4ODI4MTI0OCA2MzcuMTU5OTE2OTkyMTg3NSAyMTcuOTYwMDA3MzI0MjE4NzRRNjI5LjExOTkwMjM0Mzc1IDIwMy41MjAwMDk3NjU2MjUgNjI5LjExOTkwMjM0Mzc1IDE4NS4wNDAwMDk3NjU2MjQ5N1E2MjkuMTE5OTAyMzQzNzUgMTY2LjU2MDAwOTc2NTYyNDk4IDYzNy4xNTk5MTY5OTIxODc1IDE1Mi4yNDAwMDQ4ODI4MTI0OVE2NDUuMTk5OTMxNjQwNjI1IDEzNy45MiA2NTkuMzE5OTYzMzc4OTA2MyAxMjkuNzZRNjczLjQzOTk5NTExNzE4NzYgMTIxLjU5OTk5OTk5OTk5OTk4IDY5MS43NjAwNDg4MjgxMjUgMTIxLjU5OTk5OTk5OTk5OTk4UTcwNy4wNDAwOTc2NTYyNSAxMjEuNTk5OTk5OTk5OTk5OTggNzE5LjI0MDEzNjcxODc1IDEyNy4yODAwMTIyMDcwMzEyM1E3MzEuNDQwMTc1NzgxMjUgMTMyLjk2MDAyNDQxNDA2MjUgNzM5LjMyMDIwMDE5NTMxMjUgMTQzLjA4MDAzNjYyMTA5Mzc0UTc0Ny4yMDAyMjQ2MDkzNzUgMTUzLjIwMDA0ODgyODEyNDk4IDc0OS40NDAyMzQzNzUgMTY2LjgwMDA2ODM1OTM3NDk2SDcyMC4zMTk4ODc2OTUzMTI2UTcxNy43NTk4ODI4MTI1IDE1Ni45NjAxMjY5NTMxMjQ5OCA3MTAuMzE5OTE5NDMzNTkzOCAxNTEuNDQwMTg1NTQ2ODc1UTcwMi44Nzk5NTYwNTQ2ODc2IDE0NS45MjAyNDQxNDA2MjUgNjkyLjI0MDA0ODgyODEyNSAxNDUuOTIwMjQ0MTQwNjI1UTY4Mi41NjAxMTIzMDQ2ODc2IDE0NS45MjAyNDQxNDA2MjUgNjc1LjQ0MDE1ODY5MTQwNjMgMTUwLjcyMDIxNDg0Mzc1UTY2OC4zMjAyMDUwNzgxMjUgMTU1LjUyMDE4NTU0Njg3NDk4IDY2NC40ODAyMzQzNzUgMTY0LjMyMDEzMTgzNTkzNzQ3UTY2MC42NDAyNjM2NzE4NzUgMTczLjEyMDA3ODEyNDk5OTk2IDY2MC42NDAyNjM2NzE4NzUgMTg1LjA0MDAwOTc2NTYyNDk3UTY2MC42NDAyNjM2NzE4NzUgMTk2Ljk1OTk0MTQwNjI0OTk4IDY2NC40ODAyMzQzNzUgMjA1LjgzOTg4MjgxMjQ5OTk4UTY2OC4zMjAyMDUwNzgxMjUgMjE0LjcxOTgyNDIxODc0OTk4IDY3NS40ODAxNTYyNDk5OTk5IDIxOS41OTk3OTAwMzkwNjI1UTY4Mi42NDAxMDc0MjE4NzUgMjI0LjQ3OTc1NTg1OTM3NSA2OTIuMzIwMDQzOTQ1MzEyNSAyMjQuNDc5NzU1ODU5Mzc1UTcwMi43OTk5NjA5Mzc1IDIyNC40Nzk3NTU4NTkzNzUgNzEwLjMxOTkxOTQzMzU5MzggMjE4Ljk5OTgxMjAxMTcxODc1UTcxNy44Mzk4Nzc5Mjk2ODc1IDIxMy41MTk4NjgxNjQwNjI0NyA3MjAuMzk5ODgyODEyNSAyMDMuNjc5OTI2NzU3ODEyNUg3NDkuNTIwMjI5NDkyMTg3NlE3NDcuMjAwMjI0NjA5Mzc1IDIxNy4xOTk5NTExNzE4NzQ5NyA3MzkuMjQwMjA1MDc4MTI1IDIyNy4zMTk5NjMzNzg5MDYyUTczMS4yODAxODU1NDY4NzUgMjM3LjQzOTk3NTU4NTkzNzQ3IDcxOS4xMjAxNDQwNDI5Njg4IDI0My4xMTk5ODc3OTI5Njg3NFE3MDYuOTYwMTAyNTM5MDYyNSAyNDguNzk5OTk5OTk5OTk5OTggNjkxLjg0MDA0Mzk0NTMxMjYgMjQ4Ljc5OTk5OTk5OTk5OTk4Wk04MTYuMjQwMDg3ODkwNjI1MSAyNDguODgwMDA5NzY1NjI0OThRNzkzLjc2MDAyNDQxNDA2MjUgMjQ4Ljg4MDAwOTc2NTYyNDk4IDc4My4wNzk5ODA0Njg3NSAyMzguMTk5OTY1ODIwMzEyNDZRNzcyLjM5OTkzNjUyMzQzNzUgMjI3LjUxOTkyMTg3NDk5OTk3IDc3Mi4zOTk5MzY1MjM0Mzc1IDIwNi4xNTk4MDQ2ODc0OTk5OVY5Ni4yNDAwMjQ0MTQwNjI0N0w4MDIuODAwMjc4MzIwMzEyNiA4NC44Nzk4OTc0NjA5Mzc0OVYyMDYuODc5ODMzOTg0Mzc0OThRODAyLjgwMDI3ODMyMDMxMjYgMjE1Ljc1OTc5MDAzOTA2MjQ3IDgwNy42MDAyNjM2NzE4NzUgMjIwLjA3OTc3NTM5MDYyNDk3UTgxMi40MDAyNDkwMjM0Mzc1IDIyNC4zOTk3NjA3NDIxODc0OCA4MjIuODAwMjAwMTk1MzEyNSAyMjQuMzk5NzYwNzQyMTg3NDhRODI2LjgwMDE3NTc4MTI1IDIyNC4zOTk3NjA3NDIxODc0OCA4MzAuMDQwMTY4NDU3MDMxMyAyMjMuNzE5NzU4MzAwNzgxMjJRODMzLjI4MDE2MTEzMjgxMjUgMjIzLjAzOTc1NTg1OTM3NDk2IDgzNi4wODAxODA2NjQwNjI1IDIyMi4wNzk3NTU4NTkzNzQ5OFYyNDUuNzU5OTgwNDY4NzQ5OTdRODMzLjIwMDE2NjAxNTYyNTEgMjQ3LjE5OTk5NTExNzE4NzQ4IDgyNy45NjAxNDE2MDE1NjI2IDI0OC4wNDAwMDI0NDE0MDYyMlE4MjIuNzIwMTE3MTg3NSAyNDguODgwMDA5NzY1NjI0OTggODE2LjI0MDA4Nzg5MDYyNTEgMjQ4Ljg4MDAwOTc2NTYyNDk4Wk03NDguNzk5OTg1MzUxNTYyNiAxNDcuNjgwMjI0NjA5Mzc1VjEyMy45OTk5OTk5OTk5OTk5OUg4MzYuMDgwMTgwNjY0MDYyNVYxNDcuNjgwMjI0NjA5Mzc1Wk05MDQuMzIwMDQ4ODI4MTI1MSAyNDguNzk5OTk5OTk5OTk5OThRODg0Ljg4MDAwNDg4MjgxMjYgMjQ4Ljc5OTk5OTk5OTk5OTk4IDg3MC4xNTk5NzMxNDQ1MzE0IDI0MC42NDAwMDczMjQyMTg3NFE4NTUuNDM5OTQxNDA2MjUwMSAyMzIuNDgwMDE0NjQ4NDM3NDcgODQ3LjIzOTkyMTg3NTAwMDIgMjE3Ljk2MDAxNDY0ODQzNzVRODM5LjAzOTkwMjM0Mzc1MDEgMjAzLjQ0MDAxNDY0ODQzNzQ4IDgzOS4wMzk5MDIzNDM3NTAxIDE4NC43MTk5OTk5OTk5OTk5N1E4MzkuMDM5OTAyMzQzNzUwMSAxNjUuOTE5OTkwMjM0Mzc0OTggODQ3LjI3OTkxOTQzMzU5MzkgMTUxLjc1OTk5MDIzNDM3NDk4UTg1NS41MTk5MzY1MjM0Mzc3IDEzNy41OTk5OTAyMzQzNzQ5OSA4NzAuMTk5OTcwNzAzMTI1MSAxMjkuNTk5OTk1MTE3MTg3NVE4ODQuODgwMDA0ODgyODEyNiAxMjEuNTk5OTk5OTk5OTk5OTggOTA0LjMyMDA0ODgyODEyNTEgMTIxLjU5OTk5OTk5OTk5OTk4UTkyNC4wMDAwOTI3NzM0Mzc2IDEyMS41OTk5OTk5OTk5OTk5OCA5MzguNjgwMTI2OTUzMTI1MSAxMjkuNTk5OTk1MTE3MTg3NVE5NTMuMzYwMTYxMTMyODEyNiAxMzcuNTk5OTkwMjM0Mzc0OTkgOTYxLjQ4MDE3ODIyMjY1NjQgMTUxLjc1OTk5MDIzNDM3NDk4UTk2OS42MDAxOTUzMTI1MDAxIDE2NS45MTk5OTAyMzQzNzQ5OCA5NjkuNjAwMTk1MzEyNTAwMSAxODQuNzE5OTk5OTk5OTk5OTdROTY5LjYwMDE5NTMxMjUwMDEgMjAzLjQ0MDAxNDY0ODQzNzQ4IDk2MS40MDAxNzU3ODEyNSAyMTcuOTYwMDE0NjQ4NDM3NVE5NTMuMjAwMTU2MjUwMDAwMSAyMzIuNDgwMDE0NjQ4NDM3NDcgOTM4LjUyMDEyMjA3MDMxMjYgMjQwLjY0MDAwNzMyNDIxODc0UTkyMy44NDAwODc4OTA2MjUxIDI0OC43OTk5OTk5OTk5OTk5OCA5MDQuMzIwMDQ4ODI4MTI1MSAyNDguNzk5OTk5OTk5OTk5OThaTTkwNC4zMjAwNDg4MjgxMjUxIDIyNC40Nzk3NTU4NTkzNzVROTE0LjA3OTk2NTgyMDMxMjYgMjI0LjQ3OTc1NTg1OTM3NSA5MjEuNjc5OTE5NDMzNTkzOCAyMTkuNTU5NzkyNDgwNDY4NzNROTI5LjI3OTg3MzA0Njg3NTEgMjE0LjYzOTgyOTEwMTU2MjQ3IDkzMy42Nzk4NTM1MTU2MjUyIDIwNS42Nzk4ODUyNTM5MDYyUTkzOC4wNzk4MzM5ODQzNzUxIDE5Ni43MTk5NDE0MDYyNDk5NyA5MzguMDc5ODMzOTg0Mzc1MSAxODQuNDhROTM4LjA3OTgzMzk4NDM3NTEgMTY2LjQwMDA5Mjc3MzQzNzQ4IDkyOC41MTk4ODI4MTI1MDAxIDE1Ni4xNjAxNjg0NTcwMzEyM1E5MTguOTU5OTMxNjQwNjI1MSAxNDUuOTIwMjQ0MTQwNjI1IDkwNC4zMjAwNDg4MjgxMjUxIDE0NS45MjAyNDQxNDA2MjVRODg5Ljc2MDE2MTEzMjgxMjYgMTQ1LjkyMDI0NDE0MDYyNSA4ODAuMTYwMjEyNDAyMzQzOSAxNTYuMjQwMTcwODk4NDM3NVE4NzAuNTYwMjYzNjcxODc1MSAxNjYuNTYwMDk3NjU2MjQ5OTggODcwLjU2MDI2MzY3MTg3NTEgMTg0LjQ4UTg3MC41NjAyNjM2NzE4NzUxIDE5Ni43MTk5NDE0MDYyNDk5NyA4NzQuOTYwMjQ0MTQwNjI1IDIwNS42Nzk4ODUyNTM5MDYyUTg3OS4zNjAyMjQ2MDkzNzUxIDIxNC42Mzk4MjkxMDE1NjI0NyA4ODcuMDAwMTc1NzgxMjUwMiAyMTkuNTU5NzkyNDgwNDY4NzNRODk0LjY0MDEyNjk1MzEyNTEgMjI0LjQ3OTc1NTg1OTM3NSA5MDQuMzIwMDQ4ODI4MTI1MSAyMjQuNDc5NzU1ODU5Mzc1Wk05ODEuOTE5OTAyMzQzNzUwMSAyNDYuMzk5OTk5OTk5OTk5OThWMTIzLjk5OTk5OTk5OTk5OTk5SDEwMTEuNDQwMjUzOTA2MjUwMVYxNTMuNTk5OTUxMTcxODc0OThIMTAxMi4zMjAyNDQxNDA2MjVWMjQ2LjM5OTk5OTk5OTk5OTk4Wk0xMDEyLjMyMDI0NDE0MDYyNSAxODIuNTU5OTk5OTk5OTk5OTcgMTAwOS4yMDAyNDQxNDA2MjUgMTUzLjUxOTk5OTk5OTk5OTk4UTEwMTMuNTIwMjQ0MTQwNjI1MSAxMzcuOTIgMTAyMy43NjAyMTk3MjY1NjI2IDEyOS43NlExMDM0LjAwMDE5NTMxMjUwMDIgMTIxLjU5OTk5OTk5OTk5OTk4IDEwNDguNTYwMjAwMTk1MzEyNSAxMjEuNTk5OTk5OTk5OTk5OThRMTA1My42MDAxNzA4OTg0Mzc3IDEyMS41OTk5OTk5OTk5OTk5OCAxMDU1Ljc2MDE3MDg5ODQzNzUgMTIyLjU1OTk5OTk5OTk5OTk5VjE1MS4xMjAzMDc2MTcxODc0OFExMDU0LjU2MDE3MDg5ODQzNzUgMTUwLjY0MDMwNzYxNzE4NzUgMTA1Mi40MDAxNzA4OTg0Mzc0IDE1MC41MjAzMDc2MTcxODc0OFExMDUwLjI0MDE3MDg5ODQzNzYgMTUwLjQwMDMwNzYxNzE4NzQ4IDEwNDcuMTIwMTcwODk4NDM3NyAxNTAuNDAwMzA3NjE3MTg3NDhRMTAyOS41MjAxOTA0Mjk2ODc1IDE1MC40MDAzMDc2MTcxODc0OCAxMDIwLjkyMDIxNzI4NTE1NjIgMTU4LjEyMDIwOTk2MDkzNzQ3UTEwMTIuMzIwMjQ0MTQwNjI1IDE2NS44NDAxMTIzMDQ2ODc0NyAxMDEyLjMyMDI0NDE0MDYyNSAxODIuNTU5OTk5OTk5OTk5OTdaTTExMDEuODM5OTAyMzQzNzQ5OCAyNDYuMzk5OTk5OTk5OTk5OThWNzMuNkgxMTMyLjI0MDI0NDE0MDYyNVYyNDYuMzk5OTk5OTk5OTk5OThaTTExODcuODM5ODUzNTE1NjI1IDI0Ni4zOTk5OTk5OTk5OTk5OFYxNjkuMTIwMDg3ODkwNjI0OTdRMTE4Ny44Mzk4NTM1MTU2MjUgMTU3Ljc2MDE2NjAxNTYyNDk3IDExODIuMDc5ODkwMTM2NzE4OSAxNTIuMDgwMjA1MDc4MTI0OThRMTE3Ni4zMTk5MjY3NTc4MTI1IDE0Ni40MDAyNDQxNDA2MjQ5OCAxMTY1LjIwMDAwNDg4MjgxMjQgMTQ2LjQwMDI0NDE0MDYyNDk4UTExNTUuNjAwMDc4MTI1IDE0Ni40MDAyNDQxNDA2MjQ5OCAxMTQ4LjEyMDEzMTgzNTkzNzQgMTUwLjcyMDIxNDg0Mzc0OTk3UTExNDAuNjQwMTg1NTQ2ODc0OCAxNTUuMDQwMTg1NTQ2ODc0OTcgMTEzNi40NDAyMTQ4NDM3NDk4IDE2Mi42NDAxMzE4MzU5Mzc0N1ExMTMyLjI0MDI0NDE0MDYyNSAxNzAuMjQwMDc4MTI0OTk5OTcgMTEzMi4yNDAyNDQxNDA2MjUgMTgwLjQ4MDAwOTc2NTYyNDk3TDExMjkuMTIwMjQ0MTQwNjI1IDE1MS4xMTk5OTk5OTk5OTk5OFExMTM1LjIwMDIzOTI1NzgxMjQgMTM3LjYwMDAwNDg4MjgxMjQ3IDExNDcuMjQwMjE0ODQzNzUgMTI5LjYwMDAwMjQ0MTQwNjIyUTExNTkuMjgwMTkwNDI5Njg3MyAxMjEuNTk5OTk5OTk5OTk5OTggMTE3Ni4wODAyMDUwNzgxMjUgMTIxLjU5OTk5OTk5OTk5OTk4UTExOTYuMDgwMjI5NDkyMTg3MyAxMjEuNTk5OTk5OTk5OTk5OTggMTIwNy4xNjAyMTI0MDIzNDM2IDEzMi44NDAwMDk3NjU2MjQ5OFExMjE4LjI0MDE5NTMxMjUgMTQ0LjA4MDAxOTUzMTI1IDEyMTguMjQwMTk1MzEyNSAxNjIuODAwMDQ4ODI4MTI1VjI0Ni4zOTk5OTk5OTk5OTk5OFoiIGZpbGw9IiMxRTIyMjciLz48L3N2Zz4K" alt="Factor H" width="124" height="32"></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">ACED · 19 y 20 de noviembre</p>
+    <h1>Galería <span class="g">endoTour</span> Rionegro 2026</h1>
+    <p class="lead">Las fotos de las dos jornadas, organizadas por día y por espacio. Véalas aquí, ábralas en grande y descárguelas en resolución original, una por una o todas en un .zip.</p>
+  </div>
+</section>
+
+<nav class="bar" aria-label="Controles de la galería">
+  <div class="wrap">
+    <div class="days" id="days" role="group" aria-label="Jornada"></div>
+    <div class="views" role="group" aria-label="Forma de ver">
+      <button data-view="grid" aria-pressed="true" title="Cuadrícula"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span class="t">Cuadrícula</span></button>
+      <button data-view="mosaic" aria-pressed="false" title="Mosaico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="11"/><rect x="14" y="3" width="7" height="6"/><rect x="3" y="17" width="7" height="4"/><rect x="14" y="12" width="7" height="9"/></svg><span class="t">Mosaico</span></button>
+      <button data-view="show" aria-pressed="false" title="Presentación"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M8 21h8M12 17v4"/></svg><span class="t">Presentación</span></button>
+    </div>
+    <div class="actions">
+      <button class="btn" id="selBtn" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg><span>Seleccionar</span></button>
+      <button class="btn primary" id="zipAll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg><span class="lg">Descargar&nbsp;</span><span id="zipAllLbl">todas (.zip)</span></button>
+    </div>
+    <div class="sections" id="sections" role="group" aria-label="Espacio"></div>
+  </div>
+</nav>
+
+<main class="wrap" id="main" aria-live="polite"></main>
+
+<p class="privacy" id="privacy" hidden></p>
+
+<footer class="fh">
+  <div class="wrap">
+    <div class="who">
+      <a href="https://factorh.co" target="_blank" rel="noopener" aria-label="Factor H, ir a factorh.co"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjQzIDMyMCIgd2lkdGg9IjEyNDMiIGhlaWdodD0iMzIwIiB4bWxuczpjMnBhPSJodHRwOi8vYzJwYS5vcmcvbWFuaWZlc3QiPjxyZWN0IHg9IjM4LjQwIiB5PSIyNS42MCIgd2lkdGg9IjY0LjAwIiBoZWlnaHQ9IjI2OC44MCIgZmlsbD0iIzFFMjIyNyIvPjxyZWN0IHg9IjEwMi40MCIgeT0iMTY2LjQwIiB3aWR0aD0iMTE1LjIwIiBoZWlnaHQ9IjQ0LjgwIiBmaWxsPSIjMUUyMjI3Ii8+PHJlY3QgeD0iMjE3LjYwIiB5PSIxMjEuNjAiIHdpZHRoPSI2NC4wMCIgaGVpZ2h0PSIxNzIuODAiIGZpbGw9IiMxRjZCNTciLz48cmVjdCB4PSIyMTcuNjAiIHk9IjcwLjQwIiB3aWR0aD0iNjQuMDAiIGhlaWdodD0iMzguNDAiIGZpbGw9IiNDNjhBMkUiLz48cGF0aCBkPSJNNDQ1LjU5OTg4NzY5NTMxMjUgMjQ2LjM5OTk5OTk5OTk5OTk4VjExMi44MDAxODU1NDY4NzQ5OVE0NDUuNTk5ODg3Njk1MzEyNSA5Mi40ODAwNzgxMjQ5OTk5OCA0NTYuODM5OTM0MDgyMDMxMyA4MS44NDAwMzkwNjI0OTk5OFE0NjguMDc5OTgwNDY4NzUgNzEuMTk5OTk5OTk5OTk5OTkgNDkwLjQwMDA1MzcxMDkzNzUgNzEuMTk5OTk5OTk5OTk5OTlRNDk1LjM2MDA1ODU5Mzc1IDcxLjE5OTk5OTk5OTk5OTk5IDQ5OC43NjAwNzgxMjUgNzEuNjc5OTk5OTk5OTk5OTlRNTAyLjE2MDA5NzY1NjI1IDcyLjE2IDUwNS4yMDAxMzE4MzU5Mzc1IDczLjIwMDAwOTc2NTYyNVY5Ni42NDAyNjM2NzE4NzQ5OFE1MDMuNTIwMTMxODM1OTM3NSA5Ni4wMDAyNTg3ODkwNjI0OSA1MDAuOTIwMTQ0MDQyOTY4NzMgOTUuNjAwMjYxMjMwNDY4NzNRNDk4LjMyMDE1NjI0OTk5OTk3IDk1LjIwMDI2MzY3MTg3NDk4IDQ5NC45NjAxNTYyNSA5NS4yMDAyNjM2NzE4NzQ5OFE0ODUuMjAwMTk1MzEyNSA5NS4yMDAyNjM2NzE4NzQ5OCA0ODAuNjAwMjEyNDAyMzQzNzQgOTkuOTIwMjM5MjU3ODEyNDhRNDc2LjAwMDIyOTQ5MjE4NzUgMTA0LjY0MDIxNDg0Mzc0OTk5IDQ3Ni4wMDAyMjk0OTIxODc1IDExMy40NDAxNzU3ODEyNDk5OVYyNDYuMzk5OTk5OTk5OTk5OThaTTQyMy41OTk5ODUzNTE1NjI1IDE0Ny42ODAyMjQ2MDkzNzVWMTIzLjk5OTk5OTk5OTk5OTk5SDUwMi41NjAxMzE4MzU5Mzc1VjE0Ny42ODAyMjQ2MDkzNzVaTTU5MS4xOTk5NDE0MDYyNSAyNDYuMzk5OTk5OTk5OTk5OThRNTg5LjkxOTkzMTY0MDYyNSAyNDEuNTE5OTc1NTg1OTM3NSA1ODkuMzk5OTI2NzU3ODEyNSAyMzUuNzU5OTYwOTM3NDk5OThRNTg4Ljg3OTkyMTg3NSAyMjkuOTk5OTQ2Mjg5MDYyNDggNTg4Ljg3OTkyMTg3NSAyMjEuOTk5OTUxMTcxODc0OThINTg3LjgzOTkyNjc1NzgxMjVWMTYzLjkxOTk2NTgyMDMxMjQ4UTU4Ny44Mzk5MjY3NTc4MTI1IDE1NC4zMjAwOTc2NTYyNDk5NyA1ODIuNDM5OTU2MDU0Njg3NSAxNDkuMzIwMTQ2NDg0Mzc0OTZRNTc3LjAzOTk4NTM1MTU2MjYgMTQ0LjMyMDE5NTMxMjQ5OTk4IDU2NS45MjAwNzgxMjUgMTQ0LjMyMDE5NTMxMjQ5OTk4UTU1NS4yMDAxNzU3ODEyNSAxNDQuMzIwMTk1MzEyNDk5OTggNTQ4Ljg0MDIzNDM3NSAxNDguMjgwMTQ0MDQyOTY4NzRRNTQyLjQ4MDI5Mjk2ODc1MDEgMTUyLjI0MDA5Mjc3MzQzNzQ4IDU0MS4wNDAyNzgzMjAzMTI1IDE1OS42ODAwMDQ4ODI4MTI0OEg1MTEuOTk5OTU2MDU0Njg3NVE1MTMuOTk5OTgwNDY4NzUgMTQyLjcyMDAyOTI5Njg3NSA1MjguMzE5OTk5OTk5OTk5OSAxMzIuMTYwMDE0NjQ4NDM3NDhRNTQyLjY0MDAxOTUzMTI1IDEyMS41OTk5OTk5OTk5OTk5OCA1NjYuOTYwMDg3ODkwNjI1IDEyMS41OTk5OTk5OTk5OTk5OFE1OTIuMTYwMTYxMTMyODEyNSAxMjEuNTk5OTk5OTk5OTk5OTggNjA1LjEyMDIxOTcyNjU2MjUgMTMzLjA0MDAxOTUzMTI0OTk4UTYxOC4wODAyNzgzMjAzMTI1IDE0NC40ODAwMzkwNjI1IDYxOC4wODAyNzgzMjAzMTI1IDE2Ni40MDAwNDg4MjgxMjQ5N1YyMjEuOTk5OTUxMTcxODc0OThRNjE4LjA4MDI3ODMyMDMxMjUgMjI3Ljc1OTk2NTgyMDMxMjUgNjE4Ljg4MDI4MDc2MTcxODcgMjMzLjcxOTk3NTU4NTkzNzQ4UTYxOS42ODAyODMyMDMxMjUgMjM5LjY3OTk4NTM1MTU2MjQ2IDYyMS4zNjAyOTc4NTE1NjI2IDI0Ni4zOTk5OTk5OTk5OTk5OFpNNTQ4LjcxOTkyNjc1NzgxMjUgMjQ4Ljc5OTk5OTk5OTk5OTk4UTUzMC4yMzk5NDE0MDYyNSAyNDguNzk5OTk5OTk5OTk5OTggNTE5LjMxOTk0ODczMDQ2ODcgMjM5LjU2UTUwOC4zOTk5NTYwNTQ2ODc1IDIzMC4zMiA1MDguMzk5OTU2MDU0Njg3NSAyMTQuNzIwMDE0NjQ4NDM3NDhRNTA4LjM5OTk1NjA1NDY4NzUgMTk3Ljk5OTk5NTExNzE4NzUgNTIwLjYzOTk5MjY3NTc4MTMgMTg4LjA3OTk2MzM3ODkwNjIzUTUzMi44ODAwMjkyOTY4NzUgMTc4LjE1OTkzMTY0MDYyNDk2IDU1NS4yODAwNjgzNTkzNzUgMTc0Ljg3OTk0MTQwNjI1TDU5My4zNTk5MjY3NTc4MTI0IDE2OS4xMTk5ODUzNTE1NjI1VjE4OC4zMjAwODc4OTA2MjVMNTYwLjI0MDEzMTgzNTkzNzUgMTkzLjQ0MDA1MzcxMDkzNzVRNTQ5LjM2MDIwOTk2MDkzNzUgMTk1LjEyMDAzOTA2MjQ5OTk4IDU0NC4wMDAyNTg3ODkwNjI1IDE5OS4zNjAwMTQ2NDg0Mzc0N1E1MzguNjQwMzA3NjE3MTg3NSAyMDMuNTk5OTkwMjM0Mzc0OTkgNTM4LjY0MDMwNzYxNzE4NzUgMjExLjI3OTkzMTY0MDYyNDk3UTUzOC42NDAzMDc2MTcxODc1IDIxOC4zOTk4NjMyODEyNDk5NiA1NDMuNjQwMjY2MTEzMjgxMyAyMjIuMDc5ODI5MTAxNTYyNDdRNTQ4LjY0MDIyNDYwOTM3NSAyMjUuNzU5Nzk0OTIxODc0OTcgNTU3LjYwMDExNzE4NzUgMjI1Ljc1OTc5NDkyMTg3NDk3UTU3MC40ODAwMTk1MzEyNSAyMjUuNzU5Nzk0OTIxODc0OTcgNTc5LjE1OTk3MzE0NDUzMTIgMjE5LjIzOTgxOTMzNTkzNzQ4UTU4Ny44Mzk5MjY3NTc4MTI1IDIxMi43MTk4NDM3NSA1ODcuODM5OTI2NzU3ODEyNSAyMDMuMzU5OTE2OTkyMTg3NUw1OTEuMTE5OTMxNjQwNjI1IDIyMS44Mzk5NjA5Mzc0OTk5N1E1ODYuMzE5OTAyMzQzNzUgMjM1LjAzOTk5MDIzNDM3NDk4IDU3NS4zOTk5MDk2Njc5Njg4IDI0MS45MTk5OTUxMTcxODc0OFE1NjQuNDc5OTE2OTkyMTg3NiAyNDguNzk5OTk5OTk5OTk5OTggNTQ4LjcxOTkyNjc1NzgxMjUgMjQ4Ljc5OTk5OTk5OTk5OTk4Wk02OTEuODQwMDQzOTQ1MzEyNiAyNDguNzk5OTk5OTk5OTk5OThRNjczLjQzOTk5NTExNzE4NzYgMjQ4Ljc5OTk5OTk5OTk5OTk4IDY1OS4zMTk5NjMzNzg5MDYzIDI0MC42MDAwMDI0NDE0MDYyMlE2NDUuMTk5OTMxNjQwNjI1IDIzMi40MDAwMDQ4ODI4MTI0OCA2MzcuMTU5OTE2OTkyMTg3NSAyMTcuOTYwMDA3MzI0MjE4NzRRNjI5LjExOTkwMjM0Mzc1IDIwMy41MjAwMDk3NjU2MjUgNjI5LjExOTkwMjM0Mzc1IDE4NS4wNDAwMDk3NjU2MjQ5N1E2MjkuMTE5OTAyMzQzNzUgMTY2LjU2MDAwOTc2NTYyNDk4IDYzNy4xNTk5MTY5OTIxODc1IDE1Mi4yNDAwMDQ4ODI4MTI0OVE2NDUuMTk5OTMxNjQwNjI1IDEzNy45MiA2NTkuMzE5OTYzMzc4OTA2MyAxMjkuNzZRNjczLjQzOTk5NTExNzE4NzYgMTIxLjU5OTk5OTk5OTk5OTk4IDY5MS43NjAwNDg4MjgxMjUgMTIxLjU5OTk5OTk5OTk5OTk4UTcwNy4wNDAwOTc2NTYyNSAxMjEuNTk5OTk5OTk5OTk5OTggNzE5LjI0MDEzNjcxODc1IDEyNy4yODAwMTIyMDcwMzEyM1E3MzEuNDQwMTc1NzgxMjUgMTMyLjk2MDAyNDQxNDA2MjUgNzM5LjMyMDIwMDE5NTMxMjUgMTQzLjA4MDAzNjYyMTA5Mzc0UTc0Ny4yMDAyMjQ2MDkzNzUgMTUzLjIwMDA0ODgyODEyNDk4IDc0OS40NDAyMzQzNzUgMTY2LjgwMDA2ODM1OTM3NDk2SDcyMC4zMTk4ODc2OTUzMTI2UTcxNy43NTk4ODI4MTI1IDE1Ni45NjAxMjY5NTMxMjQ5OCA3MTAuMzE5OTE5NDMzNTkzOCAxNTEuNDQwMTg1NTQ2ODc1UTcwMi44Nzk5NTYwNTQ2ODc2IDE0NS45MjAyNDQxNDA2MjUgNjkyLjI0MDA0ODgyODEyNSAxNDUuOTIwMjQ0MTQwNjI1UTY4Mi41NjAxMTIzMDQ2ODc2IDE0NS45MjAyNDQxNDA2MjUgNjc1LjQ0MDE1ODY5MTQwNjMgMTUwLjcyMDIxNDg0Mzc1UTY2OC4zMjAyMDUwNzgxMjUgMTU1LjUyMDE4NTU0Njg3NDk4IDY2NC40ODAyMzQzNzUgMTY0LjMyMDEzMTgzNTkzNzQ3UTY2MC42NDAyNjM2NzE4NzUgMTczLjEyMDA3ODEyNDk5OTk2IDY2MC42NDAyNjM2NzE4NzUgMTg1LjA0MDAwOTc2NTYyNDk3UTY2MC42NDAyNjM2NzE4NzUgMTk2Ljk1OTk0MTQwNjI0OTk4IDY2NC40ODAyMzQzNzUgMjA1LjgzOTg4MjgxMjQ5OTk4UTY2OC4zMjAyMDUwNzgxMjUgMjE0LjcxOTgyNDIxODc0OTk4IDY3NS40ODAxNTYyNDk5OTk5IDIxOS41OTk3OTAwMzkwNjI1UTY4Mi42NDAxMDc0MjE4NzUgMjI0LjQ3OTc1NTg1OTM3NSA2OTIuMzIwMDQzOTQ1MzEyNSAyMjQuNDc5NzU1ODU5Mzc1UTcwMi43OTk5NjA5Mzc1IDIyNC40Nzk3NTU4NTkzNzUgNzEwLjMxOTkxOTQzMzU5MzggMjE4Ljk5OTgxMjAxMTcxODc1UTcxNy44Mzk4Nzc5Mjk2ODc1IDIxMy41MTk4NjgxNjQwNjI0NyA3MjAuMzk5ODgyODEyNSAyMDMuNjc5OTI2NzU3ODEyNUg3NDkuNTIwMjI5NDkyMTg3NlE3NDcuMjAwMjI0NjA5Mzc1IDIxNy4xOTk5NTExNzE4NzQ5NyA3MzkuMjQwMjA1MDc4MTI1IDIyNy4zMTk5NjMzNzg5MDYyUTczMS4yODAxODU1NDY4NzUgMjM3LjQzOTk3NTU4NTkzNzQ3IDcxOS4xMjAxNDQwNDI5Njg4IDI0My4xMTk5ODc3OTI5Njg3NFE3MDYuOTYwMTAyNTM5MDYyNSAyNDguNzk5OTk5OTk5OTk5OTggNjkxLjg0MDA0Mzk0NTMxMjYgMjQ4Ljc5OTk5OTk5OTk5OTk4Wk04MTYuMjQwMDg3ODkwNjI1MSAyNDguODgwMDA5NzY1NjI0OThRNzkzLjc2MDAyNDQxNDA2MjUgMjQ4Ljg4MDAwOTc2NTYyNDk4IDc4My4wNzk5ODA0Njg3NSAyMzguMTk5OTY1ODIwMzEyNDZRNzcyLjM5OTkzNjUyMzQzNzUgMjI3LjUxOTkyMTg3NDk5OTk3IDc3Mi4zOTk5MzY1MjM0Mzc1IDIwNi4xNTk4MDQ2ODc0OTk5OVY5Ni4yNDAwMjQ0MTQwNjI0N0w4MDIuODAwMjc4MzIwMzEyNiA4NC44Nzk4OTc0NjA5Mzc0OVYyMDYuODc5ODMzOTg0Mzc0OThRODAyLjgwMDI3ODMyMDMxMjYgMjE1Ljc1OTc5MDAzOTA2MjQ3IDgwNy42MDAyNjM2NzE4NzUgMjIwLjA3OTc3NTM5MDYyNDk3UTgxMi40MDAyNDkwMjM0Mzc1IDIyNC4zOTk3NjA3NDIxODc0OCA4MjIuODAwMjAwMTk1MzEyNSAyMjQuMzk5NzYwNzQyMTg3NDhRODI2LjgwMDE3NTc4MTI1IDIyNC4zOTk3NjA3NDIxODc0OCA4MzAuMDQwMTY4NDU3MDMxMyAyMjMuNzE5NzU4MzAwNzgxMjJRODMzLjI4MDE2MTEzMjgxMjUgMjIzLjAzOTc1NTg1OTM3NDk2IDgzNi4wODAxODA2NjQwNjI1IDIyMi4wNzk3NTU4NTkzNzQ5OFYyNDUuNzU5OTgwNDY4NzQ5OTdRODMzLjIwMDE2NjAxNTYyNTEgMjQ3LjE5OTk5NTExNzE4NzQ4IDgyNy45NjAxNDE2MDE1NjI2IDI0OC4wNDAwMDI0NDE0MDYyMlE4MjIuNzIwMTE3MTg3NSAyNDguODgwMDA5NzY1NjI0OTggODE2LjI0MDA4Nzg5MDYyNTEgMjQ4Ljg4MDAwOTc2NTYyNDk4Wk03NDguNzk5OTg1MzUxNTYyNiAxNDcuNjgwMjI0NjA5Mzc1VjEyMy45OTk5OTk5OTk5OTk5OUg4MzYuMDgwMTgwNjY0MDYyNVYxNDcuNjgwMjI0NjA5Mzc1Wk05MDQuMzIwMDQ4ODI4MTI1MSAyNDguNzk5OTk5OTk5OTk5OThRODg0Ljg4MDAwNDg4MjgxMjYgMjQ4Ljc5OTk5OTk5OTk5OTk4IDg3MC4xNTk5NzMxNDQ1MzE0IDI0MC42NDAwMDczMjQyMTg3NFE4NTUuNDM5OTQxNDA2MjUwMSAyMzIuNDgwMDE0NjQ4NDM3NDcgODQ3LjIzOTkyMTg3NTAwMDIgMjE3Ljk2MDAxNDY0ODQzNzVRODM5LjAzOTkwMjM0Mzc1MDEgMjAzLjQ0MDAxNDY0ODQzNzQ4IDgzOS4wMzk5MDIzNDM3NTAxIDE4NC43MTk5OTk5OTk5OTk5N1E4MzkuMDM5OTAyMzQzNzUwMSAxNjUuOTE5OTkwMjM0Mzc0OTggODQ3LjI3OTkxOTQzMzU5MzkgMTUxLjc1OTk5MDIzNDM3NDk4UTg1NS41MTk5MzY1MjM0Mzc3IDEzNy41OTk5OTAyMzQzNzQ5OSA4NzAuMTk5OTcwNzAzMTI1MSAxMjkuNTk5OTk1MTE3MTg3NVE4ODQuODgwMDA0ODgyODEyNiAxMjEuNTk5OTk5OTk5OTk5OTggOTA0LjMyMDA0ODgyODEyNTEgMTIxLjU5OTk5OTk5OTk5OTk4UTkyNC4wMDAwOTI3NzM0Mzc2IDEyMS41OTk5OTk5OTk5OTk5OCA5MzguNjgwMTI2OTUzMTI1MSAxMjkuNTk5OTk1MTE3MTg3NVE5NTMuMzYwMTYxMTMyODEyNiAxMzcuNTk5OTkwMjM0Mzc0OTkgOTYxLjQ4MDE3ODIyMjY1NjQgMTUxLjc1OTk5MDIzNDM3NDk4UTk2OS42MDAxOTUzMTI1MDAxIDE2NS45MTk5OTAyMzQzNzQ5OCA5NjkuNjAwMTk1MzEyNTAwMSAxODQuNzE5OTk5OTk5OTk5OTdROTY5LjYwMDE5NTMxMjUwMDEgMjAzLjQ0MDAxNDY0ODQzNzQ4IDk2MS40MDAxNzU3ODEyNSAyMTcuOTYwMDE0NjQ4NDM3NVE5NTMuMjAwMTU2MjUwMDAwMSAyMzIuNDgwMDE0NjQ4NDM3NDcgOTM4LjUyMDEyMjA3MDMxMjYgMjQwLjY0MDAwNzMyNDIxODc0UTkyMy44NDAwODc4OTA2MjUxIDI0OC43OTk5OTk5OTk5OTk5OCA5MDQuMzIwMDQ4ODI4MTI1MSAyNDguNzk5OTk5OTk5OTk5OThaTTkwNC4zMjAwNDg4MjgxMjUxIDIyNC40Nzk3NTU4NTkzNzVROTE0LjA3OTk2NTgyMDMxMjYgMjI0LjQ3OTc1NTg1OTM3NSA5MjEuNjc5OTE5NDMzNTkzOCAyMTkuNTU5NzkyNDgwNDY4NzNROTI5LjI3OTg3MzA0Njg3NTEgMjE0LjYzOTgyOTEwMTU2MjQ3IDkzMy42Nzk4NTM1MTU2MjUyIDIwNS42Nzk4ODUyNTM5MDYyUTkzOC4wNzk4MzM5ODQzNzUxIDE5Ni43MTk5NDE0MDYyNDk5NyA5MzguMDc5ODMzOTg0Mzc1MSAxODQuNDhROTM4LjA3OTgzMzk4NDM3NTEgMTY2LjQwMDA5Mjc3MzQzNzQ4IDkyOC41MTk4ODI4MTI1MDAxIDE1Ni4xNjAxNjg0NTcwMzEyM1E5MTguOTU5OTMxNjQwNjI1MSAxNDUuOTIwMjQ0MTQwNjI1IDkwNC4zMjAwNDg4MjgxMjUxIDE0NS45MjAyNDQxNDA2MjVRODg5Ljc2MDE2MTEzMjgxMjYgMTQ1LjkyMDI0NDE0MDYyNSA4ODAuMTYwMjEyNDAyMzQzOSAxNTYuMjQwMTcwODk4NDM3NVE4NzAuNTYwMjYzNjcxODc1MSAxNjYuNTYwMDk3NjU2MjQ5OTggODcwLjU2MDI2MzY3MTg3NTEgMTg0LjQ4UTg3MC41NjAyNjM2NzE4NzUxIDE5Ni43MTk5NDE0MDYyNDk5NyA4NzQuOTYwMjQ0MTQwNjI1IDIwNS42Nzk4ODUyNTM5MDYyUTg3OS4zNjAyMjQ2MDkzNzUxIDIxNC42Mzk4MjkxMDE1NjI0NyA4ODcuMDAwMTc1NzgxMjUwMiAyMTkuNTU5NzkyNDgwNDY4NzNRODk0LjY0MDEyNjk1MzEyNTEgMjI0LjQ3OTc1NTg1OTM3NSA5MDQuMzIwMDQ4ODI4MTI1MSAyMjQuNDc5NzU1ODU5Mzc1Wk05ODEuOTE5OTAyMzQzNzUwMSAyNDYuMzk5OTk5OTk5OTk5OThWMTIzLjk5OTk5OTk5OTk5OTk5SDEwMTEuNDQwMjUzOTA2MjUwMVYxNTMuNTk5OTUxMTcxODc0OThIMTAxMi4zMjAyNDQxNDA2MjVWMjQ2LjM5OTk5OTk5OTk5OTk4Wk0xMDEyLjMyMDI0NDE0MDYyNSAxODIuNTU5OTk5OTk5OTk5OTcgMTAwOS4yMDAyNDQxNDA2MjUgMTUzLjUxOTk5OTk5OTk5OTk4UTEwMTMuNTIwMjQ0MTQwNjI1MSAxMzcuOTIgMTAyMy43NjAyMTk3MjY1NjI2IDEyOS43NlExMDM0LjAwMDE5NTMxMjUwMDIgMTIxLjU5OTk5OTk5OTk5OTk4IDEwNDguNTYwMjAwMTk1MzEyNSAxMjEuNTk5OTk5OTk5OTk5OThRMTA1My42MDAxNzA4OTg0Mzc3IDEyMS41OTk5OTk5OTk5OTk5OCAxMDU1Ljc2MDE3MDg5ODQzNzUgMTIyLjU1OTk5OTk5OTk5OTk5VjE1MS4xMjAzMDc2MTcxODc0OFExMDU0LjU2MDE3MDg5ODQzNzUgMTUwLjY0MDMwNzYxNzE4NzUgMTA1Mi40MDAxNzA4OTg0Mzc0IDE1MC41MjAzMDc2MTcxODc0OFExMDUwLjI0MDE3MDg5ODQzNzYgMTUwLjQwMDMwNzYxNzE4NzQ4IDEwNDcuMTIwMTcwODk4NDM3NyAxNTAuNDAwMzA3NjE3MTg3NDhRMTAyOS41MjAxOTA0Mjk2ODc1IDE1MC40MDAzMDc2MTcxODc0OCAxMDIwLjkyMDIxNzI4NTE1NjIgMTU4LjEyMDIwOTk2MDkzNzQ3UTEwMTIuMzIwMjQ0MTQwNjI1IDE2NS44NDAxMTIzMDQ2ODc0NyAxMDEyLjMyMDI0NDE0MDYyNSAxODIuNTU5OTk5OTk5OTk5OTdaTTExMDEuODM5OTAyMzQzNzQ5OCAyNDYuMzk5OTk5OTk5OTk5OThWNzMuNkgxMTMyLjI0MDI0NDE0MDYyNVYyNDYuMzk5OTk5OTk5OTk5OThaTTExODcuODM5ODUzNTE1NjI1IDI0Ni4zOTk5OTk5OTk5OTk5OFYxNjkuMTIwMDg3ODkwNjI0OTdRMTE4Ny44Mzk4NTM1MTU2MjUgMTU3Ljc2MDE2NjAxNTYyNDk3IDExODIuMDc5ODkwMTM2NzE4OSAxNTIuMDgwMjA1MDc4MTI0OThRMTE3Ni4zMTk5MjY3NTc4MTI1IDE0Ni40MDAyNDQxNDA2MjQ5OCAxMTY1LjIwMDAwNDg4MjgxMjQgMTQ2LjQwMDI0NDE0MDYyNDk4UTExNTUuNjAwMDc4MTI1IDE0Ni40MDAyNDQxNDA2MjQ5OCAxMTQ4LjEyMDEzMTgzNTkzNzQgMTUwLjcyMDIxNDg0Mzc0OTk3UTExNDAuNjQwMTg1NTQ2ODc0OCAxNTUuMDQwMTg1NTQ2ODc0OTcgMTEzNi40NDAyMTQ4NDM3NDk4IDE2Mi42NDAxMzE4MzU5Mzc0N1ExMTMyLjI0MDI0NDE0MDYyNSAxNzAuMjQwMDc4MTI0OTk5OTcgMTEzMi4yNDAyNDQxNDA2MjUgMTgwLjQ4MDAwOTc2NTYyNDk3TDExMjkuMTIwMjQ0MTQwNjI1IDE1MS4xMTk5OTk5OTk5OTk5OFExMTM1LjIwMDIzOTI1NzgxMjQgMTM3LjYwMDAwNDg4MjgxMjQ3IDExNDcuMjQwMjE0ODQzNzUgMTI5LjYwMDAwMjQ0MTQwNjIyUTExNTkuMjgwMTkwNDI5Njg3MyAxMjEuNTk5OTk5OTk5OTk5OTggMTE3Ni4wODAyMDUwNzgxMjUgMTIxLjU5OTk5OTk5OTk5OTk4UTExOTYuMDgwMjI5NDkyMTg3MyAxMjEuNTk5OTk5OTk5OTk5OTggMTIwNy4xNjAyMTI0MDIzNDM2IDEzMi44NDAwMDk3NjU2MjQ5OFExMjE4LjI0MDE5NTMxMjUgMTQ0LjA4MDAxOTUzMTI1IDEyMTguMjQwMTk1MzEyNSAxNjIuODAwMDQ4ODI4MTI1VjI0Ni4zOTk5OTk5OTk5OTk5OFoiIGZpbGw9IiMxRTIyMjciLz48L3N2Zz4K" alt="Factor H" width="132" height="34"></a>
+      <div>
+        <span class="lbl">Cobertura fotográfica y digital</span>
+        <p class="tag">Factor H Comunicaciones · Pacientes indicados, con respaldo.</p>
+      </div>
+    </div>
+    <div class="links">
+      <a class="go" href="https://factorh.co" target="_blank" rel="noopener">Conozca nuestro trabajo en factorh.co</a>
+      <a class="mail" href="mailto:contacto@factorh.co">contacto@factorh.co</a>
+    </div>
+  </div>
+</footer>
+
+<div class="selbar" id="selbar" role="region" aria-label="Fotos seleccionadas">
+  <b id="selCount">0 seleccionadas</b>
+  <button class="btn primary" id="zipSel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg>.zip</button>
+  <button class="btn ghost" id="selClear">Quitar</button>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto en grande">
+  <div class="head">
+    <span class="name" id="lbName"></span>
+    <button id="lbDl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg><span class="t">Descargar original</span></button>
+    <button id="lbFs" aria-label="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    <button id="lbClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="t">Cerrar</span></button>
+  </div>
+  <div class="body" id="lbBody">
+    <div class="spin" id="lbSpin"></div>
+    <img id="lbImg" alt="">
+    <button class="navbtn prev" id="lbPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 5-7 7 7 7"/></svg></button>
+    <button class="navbtn next" id="lbNext" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlgTitle">
+  <div class="card">
+    <button class="close" id="dlgClose" aria-label="Cerrar">×</button>
+    <h3 id="dlgTitle">Descargar fotos</h3>
+    <p id="dlgText"></p>
+    <div class="parts" id="parts"></div>
+    <p style="font-size:12px;color:var(--nota);margin:0">El archivo se arma en su navegador, sin salir de esta página. Mantenga la pestaña abierta mientras termina.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<div class="cr" id="cr" aria-label="Fotos del endoTour Rionegro 2026">
+  <div class="wait" id="crWait">Cargando fotos…</div>
+  <div class="shade"></div>
+  <div class="bar2" id="crBar"></div>
+  <a class="fhc" href="https://factorh.co" target="_blank" rel="noopener">Fotos: <b>Factor H</b></a>
+  <div class="cap">
+    <div><p class="t1">ACED · endoTour Rionegro 2026</p><p class="t2">Así vivimos el endoTour</p></div>
+    <a id="crLink" href="#" target="_top">Ver todas las fotos →</a>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s);
+const params = new URLSearchParams(location.search);
+const DEMO = CONFIG.demo || params.has("demo");
+const CARRUSEL = (params.get("modo")||"").toLowerCase() === "carrusel";
+const API = "https://www.googleapis.com/drive/v3/files";
+const RAW = /\.(cr2|cr3|nef|arw|dng|raf|orf|rw2|psd)$/i;
+const norm = s => (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtMB = b => b >= 1e9 ? (b/1e9).toFixed(1).replace(".",",")+" GB" : Math.max(1,Math.round(b/1e6))+" MB";
+
+const state = { days: [], day: null, section: "all", view: "grid", selecting: false, selected: new Set(), list: [], idx: 0 };
+
+/* ---------- Datos desde Google Drive ---------- */
+async function listChildren(folderId){
+  const out = []; let token = "";
+  do {
+    const q = encodeURIComponent(`'${folderId}' in parents and trashed = false`);
+    const fields = encodeURIComponent("nextPageToken,files(id,name,mimeType,size,thumbnailLink,imageMediaMetadata(width,height,rotation),createdTime)");
+    const url = `${API}?q=${q}&fields=${fields}&pageSize=1000&orderBy=name_natural&supportsAllDrives=true&includeItemsFromAllDrives=true&key=${encodeURIComponent(CONFIG.apiKey)}${token?`&pageToken=${encodeURIComponent(token)}`:""}`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error("Drive " + r.status + ": " + (await r.text()).slice(0,300));
+    const j = await r.json();
+    out.push(...(j.files||[])); token = j.nextPageToken || "";
+  } while (token);
+  return out;
+}
+const isFolder = f => f.mimeType === "application/vnd.google-apps.folder";
+const isPhoto = f => /^image\//.test(f.mimeType) && !RAW.test(f.name) && !/x-(canon|nikon|sony|adobe-dng|fuji)/.test(f.mimeType);
+
+function toPhoto(f, section){
+  const m = f.imageMediaMetadata || {};
+  let w = m.width || 3, h = m.height || 2;
+  if (m.rotation === 1 || m.rotation === 3) [w,h] = [h,w];
+  return { id: f.id, name: f.name, size: +f.size || 0, w, h, thumb: f.thumbnailLink || "", section, created: f.createdTime };
+}
+async function collect(folderId, section, depth, bucket){
+  const kids = await listChildren(folderId);
+  for (const f of kids) if (isPhoto(f)) bucket.push(toPhoto(f, section));
+  if (depth < 3) for (const f of kids) if (isFolder(f)) await collect(f.id, section, depth+1, bucket);
+}
+async function loadDrive(){
+  const root = await listChildren(CONFIG.folderId);
+  const folders = root.filter(isFolder);
+  return Promise.all(CONFIG.days.map(async d => {
+    const fol = folders.find(f => norm(f.name).includes(norm(d.buscar)));
+    const day = { ...d, sections: [], photos: [] };
+    if (!fol) return day;
+    const kids = await listChildren(fol.id);
+    const loose = kids.filter(isPhoto).map(f => toPhoto(f, "General"));
+    const subs = kids.filter(isFolder);
+    const secs = await Promise.all(subs.map(async s => { const b = []; await collect(s.id, s.name.trim(), 1, b); return { name: s.name.trim(), photos: b }; }));
+    if (loose.length) secs.unshift({ name: "General", photos: loose });
+    day.sections = secs.filter(s => s.photos.length);
+    day.photos = day.sections.flatMap(s => s.photos);
+    return day;
+  }));
+}
+
+/* ---------- Fotos de ejemplo (solo vista previa) ---------- */
+function demoData(){
+  const tones = ["#2F5D3A","#6E7F72","#A7B8A9","#3E4A44","#8C6E4E","#C9B79C","#24443A","#5E8C6A","#B4C7B8","#4D5A52"];
+  const secs = [["Salón Guayacán",18],["Salón Sapán",12],["Sociales",14],["Muestra Comercial",8]];
+  let n = 0;
+  const mk = (sec, i) => {
+    n++; const port = (n % 5 === 2 || n % 7 === 0); const w = port ? 1000 : 1500, h = port ? 1500 : 1000;
+    const c = tones[n % tones.length], c2 = tones[(n*3+1) % tones.length];
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"><rect width="${w}" height="${h}" fill="${c}"/><circle cx="${w*0.68}" cy="${h*0.38}" r="${Math.min(w,h)*0.26}" fill="${c2}" opacity=".55"/><rect y="${h*0.72}" width="${w}" height="${h*0.28}" fill="#000" opacity=".12"/><text x="50%" y="52%" fill="#fff" font-family="Arial" font-size="${Math.min(w,h)*0.07}" text-anchor="middle" opacity=".9">Foto de ejemplo ${n}</text><text x="50%" y="60%" fill="#fff" font-family="Arial" font-size="${Math.min(w,h)*0.04}" text-anchor="middle" opacity=".75">${sec}</text></svg>`;
+    return { id: "demo"+n, name: `endoTour-${String(n).padStart(3,"0")}.jpg`, size: 6.5e6 + (n%9)*4e5, w, h, section: sec, demoSrc: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg), demoSvg: svg };
+  };
+  const viernes = { ...CONFIG.days[0], sections: secs.map(([s,k]) => ({ name: s, photos: Array.from({length:k}, (_,i) => mk(s,i)) })) };
+  viernes.photos = viernes.sections.flatMap(s => s.photos);
+  const sabado = { ...CONFIG.days[1], sections: [], photos: [] };
+  return [viernes, sabado];
+}
+
+/* ---------- Lista fija (versión publicada en Claude) ---------- */
+function staticDays(){
+  return CONFIG.days.map(d => {
+    const mine = CONFIG.photos.filter(p => p.day === d.id);
+    const names = [...new Set(mine.map(p => p.section))];
+    const sections = names.map(n => ({ name: n, photos: mine.filter(p => p.section === n).map(p => ({ id: p.id, name: p.name, size: p.size, w: 3, h: 2, section: n })) }));
+    return { ...d, sections, photos: sections.flatMap(s => s.photos) };
+  });
+}
+
+/* ---------- URLs de imagen ---------- */
+function src(p, size){
+  if (p.demoSrc) return p.demoSrc;
+  if (p.thumb) return p.thumb.replace(/=s\d+(-[a-z0-9-]+)?$/i, "") + "=s" + size;
+  if (!CONFIG.apiKey) return `https://lh3.googleusercontent.com/d/${p.id}=w${size}`;
+  return `https://drive.google.com/thumbnail?id=${p.id}&sz=w${size}`;
+}
+function fallbackSrc(p, size){ return `https://drive.google.com/thumbnail?id=${p.id}&sz=w${size}`; }
+function imgTag(p, size, cls){
+  return `<img ${cls?`class="${cls}"`:""} src="${esc(src(p,size))}" data-fb="${esc(fallbackSrc(p,size))}" alt="${esc(p.section)}, foto ${esc(p.name)}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async">`;
+}
+document.addEventListener("load", e => { const t = e.target; if (t.tagName === "IMG") t.classList.add("ok"); }, true);
+document.addEventListener("error", e => { const t = e.target; if (t.tagName === "IMG" && t.dataset.fb && t.src !== t.dataset.fb) { t.src = t.dataset.fb; } else if (t.tagName === "IMG") t.classList.add("ok"); }, true);
+
+/* ---------- Descarga de originales ---------- */
+async function fetchOriginal(p, onProgress){
+  if (p.demoSvg) return new Blob([p.demoSvg], { type: "image/svg+xml" });
+  let r = null;
+  const urls = CONFIG.apiKey ? [`${API}/${p.id}?alt=media&supportsAllDrives=true&key=${encodeURIComponent(CONFIG.apiKey)}`]
+    : [`https://lh3.googleusercontent.com/d/${p.id}=s0`, `https://drive.usercontent.google.com/download?id=${p.id}&export=download&confirm=t`];
+  for (const u of urls){ try { const x = await fetch(u); if (x.ok){ r = x; break; } } catch(_){} }
+  if (!r) throw new Error("No se pudo descargar " + p.name);
+  if (!r.body || !onProgress) return r.blob();
+  const reader = r.body.getReader(); const chunks = []; let got = 0;
+  for (;;) { const { done, value } = await reader.read(); if (done) break; chunks.push(value); got += value.length; onProgress(got); }
+  return new Blob(chunks, { type: r.headers.get("content-type") || "image/jpeg" });
+}
+let dlNs;
+async function saveBlob(blob, name){
+  if (window.claude && window.claude.use){
+    if (dlNs === undefined){ try { dlNs = await window.claude.use("downloads"); } catch(_){ dlNs = null; } }
+    if (dlNs){ await dlNs.save({ filename: name, data: blob }); return; }
+  }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
+async function downloadOne(p){
+  toast(`Preparando ${p.name}…`);
+  try {
+    const b = await fetchOriginal(p, got => p.size && toast(`Descargando ${p.name}: ${Math.round(got/p.size*100)} %`));
+    await saveBlob(b, p.demoSvg ? p.name.replace(/\.jpg$/,".svg") : p.name); toast("Listo. La foto quedó en sus descargas.", 2500);
+  } catch(e) {
+    console.error(e);
+    if (e && e.code === "declined") { toast("Descarga cancelada.", 2500); return; }
+    if (!CONFIG.apiKey && !p.demoSvg) { toast("Abriendo la descarga en una pestaña nueva…", 3000); window.open(`https://drive.usercontent.google.com/download?id=${p.id}&export=download`, "_blank", "noopener"); return; }
+    toast("No pudimos descargar la foto. Intente de nuevo en un momento.", 4000);
+  }
+}
+
+/* ---------- .zip sin compresión, armado en el navegador ---------- */
+const CRC = (() => { const t = new Uint32Array(256); for (let n=0;n<256;n++){ let c=n; for (let k=0;k<8;k++) c = c&1 ? 0xEDB88320^(c>>>1) : c>>>1; t[n]=c>>>0; } return t; })();
+function crc32(buf){ let c = 0xFFFFFFFF; for (let i=0;i<buf.length;i++) c = CRC[(c^buf[i])&255]^(c>>>8); return (c^0xFFFFFFFF)>>>0; }
+function dosTime(d){ d = d ? new Date(d) : new Date(); if (isNaN(d)) d = new Date();
+  return { time: (d.getHours()<<11)|(d.getMinutes()<<5)|(d.getSeconds()>>1), date: ((d.getFullYear()-1980)<<9)|((d.getMonth()+1)<<5)|d.getDate() }; }
+async function buildZip(photos, onStep){
+  const enc = new TextEncoder(); const parts = []; const central = []; let offset = 0; const used = new Set();
+  for (let i=0;i<photos.length;i++){
+    const p = photos[i]; onStep(i, photos.length);
+    let base = (p.section && p.section !== "General" ? p.section.replace(/[\\/:*?"<>|]/g,"-") + "/" : "") + (p.demoSvg ? p.name.replace(/\.jpg$/,".svg") : p.name);
+    let name = base, k = 2; while (used.has(name)) name = base.replace(/(\.[^.]+)?$/, m => `-${k++}${m}`); used.add(name);
+    const data = new Uint8Array(await (await fetchOriginal(p)).arrayBuffer());
+    const crc = crc32(data), nb = enc.encode(name), t = dosTime(p.created);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0,0x04034b50,true); lh.setUint16(4,20,true); lh.setUint16(6,0x0800,true); lh.setUint16(8,0,true);
+    lh.setUint16(10,t.time,true); lh.setUint16(12,t.date,true); lh.setUint32(14,crc,true);
+    lh.setUint32(18,data.length,true); lh.setUint32(22,data.length,true); lh.setUint16(26,nb.length,true); lh.setUint16(28,0,true);
+    parts.push(lh.buffer, nb, data);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0,0x02014b50,true); ch.setUint16(4,20,true); ch.setUint16(6,20,true); ch.setUint16(8,0x0800,true); ch.setUint16(10,0,true);
+    ch.setUint16(12,t.time,true); ch.setUint16(14,t.date,true); ch.setUint32(16,crc,true); ch.setUint32(20,data.length,true); ch.setUint32(24,data.length,true);
+    ch.setUint16(28,nb.length,true); ch.setUint32(42,offset,true);
+    central.push(ch.buffer, nb);
+    offset += 30 + nb.length + data.length;
+  }
+  const cdSize = central.reduce((s,b) => s + b.byteLength, 0);
+  const end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0,0x06054b50,true); end.setUint16(8,photos.length,true); end.setUint16(10,photos.length,true);
+  end.setUint32(12,cdSize,true); end.setUint32(16,offset,true);
+  onStep(photos.length, photos.length);
+  return new Blob([...parts, ...central, end.buffer], { type: "application/zip" });
+}
+function splitParts(photos){
+  const max = Math.max(20, CONFIG.zipPartMB) * 1e6; const out = []; let cur = [], sz = 0;
+  for (const p of photos){ const s = p.size || 7e6; if (cur.length && sz + s > max){ out.push(cur); cur = []; sz = 0; } cur.push(p); sz += s; }
+  if (cur.length) out.push(cur); return out;
+}
+function slug(s){ return norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+function openZip(photos, label){
+  if (!photos.length) return;
+  const parts = splitParts(photos), total = photos.reduce((s,p) => s + (p.size||0), 0);
+  $("#dlgTitle").textContent = "Descargar " + label;
+  $("#dlgText").textContent = `${photos.length} ${photos.length===1?"foto":"fotos"}, unos ${fmtMB(total)} en total.` + (parts.length > 1 ? ` Para que la descarga sea estable, el archivo se divide en ${parts.length} partes de hasta ${CONFIG.zipPartMB} MB. Descárguelas una por una.` : "");
+  const box = $("#parts"); box.innerHTML = "";
+  const base = "endoTour-Rionegro-2026_" + slug(label);
+  parts.forEach((ph, i) => {
+    const sz = ph.reduce((s,p) => s + (p.size||0), 0);
+    const fname = base + (parts.length > 1 ? `_parte-${i+1}-de-${parts.length}` : "") + ".zip";
+    const row = document.createElement("div"); row.className = "part";
+    row.innerHTML = `<div class="info">${parts.length>1?`Parte ${i+1} de ${parts.length}`:"Archivo .zip"}<small>${ph.length} fotos · ${fmtMB(sz)}</small><div class="prog"><i></i></div></div><button class="btn primary">Descargar</button>`;
+    const btn = row.querySelector("button"), bar = row.querySelector("i"), small = row.querySelector("small");
+    btn.onclick = async () => {
+      if (row.classList.contains("busy")) return;
+      row.classList.add("busy"); btn.disabled = true; btn.textContent = "Preparando…";
+      try {
+        const blob = await buildZip(ph, (k, n) => { bar.style.width = (k/n*100) + "%"; small.textContent = `Foto ${Math.min(k+1,n)} de ${n} · ${fmtMB(sz)}`; });
+        await saveBlob(blob, fname); row.classList.remove("busy"); row.classList.add("done"); btn.disabled = false; btn.textContent = "Descargada"; small.textContent = `${ph.length} fotos · ${fmtMB(sz)}`;
+      } catch(e) { console.error(e); row.classList.remove("busy"); btn.disabled = false; btn.textContent = "Reintentar"; small.textContent = (e && e.code === "declined") ? "Descarga cancelada." : "Hubo un problema con la conexión. Intente de nuevo."; }
+    };
+    box.appendChild(row);
+  });
+  $("#dlg").classList.add("on");
+}
+$("#dlgClose").onclick = () => $("#dlg").classList.remove("on");
+$("#dlg").addEventListener("click", e => { if (e.target.id === "dlg") $("#dlg").classList.remove("on"); });
+
+/* ---------- Interfaz ---------- */
+let toastT;
+function toast(msg, ms){ const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toastT); if (ms) toastT = setTimeout(() => t.classList.remove("on"), ms); }
+
+function current(){ const d = state.day; if (!d) return []; return state.section === "all" ? d.photos : (d.sections.find(s => s.name === state.section)||{photos:[]}).photos; }
+
+function renderDays(){
+  $("#days").innerHTML = state.days.map(d => `<button class="day" data-day="${d.id}" aria-pressed="${d===state.day}">${esc(d.label)}<small>${d.photos.length ? d.photos.length + " fotos" : "Fotos en camino"}</small></button>`).join("");
+}
+function renderSections(){
+  const d = state.day;
+  if (!d || d.sections.length < 2) { $("#sections").innerHTML = ""; return; }
+  $("#sections").innerHTML = `<button class="chip" data-sec="all" aria-pressed="${state.section==="all"}">Todas · ${d.photos.length}</button>` +
+    d.sections.map(s => `<button class="chip" data-sec="${esc(s.name)}" aria-pressed="${state.section===s.name}">${esc(s.name)} · ${s.photos.length}</button>`).join("");
+}
+function tile(p, i){
+  return `<button class="tile${state.selected.has(p.id)?" sel":""}" data-i="${i}" aria-label="Abrir foto ${i+1}">${imgTag(p, state.view==="mosaic"?800:500)}<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="m5 12 5 5 9-10"/></svg></span></button>`;
+}
+function renderMain(){
+  const m = $("#main"); stopShow();
+  const d = state.day;
+  document.querySelectorAll(".views button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === state.view));
+  const has = d && d.photos.length;
+  $("#zipAll").disabled = !has; $("#selBtn").disabled = !has || state.view === "show";
+  $("#zipAllLbl").textContent = state.section === "all" ? "todas (.zip)" : "sección (.zip)";
+  if (!has){
+    state.list = [];
+    m.innerHTML = `<div class="empty"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><h2>Fotos en camino</h2><p>Estamos cargando las fotos del ${esc(d ? d.full.toLowerCase() : "evento")}. Aparecerán aquí automáticamente; vuelva a visitar la página en unas horas.</p></div>`;
+    return;
+  }
+  state.list = current();
+  m.classList.toggle("selecting", state.selecting);
+  if (state.view === "show"){ renderShow(); return; }
+  const cls = state.view === "mosaic" ? "mosaic" : "grid";
+  if (state.section === "all" && d.sections.length > 1){
+    let i = 0;
+    m.innerHTML = d.sections.map(s => { const html = `<h2 class="sec-title">${esc(s.name)} <span>${s.photos.length} fotos</span></h2><div class="${cls}">${s.photos.map(p => tile(p, i++)).join("")}</div>`; return html; }).join("");
+  } else {
+    m.innerHTML = `<div class="${cls}">${state.list.map(tile).join("")}</div>`;
+  }
+}
+
+/* Presentación */
+let showT = null, playing = false;
+function renderShow(){
+  const m = $("#main");
+  m.innerHTML = `<div class="show" id="show"><div class="stage"><img id="shImg" alt=""><button class="navbtn prev" id="shPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 5-7 7 7 7"/></svg></button><button class="navbtn next" id="shNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg></button></div>
+  <div class="ctrl"><span class="count" id="shCount"></span>
+  <button id="shPlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg><span>Reproducir</span></button>
+  <button id="shBig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg><span>Ver en grande</span></button>
+  <button id="shDl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></svg><span>Descargar</span></button>
+  <button id="shFs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Pantalla completa</span></button></div>
+  <div class="strip" id="strip">${state.list.map((p,i) => `<button data-s="${i}" aria-label="Foto ${i+1}">${imgTag(p,160)}</button>`).join("")}</div></div>`;
+  state.idx = Math.min(state.idx, state.list.length-1);
+  showAt(state.idx);
+  $("#shPrev").onclick = () => { showAt(state.idx-1); restart(); };
+  $("#shNext").onclick = () => { showAt(state.idx+1); restart(); };
+  $("#shPlay").onclick = () => playing ? stopShow() : startShow();
+  $("#shBig").onclick = () => openLB(state.idx);
+  $("#shDl").onclick = () => downloadOne(state.list[state.idx]);
+  $("#shFs").onclick = () => toggleFs($("#show"));
+  $("#strip").onclick = e => { const b = e.target.closest("[data-s]"); if (b){ showAt(+b.dataset.s); restart(); } };
+  swipe($("#show .stage"), () => { showAt(state.idx+1); restart(); }, () => { showAt(state.idx-1); restart(); });
+}
+function showAt(i){
+  const n = state.list.length; if (!n) return; state.idx = (i+n)%n; const p = state.list[state.idx];
+  const im = $("#shImg"); if (!im) return;
+  im.style.opacity = .25; const pre = new Image(); pre.onload = pre.onerror = () => { im.src = pre.src; im.style.opacity = 1; };
+  pre.src = src(p, 1600); im.alt = `${p.section}, foto ${state.idx+1}`;
+  $("#shCount").textContent = `${state.idx+1} de ${n} · ${p.section}`;
+  document.querySelectorAll("#strip button").forEach((b,k) => b.setAttribute("aria-current", k===state.idx));
+  const cur = document.querySelector(`#strip [data-s="${state.idx}"]`); if (cur) cur.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+  const nx = state.list[(state.idx+1)%n]; if (nx) new Image().src = src(nx, 1600);
+}
+function startShow(){ playing = true; setPlayLbl(); clearInterval(showT); showT = setInterval(() => showAt(state.idx+1), CONFIG.slideSeconds*1000); }
+function stopShow(){ playing = false; clearInterval(showT); setPlayLbl(); }
+function restart(){ if (playing) startShow(); }
+function setPlayLbl(){ const b = $("#shPlay"); if (!b) return; b.innerHTML = playing ? `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg><span>Pausar</span>` : `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg><span>Reproducir</span>`; }
+function toggleFs(el){ if (document.fullscreenElement) document.exitFullscreen(); else if (el.requestFullscreen) el.requestFullscreen().catch(()=>{}); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); }
+
+/* Visor en grande */
+let lbI = 0;
+function openLB(i){ lbI = i; $("#lb").classList.add("on"); document.body.style.overflow = "hidden"; lbShow(); $("#lbClose").focus(); }
+function closeLB(){ $("#lb").classList.remove("on"); document.body.style.overflow = ""; if (document.fullscreenElement) document.exitFullscreen(); }
+function lbShow(){
+  const n = state.list.length; lbI = (lbI+n)%n; const p = state.list[lbI];
+  const im = $("#lbImg"); $("#lbSpin").style.display = "block"; im.style.opacity = 0;
+  const pre = new Image(); pre.onload = () => { if (state.list[lbI] !== p) return; im.src = pre.src; im.style.opacity = 1; $("#lbSpin").style.display = "none"; };
+  pre.onerror = () => { if (!p.demoSrc && pre.src !== fallbackSrc(p,2000)) pre.src = fallbackSrc(p,2000); else $("#lbSpin").style.display = "none"; };
+  pre.src = src(p, 2000); im.alt = `${p.section}, foto ${lbI+1}`;
+  $("#lbName").textContent = `${lbI+1} de ${n} · ${p.section} · ${p.name}`;
+  [lbI+1, lbI-1].forEach(k => { const q = state.list[(k+n)%n]; if (q) new Image().src = src(q, 2000); });
+}
+$("#lbPrev").onclick = () => { lbI--; lbShow(); };
+$("#lbNext").onclick = () => { lbI++; lbShow(); };
+$("#lbClose").onclick = closeLB;
+$("#lbDl").onclick = () => downloadOne(state.list[lbI]);
+$("#lbFs").onclick = () => toggleFs($("#lb"));
+$("#lbBody").addEventListener("click", e => { if (e.target.id === "lbBody") closeLB(); });
+function swipe(el, left, right){ let x0 = null, y0 = 0;
+  el.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  el.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? left : right)(); x0 = null; }); }
+swipe($("#lbBody"), () => { lbI++; lbShow(); }, () => { lbI--; lbShow(); });
+document.addEventListener("keydown", e => {
+  if ($("#dlg").classList.contains("on")) { if (e.key === "Escape") $("#dlg").classList.remove("on"); return; }
+  if ($("#lb").classList.contains("on")) { if (e.key === "ArrowRight") { lbI++; lbShow(); } else if (e.key === "ArrowLeft") { lbI--; lbShow(); } else if (e.key === "Escape") closeLB(); return; }
+  if (state.view === "show" && $("#show")) { if (e.key === "ArrowRight") { showAt(state.idx+1); restart(); } else if (e.key === "ArrowLeft") { showAt(state.idx-1); restart(); } }
+});
+
+/* Selección */
+function updSel(){ const n = state.selected.size; $("#selCount").textContent = n === 1 ? "1 seleccionada" : `${n} seleccionadas`; $("#selbar").classList.toggle("on", state.selecting && n > 0); }
+$("#selBtn").onclick = () => { state.selecting = !state.selecting; $("#selBtn").setAttribute("aria-pressed", state.selecting); $("#main").classList.toggle("selecting", state.selecting); if (!state.selecting){ state.selected.clear(); document.querySelectorAll(".tile.sel").forEach(t => t.classList.remove("sel")); } else toast("Toque las fotos que quiere descargar.", 2500); updSel(); };
+$("#selClear").onclick = () => { state.selected.clear(); document.querySelectorAll(".tile.sel").forEach(t => t.classList.remove("sel")); updSel(); };
+$("#zipSel").onclick = () => { const all = state.days.flatMap(d => d.photos); openZip(all.filter(p => state.selected.has(p.id)), "seleccion"); };
+$("#zipAll").onclick = () => { const d = state.day; openZip(current(), state.section === "all" ? d.label : `${d.label} ${state.section}`); };
+
+$("#main").addEventListener("click", e => {
+  const t = e.target.closest(".tile"); if (!t) return; const i = +t.dataset.i, p = state.list[i];
+  if (state.selecting){ if (state.selected.has(p.id)) state.selected.delete(p.id); else state.selected.add(p.id); t.classList.toggle("sel"); updSel(); }
+  else openLB(i);
+});
+$("#days").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (!b) return; state.day = state.days.find(d => d.id === b.dataset.day); state.section = "all"; state.idx = 0; renderDays(); renderSections(); renderMain(); setUrl(); });
+$("#sections").addEventListener("click", e => { const b = e.target.closest("[data-sec]"); if (!b) return; state.section = b.dataset.sec; state.idx = 0; renderSections(); renderMain(); });
+document.querySelector(".views").addEventListener("click", e => { const b = e.target.closest("[data-view]"); if (!b) return; state.view = b.dataset.view; if (state.view === "show" && state.selecting) $("#selBtn").click(); renderMain(); try { localStorage.setItem("galeria-vista", state.view); } catch(_){} });
+function setUrl(){ try { const u = new URL(location.href); u.searchParams.set("dia", state.day.id); history.replaceState(null, "", u); } catch(_){} }
+
+/* Sin clave: carpeta incrustada */
+function renderEmbed(reason){
+  if (reason) console.warn("Galería: se muestra la carpeta incrustada.", reason);
+  $("#zipAll").style.display = "none"; $("#selBtn").style.display = "none"; document.querySelector(".views").style.display = "none";
+  const pick = id => { const d = CONFIG.days.find(x => x.id === id) || CONFIG.days[0]; state.day = { ...d, photos: [] };
+    $("#days").innerHTML = CONFIG.days.map(x => `<button class="day" data-emb="${x.id}" aria-pressed="${x.id===d.id}">${esc(x.label)}</button>`).join("");
+    $("#main").innerHTML = `<p class="embed-note">Haga clic en una carpeta o foto para verla en grande.</p><iframe class="embed" title="Fotos del ${esc(d.full)}" src="https://drive.google.com/embeddedfolderview?id=${encodeURIComponent(d.folderId || CONFIG.folderId)}#grid"></iframe>`; };
+  $("#days").onclick = e => { const b = e.target.closest("[data-emb]"); if (b) pick(b.dataset.emb); };
+  pick(params.get("dia") || CONFIG.days[0].id);
+}
+
+/* Carrusel */
+async function runCarrusel(days){
+  document.body.classList.add("carrusel");
+  const link = CONFIG.galleryUrl || (location.href.split("?")[0]);
+  $("#crLink").href = link;
+  let all = days.flatMap(d => d.photos);
+  if (!all.length){ $("#crWait").textContent = "Fotos en camino"; return; }
+  for (let i = all.length-1; i > 0; i--){ const j = Math.floor(Math.random()*(i+1)); [all[i],all[j]] = [all[j],all[i]]; }
+  all = all.slice(0, 60);
+  const cr = $("#cr"); let k = 0, cur = null, paused = false;
+  const w = Math.min(2400, Math.round(Math.max(innerWidth, 800) * (devicePixelRatio||1)));
+  const show = () => {
+    const p = all[k % all.length]; k++;
+    const el = document.createElement("div"); el.className = "slide";
+    const im = new Image(); im.alt = "Foto del endoTour Rionegro 2026"; im.onload = () => { $("#crWait").style.display = "none"; requestAnimationFrame(() => el.classList.add("on")); if (cur){ const old = cur; setTimeout(() => old.remove(), 1400); } cur = el; };
+    im.onerror = () => { el.remove(); setTimeout(show, 50); };
+    im.src = src(p, w); el.appendChild(im); cr.insertBefore(el, cr.querySelector(".shade"));
+    const bar = $("#crBar"); bar.style.transition = "none"; bar.style.width = "0"; requestAnimationFrame(() => { bar.style.transition = `width ${CONFIG.slideSeconds}s linear`; bar.style.width = "100%"; });
+  };
+  show();
+  setInterval(() => { if (!paused && !document.hidden) show(); }, CONFIG.slideSeconds*1000);
+  cr.addEventListener("mouseenter", () => paused = true); cr.addEventListener("mouseleave", () => paused = false);
+}
+
+/* Arranque */
+async function start(){
+  if (CONFIG.contactEmail){ const pv = $("#privacy"); pv.hidden = false; pv.innerHTML = `¿Aparece en una foto y prefiere que la retiremos? Escríbanos a <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a>.`; }
+  const STATIC = !DEMO && !CONFIG.apiKey && Array.isArray(CONFIG.photos) && CONFIG.photos.length;
+  if (!DEMO && !CONFIG.apiKey && !STATIC){ if (CARRUSEL){ document.body.classList.add("carrusel"); $("#crWait").textContent = "Galería endoTour Rionegro 2026"; $("#crLink").href = CONFIG.galleryUrl || location.href.split("?")[0]; return; } renderEmbed("Falta la clave de la API."); return; }
+  if (!CARRUSEL) $("#main").innerHTML = `<div class="loading">${"<div></div>".repeat(12)}</div>`;
+  let days;
+  try { days = DEMO ? demoData() : STATIC ? staticDays() : await loadDrive(); }
+  catch(e){ if (CARRUSEL){ document.body.classList.add("carrusel"); $("#crWait").textContent = "Galería endoTour Rionegro 2026"; console.warn(e); return; } renderEmbed(e); return; }
+  if (CARRUSEL){ runCarrusel(days); return; }
+  state.days = days;
+  const want = params.get("dia");
+  state.day = days.find(d => d.id === want) || days.find(d => d.photos.length) || days[0];
+  try { const v = localStorage.getItem("galeria-vista"); if (["grid","mosaic","show"].includes(v)) state.view = v; } catch(_){}
+  renderDays(); renderSections(); renderMain();
+}
+start();
+})();
+</script>
+</body>
+</html>
